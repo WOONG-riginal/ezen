@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고정형을 가변형으로 계산하기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        #wrap{
+            /* 내 마음 속 기준값 960 */
+            width: 960px;
+            width: 90%;
+            margin: 30px auto;
+        }
+        header{
+            height: 120px;
+            background-color: red;
+        }
+        header h1{
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+        }
+        section{
+            width: 600px;
+            width: 62.5%;
+            height: 400px;
+            background-color: green;
+            /* 플롯 */
+            float: left;
+        }
+        aside{
+            width: 360px;
+            width: 37.5%;
+            height: 400px;
+            background-color: blue;
+            /* 플롯 */
+            float: right;
+        }
+        footer{
+            height: 120px;
+            background-color: yellowgreen;
+            /* 플롯해제 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>가변형</h1>
+        </header>
+        <section>
+            <h2>Contents</h2>
+        </section>
+        <aside>
+            <h2>Aside</h2>
+        </aside>
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

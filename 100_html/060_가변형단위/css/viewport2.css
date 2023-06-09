@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* Viewport 가변단위 */
+/* 내 PC 모니터 해상도에서의 기준값 : 1920(vw) x 936(vh) */
+*{
+    background-color: transparent !important;
+}
+.maxw1440{
+    max-width: 1440px;
+    /* (1440/1920)*100 = 75 */
+    max-width: 75vw;
+    margin: 0 auto;
+}
+body,html{
+    font-size: 16px;
+    /* (16/936)*100 = 1.709401709401709 */
+    font-size: 1.709401709401709vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap{
+    width: 100vw;
+    height: 100vh;
+    /* 포지션 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+/* Video Background */
+.video_wrapper{
+    width: 100vw;
+    height: 100vh;
+    /* 포지션 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.video_wrapper .video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+}
+/* Video Control Button */
+#car_btn{
+    /* 포지션 */
+    position: fixed;
+    left: 48px;
+    /* (48/1920)*100 */
+    left: 2.5vw;
+    bottom: 56px;
+    /* (56/936)*100 */
+    bottom: 5.982905982905983vh;
+    transform: translateY(-13vh);
+    z-index: 100;
+}
+#car_btn i{
+    font-size: 24px;
+    /* (24/936)*100 */
+    font-size: 2.564102564102564vh;
+    color: #fff;
+    cursor: pointer;
+}
+/* Sound Control Button */
+#car_sound{
+    /* 포지션 */
+    position: fixed;
+    left: 96px;
+    /* (96/1920)*100 */
+    left: 5vw;
+    bottom: 56px;
+    /* (56/936)*100 */
+    bottom: 5.982905982905983vh;
+    transform: translateY(-13vh);
+    z-index: 100;
+}
+#car_sound i{
+    font-size: 24px;
+    /* (24/936)*100 */
+    font-size: 2.564102564102564vh;
+    color: #fff;
+    cursor: pointer;
+}
+/* Image Text */
+.video_text{
+    /* 포지션 */
+    position: fixed;
+    left: 48px;
+    /* (48/1920)*100 */
+    left: 2.5vw;
+    bottom: 100px;
+    /* (100/936)*100 */
+    bottom: 10.68376068376068vh;
+    transform: translateY(-15vh);
+    z-index: 200;
+}
+.video_text h2{
+    font-size: 72px;
+    /* (72/936)*100 */
+    font-size: 7.692307692307692vh;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+}
+.video_text p{
+    font-size: 21px;
+    /* (21/936)*100 */
+    font-size: 2.243589743589744vh;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 16px;
+    /* (16/936)*100 */
+    margin-top: 1.709401709401709vh;
+    text-indent: 0.2em;
+}
+/* Header */
+.header{
+    color: #fff;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 30px;
+    /* (30/936)*100 */
+    padding-top: 3.205128205128205vh;
+    text-align: center;
+}
+.header h1{
+    width: 160px;
+    /* (160/1920)*100 */
+    width: 8.333333333333333vw;
+}
+.header .gnb_wrap{
+    font-size: 20px;
+    /* (20/936)*100 */
+    font-size: 2.136752136752137vh;
+    font-weight: 500;
+}
+.header .gnb{
+    /* 플렉스 */
+    display: flex;
+}
+.header .gnb li{
+    padding: 0 40px;
+    /* (40/1920)*100 */
+    padding: 0 2.083333333333333vw;
+}
+.header .snb_wrap{
+    font-size: 14px;
+    /* (14/936)*100 */
+    font-size: 1.495726495726496vh;
+}
+.header .snb{
+    /* 플렉스 */
+    display: flex;
+}
+.header .snb li{
+    padding: 0 8px;
+    /* (8/1920)*100 */
+    padding: 0 0.4166666666666667vw;
+}
+.header .snb li:last-child{
+    border: 1px solid #fff;
+    font-size: 12px;
+    /* (12/936)*100 */
+    font-size: 1.282051282051282vh;
+    padding: 4px 12px;
+    /* (4/936)*100, (12/1920)*100 */
+    padding: 0.4273504273504274vh 0.625vw;
+    margin-top: -4px;
+    /* (4/936)*100 */
+    margin-top: -0.4273504273504274vh;
+}
+/* Footer */
+.footer{
+    background-color: #3e3e3e !important;
+    width: 100vw;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+    color: #737373;
+    padding: 32px 72px;
+    /* (32/936)*100, (72/1920)*100 */
+    padding: 3.418803418803419vh 3.75vw;
+    /* 포지션 */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.footer h3{
+    width: 6vw;
+}
+.footer nav{
+    font-size: 1.5vh;
+    margin-right: 10vw;
+}
+.footer .fnb{
+    /* 플렉스 */
+    display: flex;
+}
+.footer .fnb li{
+    margin-right: 2vw;
+}
+.footer .fnb li a::after{
+    content: "|";
+    display: inline-block;
+    padding-left: 1.6vw;
+}
+.footer .fnb li:last-child a::after{
+    content: "";
+}
+.copyright{
+    font-size: 1.4vh;
+    margin-top: 3.4vh;
+    line-height: 1.5;
+}
+.copyright span{
+    font-size: 1.3vh;
+}
+.sns{
+    /* 플렉스 */
+    display: flex;
+}
+.sns li{
+    margin-left: 1.24vw;
+    background-color: #fff;
+}
+.sns li a{
+    font-size: 2.5vh;
+}

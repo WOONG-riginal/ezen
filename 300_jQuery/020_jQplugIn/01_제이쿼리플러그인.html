@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 플러그인 부드러운 스크롤링</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <!-- 1. 제이쿼리 코어파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>        
+    <!-- 2. 제이쿼리 CDN방식 이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- 3. 제이쿼리 플러그인 추가 -->
+    <script src="./js/jquery.scrollTo.min.js"></script>
+    <!-- 4. 해당 문서 스크립트 -->
+    <script src="./js/scroll.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- Header -->
+        <header>
+            <h1>ONE-PAGE SITE</h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#rolex" class="nav_btn">ROLEX</a></li>
+                    <li><a href="#omega" class="nav_btn">OMEGA</a></li>
+                    <li><a href="#iwc" class="nav_btn">IWC</a></li>
+                    <li><a href="#breitling" class="nav_btn">BREITLING</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /Header -->
+        <!-- Contents -->
+        <main role="main">
+            <section id="rolex" class="page1">
+                <h2>ROLEX</h2>
+            </section>
+            <section id="omega" class="page2">
+                <h2>OMEGA</h2>
+            </section>
+            <section id="iwc" class="page3">
+                <h2>IWC</h2>
+            </section>
+            <section id="breitling" class="page4">
+                <h2>BREITLING</h2>
+            </section>
+        </main>
+        <!-- /Contents -->
+
+        <!-- GOTO TOP 버튼 -->
+        <aside>
+            <div>
+                <a href="#" class="top">TOP</a>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

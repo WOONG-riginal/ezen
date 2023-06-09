@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Shin" content="Woong">
+    <meta name="description" content="포트폴리오, 플렉스 레이아웃">
+    <title>플렉스 레이아웃 튜더</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="shortcut icon" href="./images/favicon/favtudor.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 박스 슬라이더 JS -->
+    <script src="./js/jquery.bxslider.js"></script>
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <!-- 파일 CSS -->
+    <link rel="stylesheet" href="./css/tudor.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header>
+            <div class="first_line">
+                <div id="fir_box" class="w1300">
+                    <div class="fir_box">
+                        <p>로그인하면 확인되는 차별화된 회원가!</p>
+                    </div>
+                    <div class="fir_box">
+                        <p>혜택확인하기</p>
+                        <div class="x_box">x</div>
+                    </div>
+                    <div class="fir_box">
+                        <p class="closeFirst">닫기</p>
+                        <div class="x_box2">x</div>
+                    </div>
+                </div>
+            </div>
+            <div class="second_line w1300">
+                <div class="box1"><a href="#"><img src="./images/Tudor-Logo.png" alt="로고"></a></div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="third_line w1300">
+                <h1 class="menu">
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </h1>
+                <nav>
+                    <ul class="gnb">
+                        <li onmouseenter="mouseYes(0);" onmouseleave="mouseNo(0);"><a href="#">BLACK&nbsp;BAY</a></li>
+                        <li onmouseenter="mouseYes(1);" onmouseleave="mouseNo(1);"><a href="#">스포츠&nbsp;워치</a></li>
+                        <li onmouseenter="mouseYes(2);" onmouseleave="mouseNo(2);"><a href="#">클래식&nbsp;워치</a></li>
+                        <li onmouseenter="mouseYes(3);" onmouseleave="mouseNo(3);"><a href="#">여성&nbsp;시계</a></li>
+                        <li onmouseenter="mouseYes(4);" onmouseleave="mouseNo(4);"><a href="#">다이버&nbsp;워치</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">미디어</a></li>
+                        <li class="no_mr"><a href="#">기업소개</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu_dept">
+                <nav>
+                    <ul class="submenu" onmouseenter="mouseYes(0);" onmouseleave="mouseNo(0);">
+                        <li><a href="#"><p>BLACK&nbsp;BAY&nbsp;PRO</p><br><img src="./images/goods/tudor-m79470-0001.png" alt="상품1"></a></li>
+                        <li><a href="#"><p>BLACK&nbsp;BAY&nbsp;GMT</p><br><img src="./images/goods/tudor-m79830rb-0001.png" alt="상품2"></a></li>
+                        <li><a href="#"><p>BLACK&nbsp;BAY&nbsp;CHRONO</p><br><img src="./images/goods/tudor-m79360n-0002.png" alt="상품3"></a></li>
+                        <li><a href="#"><p>BLACK&nbsp;BAY&nbsp;FIFTY-EIGHT</p><br><img src="./images/goods/tudor-m79030b-0001.png" alt="상품4"></a></li>
+                        <li><a href="#"><p>BLACK&nbsp;BAY&nbsp;32/36/41</p><br><img src="./images/goods/tudor-m79500-0007.png" alt="상품5"></a></li>
+                    </ul>
+                    <ul class="submenu" onmouseenter="mouseYes(1);" onmouseleave="mouseNo(1);">
+                        <li><a href="#"><p>PELAGOS&nbsp;39</p><br><img src="./images/goods/tudor-m25407n-0001.png" alt="상품1"></a></li>
+                        <li><a href="#"><p>RANGER</p><br><img src="./images/goods/tudor-m79950-0001.png" alt="상품2"></a></li>
+                        <li><a href="#"><p>TUDOR&nbsp;ROYAL</p><br><img src="./images/goods/tudor-m28600-0005.png" alt="상품3"></a></li>
+                        <li><a href="#"><p>HERITAGE&nbsp;CHORONO</p><br><img src="./images/goods/tudor-m70330b-0004.png" alt="상품4"></a></li>
+                    </ul>
+                    <ul class="submenu" onmouseenter="mouseYes(2);" onmouseleave="mouseNo(2);">
+                        <li><a href="#"><p>1926</p><br><img src="./images/goods/tudor-m91350-0005.png" alt="상품1"></a></li>
+                        <li><a href="#"><p>CLAIR&nbsp;DE&nbsp;ROSE</p><br><img src="./images/goods/tudor-m35800-0004.png" alt="상품2"></a></li>
+                        <li><a href="#"><p>STYLE</p><br><img src="./images/goods/tudor-m12713-0007.png" alt="상품3"></a></li>
+                        <li><a href="#"><p>GLAMOUR&nbsp;DATE</p><br><img src="./images/goods/tudor-m55003-0003.png" alt="상품4"></a></li>
+                    </ul>
+                    <ul class="submenu" onmouseenter="mouseYes(3);" onmouseleave="mouseNo(3);">
+                        <li><a href="#"><p>TUDOR&nbsp;ROYAL</p><br><img src="./images/goods/tudor-m28323-0001.png" alt="상품1"></a></li>
+                        <li><a href="#"><p>GLAMOUR&nbsp;DATE</p><br><img src="./images/goods/tudor-m53003-0005.png" alt="상품2"></a></li>
+                        <li><a href="#"><p>CLAIR&nbsp;DE&nbsp;ROSE</p><br><img src="./images/goods/tudor-m35500-0004.png" alt="상품3"></a></li>
+                        <li><a href="#"><p>STYLE</p><br><img src="./images/goods/tudor-m12110-0017.png" alt="상품4"></a></li>
+                    </ul>
+                    <ul class="submenu" onmouseenter="mouseYes(4);" onmouseleave="mouseNo(4);">
+                        <li><a href="#"><p>PELAGOS&nbsp;39</p><br><img src="./images/goods/tudor-m25407n-0001.png" alt="상품1"></a></li>
+                        <li><a href="#"><p>PELAGOS&nbsp;FXD</p><br><img src="./images/goods/tudor-m25707b-0001.png" alt="상품2"></a></li>
+                        <li><a href="#"><p>BLACK&nbsp;BAY&nbsp;FIFTY-EIGHT</p><br><img src="./images/goods/tudor-m79010sg-0002.png" alt="상품3"></a></li>
+                        <li><a href="#"><p>BLACK&nbsp;BAY</p><br><img src="./images/goods/tudor-m79210cnu-0001.png" alt="상품4"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- /Header -->
+        <!-- Article -->
+        <article>
+            <!-- <div class="main_image"></div> -->
+            <ul class="slide_gallery">
+                <li><img src="./images/bxSlider/slideimg1.jpg" alt="슬라이드01"></li>
+                <li><img src="./images/bxSlider/slideimg2.jpg" alt="슬라이드02"></li>
+                <li><img src="./images/bxSlider/slideimg3.jpg" alt="슬라이드03"></li>
+                <li><img src="./images/bxSlider/slideimg4.jpg" alt="슬라이드04"></li>
+                <li><img src="./images/bxSlider/slideimg5.jpg" alt="슬라이드05"></li>
+                <li><img src="./images/bxSlider/slideimg6.jpg" alt="슬라이드06"></li>
+            </ul>
+        </article>
+        <!-- /Article -->
+        <!-- Contents -->
+        <section id="container">
+            <div class="first_section w1500">
+                <div class="video_box">
+                    <video src="./media/sea.mp4" muted autoplay loop width="130%" height="100%"></video>
+                    <div class="tothesea">TUDOR&nbsp;TAKES<br>THE&nbsp;RACE<br>TO&nbsp;THE&nbsp;SEAS</div>
+                </div>
+                <div>
+                    <div class="cards_box">
+                        <div class="card1"></div>
+                        <div class="card2"></div>
+                        <div class="card3 no_mr"></div>
+                    </div>
+                    <div class="gotoshop">TUDOR&nbsp;X&nbsp;알링기&nbsp;레드&nbsp;불&nbsp;레이싱</div>
+                </div>
+            </div>
+            <div class="second_section">
+                <div class="lr_flex w1300">
+                    <div class="left_section">
+                        <div class="box1">NEW&nbsp;ARRIVAL</div>
+                        <ul>
+                            <li><a href="#">#TudorWatch</a></li>
+                            <li><a href="#">#단방향회전베젤</a></li>
+                            <li><a href="#">#티타늄브레이슬릿</a></li>
+                            <li><a href="#">#컴팩트다이버</a></li>
+                        </ul>
+                        <div class="box2"><img src="./images/born-to-dare.jpg" alt="본투데어"></div>
+                    </div>
+                    <div class="right_section">
+                        <div class="box3">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Br-LEG02Ebg" title="Tudor Pelagos 39 | A Week On The Wrist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third_section w1300">
+                <div class="first_box">PARTNERSHIP</div>
+                <div class="images">
+                    <div class="sec1">
+                        <div class="img">
+                            <a href="#">
+                                <img src="./images/pic1.png" alt="사진1">
+                                <div class="caption">ALPS</div>
+                            </a>
+                        </div>
+                        <div class="img"><a href="#"><img src="./images/pic2.png" alt="사진2"><div class="caption">OFFROAD</div></a></div>
+                    </div>
+                    <div class="sec2">
+                        <div class="bigImg"><a href="#"><img src="./images/bigpic.png" alt="큰사진"><div class="caption">WORN&WOUND</div></a></div>
+                    </div>
+                    <div class="sec3">
+                        <div class="img"><a href="#"><img src="./images/pic3.png" alt="사진3"><div class="caption">LADY&nbsp;GAGA</div></a></div>
+                        <div class="img"><a href="#"><img src="./images/pic4.png" alt="사진4"><div class="caption">DAVID&nbsp;BECKHAM</div></a></div>
+                        <div class="img no_mr"><a href="#"><img src="./images/pic5.png" alt="사진5"><div class="caption">HODINKEE</div></a></div>
+                        <div class="img"><a href="#"><img src="./images/pic6.png" alt="사진6"><div class="caption">MONTRES</div></a></div>
+                        <div class="img"><a href="#"><img src="./images/pic7.png" alt="사진7"><div class="caption">GMT</div></a></div>
+                        <div class="img no_mr"><a href="#"><img src="./images/pic8.png" alt="사진8"><div class="caption">CHRONOS</div></a></div>
+                    </div>
+                </div>
+                <div class="last_box">파트너십 보기</div>
+            </div>
+        </section>
+        <!-- /Contents -->
+        <aside>
+            <div>
+                <a href="#" class="topBtn">TOP</a>
+            </div>
+        </aside>
+        <!-- Footer -->
+        <footer>
+            <div class="w1300">
+                <div class="footer_flex">
+                    <div class="footer_left">
+                        <nav>
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li>|</li>
+                                <li><a href="#">쇼핑몰 이용안내</a></li>
+                                <li>|</li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li>|</li>
+                                <li><a href="#">고객센터</a></li>
+                                <li>|</li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li>|</li>
+                                <li><a href="#">매장안내</a></li>
+                                <li>|</li>
+                            </ul>
+                        </nav>
+                        <div class="company">
+                            <h3>주식회사알돈나 | 대표이사: EGGMONEYNA</h3>
+                            <h3>사업자등록번호 : 120-21-05435 | 통신판매업신고번호 : 제 2021-서울강남-00810호</h3>
+                            <h3>주소 : 서울특별시 강남구 아차산로 123 | 대표전화 : 02-3424-3432 | 팩스 : 02-446-7323</h3>
+                        </div>
+                        <div class="customer">
+                            <div class="cus_left">
+                                <h3>고객님의 안전거래를 위해 현금 결제시,</h3>
+                                <h3>구매안전 서비스를 이용하실 수 있습니다 [가입사실확인]</h3>
+                            </div>
+                            <div class="cus_right"></div>
+                        </div>
+                    </div>
+                    <div class="footer_right">
+                        <div class="tel">
+                            <h2>고객만족센터</h2>
+                            <h3>080-555-9812</h3>
+                            <h4>평일 09:00 ~ 18:00 | 점심 13:00 ~ 14:00</h4>
+                        </div>
+                        <div class="bank">
+                            <h2>BANK INFO</h2>
+                            <h3>국민은행 801-32-323236-39</h3>
+                            <h4>예금주:(주)알돈나</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="copy">Copyright &copy; 2022 EGGMONEYNA., Ltd. All Rights Reserved</div>
+            </div>
+        </footer>
+        <!-- /Footer -->
+    </div>
+    
+<script src="./js/tudor.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        미디어쿼리 작성시 주의사항
+            1. and 구분 앞, 뒤에서는 [반드시] 공백 한 칸
+            2. (조건문){실행문} 사이는 붙여서 코딩
+            3. min-/max- 접두어 사용시
+               a. min-접두어 : [반드시] 미디어쿼리 너비 크기가 작은 것에서 큰 것 순서로 코딩(모바일퍼스트)
+               b. max-접두어 : [반드시] 미디어쿼리 너비 크기가 큰 것에서 작은 것 순서로 코딩(PC퍼스트)
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            height: 500px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        /* 모바일 미디어쿼리 360px 이상 */
+        @media screen and (min-width:360px){
+            #wrap{
+                width: 30%;
+                background-color: aqua;
+            }
+            h1{
+                font-size: 0.75rem;
+                color: black;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        /* 태블릿 미디어쿼리 768px 이상 */
+        @media screen and (min-width:768px){
+            #wrap{
+                width: 60%;
+                background-color: pink;
+            }
+            h1{
+                font-size: 1rem;
+                color: red;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        /* PC 미디어쿼리 1024px 이상 */
+        @media screen and (min-width:1024px){
+            #wrap{
+                width: 90%;
+                background-color: orange;
+            }
+            h1{
+                font-size: 0.75rem;
+                color: blue;
+            }
+            img{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>반응형 웹사이트</h1>
+        <img src="./images/img4.png" alt="문워치">
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수업내용 복습</title>
+    <script>
+        // 10,8,21,40 중에서 최대값 출력
+        var maxNum=Math.max(10,8,21,40);
+        document.write(maxNum+"<br>");
+        // 10,8,21,40 중에서 최소값 출력
+        var minNum=Math.min(10,8,21,40);
+        document.write(minNum+"<br>");
+        // 3.141592 반올림
+        var roundNum=Math.round(3.141592);
+        document.write(roundNum+"<br>");
+        // 3.141592 올림
+        var ceilNum=Math.ceil(3.141592);
+        document.write(ceilNum+"<br>");
+        // 3.141592 버림
+        var floorNum=Math.floor(3.141592);
+        document.write(floorNum+"<br>");
+        // 랜덤수 생성
+        var randomNum=Math.random();
+        document.write(randomNum+"<br>");
+        // 이미지 랜덤으로 바꾸기
+        var imgNum=Math.ceil(randomNum*8);
+        document.write("<img src='./images/img"+imgNum+".jpg' alt=랜덤이미지 width='30%' height='30%'><br>");
+
+        // 날짜 객체 생성 => 연,월,일,요일,시간,분,초,1/1000초
+        var today=new Date();
+        var nowYear=today.getFullYear();
+        var nowMonth=today.getMonth();
+        var nowDate=today.getDate();
+        var nowDay=today.getDay();
+        var days=['일','월','화','수','목','금','토'];
+        nowDay=days[nowDay];
+        var nowHour=today.getHours();
+        var nowMin=today.getMinutes();
+        var nowSec=today.getSeconds();
+        var nowMiliSec=today.getMilliseconds();
+        document.write('오늘은 '+nowYear+'년 '+(nowMonth+1)+'월 '+nowDate+'일 '+nowDay+'요일입니다.<br>');
+        document.write('지금 시각은 '+nowHour+'시 '+nowMin+'분 '+(nowSec+(nowMiliSec/1000))+'초 입니다.<br>')
+        // getTime()
+        document.write('1970년 1월 1일 0시 이후로 '+(today.getTime()/1000)+'초가 지났습니다.<br>');
+        // 생일 D-day 생성
+        var birthDay=new Date(nowYear,3,26);
+        var dDay=birthDay.getTime()-today.getTime();
+        dDay=Math.ceil(dDay/(1000*60*60*24));
+        document.write('내 생일은 아직도 <strong>'+dDay+'</strong>일이나 남았습니다.<br>');
+
+        var str="가나다라마바사아자차카타파하";
+        // 문자열에서 인덱스 번호에 해당하는 문자를 반환
+        document.write(str.charAt(7)+'<br>');
+        // 문자열에서 왼쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 [인덱스 번호]를 반환(★)
+        document.write(str.indexOf('다')+'<br>');
+        // 문자열에서 오른쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 [인덱스 번호]를 반환
+        document.write(str.lastIndexOf('파')+'<br>');
+        // 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아, 제일 먼저 일치하는 문자를 반환
+        document.write(str.match('카')+'<br>');
+        // 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아, 제일 먼저 찾는 문자를 새문자로 치환(★)
+        document.write(str.replace('하','파')+'<br>');
+        // 문자열에서 왼쪽부터 찾을 문자와 제일 먼저 찾는 문자의 인덱스 번호를 반환
+        document.write(str.search('나')+'<br>');
+        // 문자열에서 문자를 자른 후, 남는 문자를 치환(★) = 인덱스번호 3부터 7 전까지 추출
+        document.write(str.slice(3,7)+'<br>');
+        // 문자열에서 문자 개수만큼 문자열 반환(★) = 인덱스번호 10부터 4글자 추출
+        document.write(str.substr(10,4)+'<br>');
+        var strEng="What Is Your Name?";
+        // 문자열에서 영문 대문자를 모두 소문자로 치환(★)
+        document.write(strEng.toLowerCase()+'<br>');
+        // 문자열에서 영문 소문자를 모두 대문자로 치환(★)
+        document.write(strEng.toUpperCase()+'<br>');
+        // 문자열 개수반환(★)
+        document.write(str.length+'<br>');
+        // 문자의 앞 또는 뒤에 공백 문자열 삭제
+        document.write(str.trim()+'<br>');
+
+        /* 실습1.(프롬프트)비밀번호를 입력받아,
+            (경고창)8자 미만이면 "8자 이상으로 다시 입력하시오"
+            (브라우저)8자 이상이면 "비밀번호 ???자가 입력되었습니다." */
+        // var pwd=prompt('비밀번호를 입력하세요.',12345678);
+        // var result=pwd.length;
+        // if(result<8){
+        //     alert('8자 이상으로 다시 입력하시오.');
+        //     location.reload();
+        // }else{
+        //     document.write('비밀번호 '+result+'자가 입력되었습니다.');
+        // }
+        
+        /* 실습2. (프롬프트) 이름을 영문소문자로 입력받아, 대문자로 치환
+            (브라우저)"입력한 이름은 ??? 입니다." */
+        var name=prompt('이름을 영문으로 입력하세요.','lionel messi');
+        var upperName=name.toUpperCase();
+        document.write('입력한 이름은 <strong>'+upperName+'</strong>입니다.<br>');
+        
+        /* 실습3. (프롬프트)영문 이름 입력받아, 대문자입력시 소문자로 치환
+            (도큐먼트) 입력받은 이름은 ??? 입니다.
+            (프롬프트) 전화번호 입력받아, 끝 네자리를 "****"로 치환 = substr(),replace()
+            (도큐먼트) 전화번호는 0101234**** 입니다. */
+        // var name=prompt('이름을 영문으로 입력하세요.','Lionel Messi');
+        // var lowerName=name.toLowerCase();
+        // document.write('입력받은 이름은 <strong>'+lowerName+'</strong> 입니다.<br>');
+        // 방법1. replace(), substr() 사용
+        var tel=prompt('전화번호를 입력하세요.','024965011');
+        var result=tel.replace(tel.substr(tel.length-4,),'****');
+        document.write('전화번호는 '+result+' 입니다.<br>')
+        // 방법2. substring() 사용
+        var result2=tel.substring(0,tel.length-4);
+        document.write('전화번호는 '+result2+'**** 입니다.<br>')
+
+        // 배열명 url, 할당 문자열 co.kr, net, com, go.kr, or.kr
+        var mail=prompt('이메일 주소를 입력하세요.','eggmoneyna26@gmail.com');
+        var url=['co.kr','net','com','go,kr','or.kr'];
+        var tf1=false;
+        var tf2=false;
+        /* 1. @유효성 검사 = 입력받은 데이터에 @이 포함되어 있으면, chk1에 true할당 */
+        var result3=mail.indexOf('@');
+        if(result3>0){
+            tf1=true;
+        }console.log(tf1);
+        /* 2. 이메일 형식 유효성 검사 = 입력받은 데이터에 배열에 할당한 문자열이 포함되어 있으면, chk2에 true할당 */
+        for(var i=0;i<url.length;i++){
+            var result4=mail.indexOf(url[i]);
+            if(result4>0){
+                tf2=true;
+            }
+        }console.log(tf2);
+        /* 3. 출력=@과 이메일의 유효성 형식이 맞으면 (도큐먼트)에 이메일 주소 출력,
+            아니면 (경고창)이메일 형식 오류!! */
+        if(tf1 && tf2){
+            // document.write(mail+'<br>');
+            var domainId=mail.substr(0, result3);
+            var domain=mail.substring(result3);
+            document.write('<strong>'+domainId+'</strong>'+domain+'<br>');
+        }else{
+            alert('이메일 형식 오류!!');
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

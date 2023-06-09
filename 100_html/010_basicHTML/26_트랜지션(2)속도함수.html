@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 속도함수</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        #tr_speed {
+            /* 플롯해제 */
+            overflow: hidden;
+        }
+        #tr_speed div {
+            width: 100px;
+            height: 50px;
+            background-color: deepskyblue;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            float: left;
+        }
+        /* 1. linear : 같은 속도로 트랜지션 진행 */
+        .linear {
+            transition: all 1.5s linear;
+        }
+        /* 2. ease : 빠르게 시작해서 점점 느려지는 트랜지션 진행 (기본값) */
+        .ease {
+            transition: all 1.5s ease;
+        }
+        /* 3. ease-in : 처음부터 천천히 시작 */
+        .ease-in {
+            transition: all 1.5s ease-in;
+        }
+        /* 4. ease-out : 끝을 천천히 함 */
+        .ease-out {
+            transition: all 1.5s ease-out;
+        }
+        /* 5. ease-in-out : 처음에는 천천히 시작, 점점 빨라진 후 마지막에 천천히 트랜지션 진행 */
+        .ease-in-out {
+            transition: all 1.5s ease-in-out;
+        }
+        /* tr_speed를 hover하면 div가 ~~~ */
+        #tr_speed:hover div{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tr_speed">
+        <div class="linear">Linear</div>
+        <div class="ease">ease</div>
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+        <div class="ease-in-out">ease-in-out</div>
+    </div>
+</body>
+</html>

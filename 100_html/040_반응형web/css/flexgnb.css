@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* 전체 스타일을 변수로 정의하여 사용 = var()로 속성값 변수명 사용
+반드시 --영문변수명 사용 */
+:root{
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: pink;
+}
+/* 현재 코딩 뷰포트 단위 계산 기준 픽셀 : 1440x800 */
+body{
+    color: var(--text-color);
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: -1px;
+}
+header{
+    height: 10vh;
+    line-height: 10vh;
+    background-color: var(--background-color);
+    padding: 0 5%;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    /* 플렉스 */
+    display: flex;
+}
+header h1>a{
+    font-size: 4.5vh;
+    margin-right: 16px;
+}
+header h1>p{
+    font-size: 3vh;
+}
+#gnb ul{
+    /* 플렉스 */
+    display: flex;
+    text-align: center;
+}
+#gnb ul li{
+    padding: 0 12px;
+}
+#gnb ul li:hover{
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+#lnb ul{
+    /* 플렉스 */
+    display: flex;
+    text-align: center;
+}
+#lnb ul li{
+    padding: 0 6px;
+}
+#lnb ul li:hover{
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+#lnb ul li a{
+    font-size: 3vh;
+}
+/* 햄버거 */
+.ham{
+    /* 포지션 */
+    position: absolute;
+    right: 32px;
+    font-size: 3vh;
+    display: none;
+}
+/* 태블릿 768 미디어쿼리 */
+@media screen and (max-width:768px){
+    body{
+        background-color: var(--background-color);
+    }
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+    h1{
+        padding-left: 32px;
+    }
+    #gnb{
+        width: 100%;
+    }
+    #gnb ul{
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    #gnb ul li{
+        width: 100%;
+    }
+    #lnb{
+        width: 100%;
+    }
+    #lnb ul{
+        justify-content: center;
+        display: none;
+    }
+    .ham{
+        display: block;
+    }
+
+    /* 스크립트 클래스 */
+    #gnb.active ul,
+    #lnb.active ul{
+        display: flex;
+    }
+}

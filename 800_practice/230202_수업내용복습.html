@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큰사진 작은사진</title>
+    <style>
+        img{
+            cursor: pointer;
+        }
+        #smallPic{
+            width: 500px;
+            margin-top: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .small{
+            width: 56px;
+        }
+        #clickBtn{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="changePic">
+        <img src="./images/img1.jpg" alt="큰이미지" width="500" id="bigPic">
+        <div id="smallPic">
+            <img src="./images/img1.jpg" alt="작은이미지" class="small">
+            <img src="./images/img2.jpg" alt="작은이미지" class="small">
+            <img src="./images/img3.jpg" alt="작은이미지" class="small">
+            <img src="./images/img4.jpg" alt="작은이미지" class="small">
+            <img src="./images/img5.jpg" alt="작은이미지" class="small">
+            <img src="./images/img6.jpg" alt="작은이미지" class="small">
+            <img src="./images/img7.jpg" alt="작은이미지" class="small">
+            <img src="./images/img8.jpg" alt="작은이미지" class="small">
+        </div>
+    </div>
+    <div id="clickBtn">
+        <img src="./images/img1.jpg" alt="원래이미지" width="500" id="originPic">
+        <button id="btn1" onclick="btnClick(0)";>이전 이미지</button>
+        <button id="btn2" onclick="btnClick(1)";>다음 이미지</button>
+    </div>
+
+<script>
+    var bigPic=document.getElementById("bigPic");
+    var smallPic=document.getElementsByClassName("small");
+    console.log(bigPic);
+    console.log(smallPic);
+    function changePic(){
+        bigPic.src=this.src;
+    }
+    var i=0;
+    for(i=0;i<smallPic.length;i++){
+        smallPic[i].addEventListener('mouseenter',changePic);
+    }
+
+    var originPic=document.getElementById("originPic");
+    var imgNum=1;
+    function btnClick(num){
+        if(num){
+            imgNum++;
+            if(imgNum>8){return imgNum=0};
+        }else{
+            imgNum--;
+            if(imgNum==0){return imgNum=9};
+        }
+        originPic.src="./images/img"+imgNum+".jpg";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3단플롯, 루브르</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            font: 13px 'Noto Sans KR', sans-serif;
+            background-color: #a9a9a9;
+        }
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        /* Header */
+        header {            
+            background-color: #fea900;
+            color: #fff;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 800%;
+            font-weight: 700;
+        }
+        header h1 span {
+            font-size: 20px;
+            padding: 4px;
+            font-weight: 400;
+            display: block;
+        }
+        header p {
+            background-color: #cbcbcb;
+            padding: 5px;
+            color: #333;
+            font-size: 12px;
+        }
+        header p span {
+            font-weight: 700;
+            color: blue;
+        }
+        /* Contents */
+        #artist {
+            width: 200px;
+            /* 플롯 */
+            float: left;
+        }
+        #artist dt {
+            font-size: 18px;
+            padding: 10px;
+            background-color: #980000;
+            color: #fff;
+        }
+        #artist dd a {
+            color: #000;
+            border-bottom: 1px dashed #000;
+        }
+        #artist dd a:hover {
+            font-weight: 700;
+            color: green;
+            border-bottom: 1px solid green;
+        }
+        #masterpiece {
+            background-color: #cbcbcb;
+            color: #123456;
+            width: 400px;
+            /* 플롯 */
+            float: right;
+        }
+        #masterpiece dt a {
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #123456;
+            color: #fff;
+            padding: 5px;
+            display: block;
+        }
+        #masterpiece dt+dd {         
+            font-size: 16px;
+            padding: 10px;
+        }
+        dt,dd {
+            padding: 10px;
+        }
+        #cover {
+            /* 플롯 */
+            float: left;
+        }
+        .extra {
+            width: 200px;
+            /* 플롯 */
+            float: right;
+        }
+        .extra dt {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .all, .love {
+            text-decoration: underline;
+        }
+        .love {
+            color: #fea900;
+        }
+        .extra span {
+            display: block;
+        }
+        /* Footer */
+        footer {
+            font-style: italic;
+            font-size: 8px;
+            padding: 10px;
+            text-align: center;
+            background-color: #123456;
+            color: #fff;
+        }
+        footer a {
+            color: #980000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header>
+            <h1>
+                Musee d'Orsa
+                <span>Musee d'OrsaMusee d'OrsaMusee d'OrsaMusee d'OrsaMusee d'OrsaMusee d'Orsa</span>
+            </h1>
+            <p>
+                Royal Academy of Arts, <span>THE REAL VANGOGH</span> THE ARTIST AND HIS LETTERS
+            </p>
+        </header>
+        <!-- /Header -->
+        <!-- Contents -->
+        <main role="main">            
+            <section id="container" class="cf">
+                <div id="cover">
+                    <nav id="artist">
+                        <dl>
+                            <dt>ARTIST</dt>
+                            <dd><a href="#">작가의 작품</a></dd>
+                            <dd><a href="#">작가의 시대</a></dd>
+                            <dd><a href="#">작가의 일생</a></dd>
+                        </dl>
+                    </nav>
+                    <article id="masterpiece">
+                        <dl>
+                            <dt><a href="#">피리부는 소년</a></dt>
+                            <dd>에두아르마</dd>
+                            <dd>1866 Musee d'OrsaMusee d'Orsa 161*97cm</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">반고흐의 방</a></dt>
+                            <dd>에두아르마</dd>
+                            <dd>1866 Musee d'OrsaMusee d'Orsa 161*97cm</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">황색 그리스도가 있는 화가의 자화상</a></dt>
+                            <dd>에두아르마</dd>
+                            <dd>1866 Musee d'OrsaMusee d'Orsa 161*97cm</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">오페라좌의 관현악단</a></dt>
+                            <dd>에두아르마</dd>
+                            <dd>1866 Musee d'OrsaMusee d'Orsa 161*97cm</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">만종</a></dt>
+                            <dd>에두아르마</dd>
+                            <dd>1866 Musee d'OrsaMusee d'Orsa 161*97cm</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">제비꽃 장식을 단 베르트모리조</a></dt>
+                            <dd>에두아르마</dd>
+                            <dd>1866 Musee d'OrsaMusee d'Orsa 161*97cm</dd>
+                        </dl>
+                    </article>
+                </div>
+                <dl class="extra">
+                    <dt>
+                        <span class="all">전 세계인에게</span>
+                        <span class="love">제일 사랑받는</span>
+                        <strong>서양 미술사 시대</strong>
+                    </dt>
+                    <dd><a href="#">WorkShop Go</a> <span>Life drawing workshop</span></dd>
+                    <dd><a href="#">Summer Exhibition</a> <span>Life drawing workshop</span></dd>
+                    <dd><a href="#">RA Collection</a> <span>RA Collection</span></dd>
+                </dl>
+            </section>
+        </main>
+        <!-- 3. Footer -->
+        <footer>
+            2022 Muse d'Orsa Mesee. All Rights Reserved. <a href="#">admin@OrsaMusee.com</a> Legal status
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 점심 뭐 먹지?</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+</head>
+<body>
+    <h1>오늘 점심 뭐 먹지?</h1>
+    <form action="http://localhost:8090/Chap05JSP/test.jsp" method="post">
+        <table class="table">
+            <tr>
+                <th class="txt1">고민 중인 메뉴의 개수를 선택하세요.</th>
+                <th class="txt2">메뉴를 입력하세요.</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="btn2" id="btn2" value="2개">
+                    <input type="button" name="btn3" id="btn3" value="3개">
+                    <input type="button" name="btn4" id="btn4" value="4개">
+                    <input type="button" name="btn5" id="btn5" value="5개">
+                </td>
+            </tr>
+        </table>
+        <button type="submit">오늘의 메뉴 확인하기</button>
+   </form>
+</body>
+<script>
+    $('button').hide();
+    $('.txt2').hide();
+    $('#btn2').click(function(){
+        $('.table').append('<tr><td><input type="text" name="menu1" placeholder="메뉴1 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu2" placeholder="메뉴2 입력"></td></tr>');
+        $('input:button').hide();
+        $('.txt1').hide();
+        $('.txt2').show();
+        $('.table').append('<tr><td><input type="hidden" name="num" value="2"></td></tr>');
+        $('button').show();
+    });
+    $('#btn3').click(function(){
+        $('.table').append('<tr><td><input type="text" name="menu1" placeholder="메뉴1 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu2" placeholder="메뉴2 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu3" placeholder="메뉴3 입력"></td></tr>');
+        $('input:button').hide();
+        $('.txt1').hide();
+        $('.txt2').show();
+        $('.table').append('<tr><td><input type="hidden" name="num" value="3"></td></tr>');
+        $('button').show();
+    });
+    $('#btn4').click(function(){
+        $('.table').append('<tr><td><input type="text" name="menu1" placeholder="메뉴1 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu2" placeholder="메뉴2 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu3" placeholder="메뉴3 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu4" placeholder="메뉴4 입력"></td></tr>');
+        $('input:button').hide();
+        $('.txt1').hide();
+        $('.txt2').show();
+        $('.table').append('<tr><td><input type="hidden" name="num" value="4"></td></tr>');
+        $('button').show();
+    });
+    $('#btn5').click(function(){
+        $('.table').append('<tr><td><input type="text" name="menu1" placeholder="메뉴1 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu2" placeholder="메뉴2 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu3" placeholder="메뉴3 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu4" placeholder="메뉴4 입력"></td></tr>');
+        $('.table').append('<tr><td><input type="text" name="menu5" placeholder="메뉴5 입력"></td></tr>');
+        $('input:button').hide();
+        $('.txt1').hide();
+        $('.txt2').show();
+        $('.table').append('<tr><td><input type="hidden" name="num" value="5"></td></tr>');
+        $('button').show();
+    });
+</script>
+</html>

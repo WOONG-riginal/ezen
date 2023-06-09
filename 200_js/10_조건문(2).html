@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>else if문, 중첩 if문</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+        // var grade = prompt('점수 입력', 0);
+        // grade = Number(grade);
+
+        /* 1. else if문 */
+        // if(grade>=90) {
+        //     alert('A학점');
+        // }else if(grade>=80) {
+        //     alert('B학점');
+        // }else if(grade>=70) {
+        //     alert('C학점');
+        // }else if(grade>=60) {
+        //     alert('D학점');
+        // }else {
+        //     alert('재수강');
+        // }
+        // location.reload();
+
+        /* 2. 중첩 if문 */
+        /* 데이터를 DB에서 불러온다고 가정 */
+        var dbid = 'ezen';
+        var dbpw = '1234';
+
+        var id = prompt('ID를 입력해 주세요', 'ezen');
+        if(dbid===id) {
+            var pw = prompt('비밀번호를 입력해 주세요', '1234');
+            if(dbpw===pw) {
+                alert('로그인 성공!!');
+            }else {
+                alert('비밀번호가 맞지 않습니다.');
+                location.reload();
+            }
+        }else {
+            alert('ID가 맞지 않습니다.');
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

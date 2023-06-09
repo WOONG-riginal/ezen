@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model | 인라인블록</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .gnb {
+            border: 2px solid #666;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            margin: 40px;
+        }
+        .gnb li {
+            display: inline-block;
+            margin-right: 32px;
+        }
+        .gnb li:nth-child(4) {
+            margin-right: 0 !important;
+
+        }
+        .gnb li a:hover {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav.gnb>ul>li>a -->
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">MYSTORY</a></li>
+            <li><a href="#">VISION</a></li>
+            <li><a href="#">PORTPOLIO</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

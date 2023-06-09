@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 레이아웃 | 플롯해제방법, 클리어픽스</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            background-color: #000;
+        }
+        #wrap {
+            width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1, nav, h2, p {
+            font-size: 24px;
+            color: white;
+        }
+        header h1 {
+            width: 300px;
+            height: 60px;
+            line-height: 60px;
+            background-color: yellow;
+            /* 플롯 */
+            float: left;
+        }
+        header nav {
+            width: 600px;
+            height: 60px;
+            line-height: 60px;
+            background-color: green;
+            /* 플롯 */
+            float: right;
+        }        
+        article#slide h2 {
+            width: 450px;
+            height: 60px;
+            line-height: 60px;
+            background-color: lightgrey;
+            /* 플롯 */
+            float: left;
+        }
+        article#slide p {
+            width: 450px;
+            height: 60px;
+            line-height: 60px;
+            background-color: darkolivegreen;
+            /* 플롯 */
+            float: right;
+        }
+        section#section h2 {
+            width: 300px;
+            height: 60px;
+            line-height: 60px;
+            background-color: red;
+            /* 플롯 */
+            float: left;
+        }
+        section#section p.center {
+            width: 450px;
+            height: 60px;
+            line-height: 60px;
+            background-color: lightcyan;
+            /* 플롯 */
+            float: left;
+        }
+        section#section p.right {
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            background-color: blue;
+            /* 플롯 */
+            float: right;
+        }        
+        footer {
+            width: 900px;
+            height: 60px;
+            line-height: 60px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 클리어픽스 -->
+        <header class="cf">
+            <h1>로고 영역</h1>
+            <nav>GNB 메뉴</nav>
+        </header>
+        <main role="main">
+            <!-- 클리어픽스 -->
+            <article id="slide" class="cf">
+                <h2>슬라이드 왼쪽</h2>
+                <p>슬라이드 오른쪽</p>
+            </article>
+            <!-- 클리어픽스 -->
+            <section id="section" class="cf">
+                <h2>섹션 왼쪽</h2>
+                <p class="center">섹션 가운데</p>
+                <p class="right">섹션 오른쪽</p>
+            </section>
+        </main>
+        <footer>
+            <p>하단 메뉴</p>
+        </footer>
+    </div>
+</body>
+</html>

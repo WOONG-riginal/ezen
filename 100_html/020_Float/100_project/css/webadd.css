@@ -1,0 +1,66 @@
+@charset "utf-8";
+body{
+    background-image: url(../images/main_back.png);
+    background-repeat: no-repeat;    
+}
+#wrap{
+    width: 1920px;
+    height: 1200px;
+    padding: 100px;
+}
+header h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 100px;
+    float: left;
+}
+header #gnb{
+    color: gray;
+    margin-left: 100px;
+}
+header #gnb li{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 50px;
+    float: left;
+}
+header #gnb li a:hover{
+    color: orangered;
+}
+header .right_side{
+    float: right;
+}
+header .right_side img{
+    margin: 0 20px;
+}
+#container{
+    margin-top: 270px;
+}
+#container .left_side{
+    width: 50%;
+    position: relative;
+}
+#container h2{
+    font-size: 110px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 80px;
+}
+#container p{
+    color: gray;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 80px;
+}
+#mainPic{
+    position: absolute;
+    left: 1300px;
+    top: 140px;
+    z-index: 1;
+}
+footer{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 80px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형기초, 박스 단수 실습2</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        /* 공통 CSS = 모바일 퍼스트 */
+        #wrap{
+            /* 960px */
+            width: 90%;
+            margin: 0 auto;
+        }
+        #wrap div{
+            font-size: 5rem;
+            padding-left: 50px;
+            margin-bottom: 30px;
+        }
+        #wrap div:nth-child(3n){
+            background-color: pink;
+        }
+        #wrap div:nth-child(3n+1){
+            background-color: yellow;
+        }
+        #wrap div:nth-child(3n+2){
+            background-color: yellowgreen;
+        }
+
+        /* 480px 이상 */
+        @media screen and (min-width:480px){
+            #wrap div{
+                /* (400/960)*100 */
+                width: 41.66666666666667%;
+                /* (40/960)*100 */
+                margin: 4.166666666666667%;
+                float: left;
+            }
+        }
+
+        /* 690px 이상 */
+        @media screen and (min-width:690px){
+            #wrap div{
+                /* (300/960)*100 */
+                width: 31.25%;
+                /* (10/960)*100 */
+                margin: 1.041666666666667%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

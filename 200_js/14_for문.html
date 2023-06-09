@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 for</title>
+    <script>
+        /* [형식]
+        for(초기값;조건식;증감식){
+            실행문;
+        } */
+        // for(var i=1;i<=5;i++){
+        //     document.write('for문 반복횟수 : '+i+'번 <br>');
+        // }
+        // document.write(i+'이상이 되면 for문 종료');
+
+        /* 실습0. 초기값 0
+        [도큐먼트] for문자 5번 나오도록 코딩 */
+        // for(var i=0;i<=4;i++){
+        //     document.write('for '+(i+1)+'번<br>');
+        // }
+
+        /* 실습1. (초기값)0, 반복횟수 10번
+        [도큐먼트] 자바스크립트 반복횟수 ???번 출력 */
+        // for(var i=0;i<10;i++){
+        //     document.write('자바스크립트 반복횟수 '+(i+1)+'번 출력<br>');
+        // }
+        // alert('반복횟수는 총 '+i+'번 입니다.')
+
+        /* 실습2. 1부터 10까지의 합(힌트:복합대입연산자 +=, i, 총합변수)
+        [도큐먼트] 1부터 10까지의 합은 ??? 입니다. */
+        // var hab=0;
+        // var sik="";
+        // for(var i=1;i<=10;i++){
+        //     hab+=i;
+        // }
+        // for(var i=1;i<10;i++){
+        //     sik+=i+'+';
+        // }
+        // document.write('1부터 '+i+'까지의 합은 '+sik+i+'='+hab+'입니다.');
+
+        /* 실습3. <h1>~<h6>순으로
+        [도큐먼트] 각각 태그별로 "풀스택개발자" 가 나오도록 코딩 */
+        // for(var i=1;i<=6;i++){
+        //     document.write('<h'+i+'>풀스택개발자</h'+i+'>');
+        // }
+        
+        /* 실습4. <h6>~<h1>순으로
+        [도큐먼트] 각각 태그별로 "풀스택개발자" 가 나오도록 코딩 */
+        // for(var j=6;j>0;j--){
+        //     document.write('<h'+j+'>풀스택개발자</h'+j+'>');
+        // }
+        
+        /* 실습5. [도큐먼트] <h3> 플스택개발자 </h3>만 출력 */
+        // for(var k=1;k<=6;k++){
+        //     if(k==3){
+        //         document.write('<h'+k+'>풀스택개발자</h'+k+'>');
+        //     }
+        // }
+
+        /* 실습6. [도큐먼트] 구구단 2단 출력하기 */
+        // var mul=2;
+        // document.write('<h1>'+mul+'단</h1>')
+        // for(var i=1;i<=9;i++){
+        //     var sik=mul+'x';
+        //     document.write('<p>'+sik+i+'='+mul*i+'</p>');
+        // }
+
+        /* 추가1. 구구단 전부 출력하기 */
+        // for(var mul=2;mul<=9;mul++){
+        //     document.write('<h1>'+mul+'단</h1>')
+        //     for(var i=1;i<=9;i++){
+        //         var sik=mul+"x";
+        //         document.write('<p>'+sik+i+'='+mul*i+'</p>');
+        //     }
+        // }
+        
+        /* 추가2. 알고 싶은 구구단 출력하기 */
+        // var mul=Number(prompt('알고 싶은 단을 입력하세요.', 2));
+        // document.write('<h1>'+mul+'단</h1>')
+        // for(var i=1;i<=9;i++){
+        //     var sik=mul+"x";
+        //     document.write('<p>'+sik+i+'='+mul*i+'</p>');
+        // }
+        
+        /* for문 코딩 위치 연습 */
+        // for(var i=1;i<=5;i++){
+        // }
+        // alert('for 반복'+(i-1)+'번');
+        
+
+        /* 실습7. (프롬프트) 구구단 단수입력받아
+        해당 단수 곱하기 결과물 출력 */
+        // var mul=Number(prompt('알고 싶은 단을 입력하세요.', 2));
+        // document.write('<h1>'+mul+'단</h1>')
+        // for(var i=1;i<=9;i++){
+        //     var cal=mul+"x"+i+'=';
+        //     var result=mul*i;
+        //     document.write('<p>'+cal+result+'</p>');
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

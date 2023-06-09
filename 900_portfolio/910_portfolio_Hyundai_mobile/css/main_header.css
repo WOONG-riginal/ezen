@@ -1,0 +1,433 @@
+@charset "utf-8";
+body,html{
+    max-width: 412px;
+    height: 2000px;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+/* 스크롤 게이지바 */
+.progress-container{
+    position: fixed;
+    top: 0;
+}
+.progress-container{
+    width: 100%;
+    height: 8px;
+    z-index: 999;
+}
+.progress-container .progress-bar{
+    width: 0;
+    height: 8px;
+    background: #002c5f;
+}
+/* GNB */
+header{
+    max-width: 412px;
+}
+header .gnb{
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 777;
+}
+header .slideDown{
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+header .openGnb{
+    background: #002c5f;
+}
+header .gnb_inner{
+    height: 20px;
+    padding: 17.5px 0 17.5px 15px;
+}
+header .gnb .logo img{
+    height: 20px;
+    float: left;
+}
+header .gnb .menu_right{
+    display: flex;
+    justify-content: right;
+}
+header .gnb .myhyundai,
+header .gnb .divider{
+    color: #fff;
+    display: none;
+    position: absolute;
+    right: 120px;
+}
+header .gnb .myhyundai span{
+    font-weight: bold;
+}
+header .gnb .divider{
+    right: 95px;
+}
+header .gnb .search{
+    position: absolute;
+    right: 60px;
+}
+header .gnb .search img{
+    height: 20px;
+}
+header .gnb .ham{
+    width: 20px;
+    height: 18px;
+    z-index: 20;
+    position: absolute;
+    right: 20px;
+}
+header .gnb .ham div{
+    width: 20px;
+    height: 2px;
+    content: "";
+    background: #000;
+    transition: all 0.3s;
+    position: absolute;
+}
+header .gnb .ham div:nth-child(2){
+    width: 14px;
+    top: 8px;
+    left: 6px;
+}
+header .gnb .ham div:nth-child(3){
+    top: 16px;
+}
+/* 햄버거 클릭 시 오픈 메뉴 */
+header .gnb_open{
+    width: 100%;
+    height: 100%;
+    margin-top: 55px;
+    display: none;
+    position: fixed;
+    overflow: auto;
+    background: #fff;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+/* 유틸 메뉴 */
+header .util{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    background: #f6f3f2;
+    color: #002c5f;
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.5px;
+    display: flex;
+}
+header .util div,
+header .util nav{
+    width: 33.3%;
+}
+header .util div:after{
+    content:"|";
+    display: inline-block;
+    position: absolute;
+    left: 33.3%;
+}
+header .util div:nth-child(2):after{
+    left: 66.6%;
+}
+header .util .lang span{
+    position: absolute;
+    right: 20px;
+    opacity: 0;
+}
+header .util .lang span.now{
+    opacity: 1;
+}
+header .util .lang ul{
+    width: 33.3%;
+    background: #f6f3f2;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    z-index: 11;
+    display: none;
+}
+header .util .lang ul li{
+    line-height: 1.15;
+    padding: 6px;
+}
+/* 콘텐츠 메뉴 */
+header .gnb_contents{
+    width: 100%;
+}
+header .gnb_contents nav,
+header .gnb_contents div{
+    line-height: 60px;
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+header .gnb_contents nav h2{
+    height: 60px;
+    padding: 0 15px;
+}
+header .gnb_contents nav h2 span{
+    position: relative;
+    left: 20px;
+    bottom: 8px;
+    float: right;
+    display: none;
+}
+header .gnb_contents nav h2 .btn_close{
+    display: block;
+}
+header .gnb_contents nav h2 span img{
+    width: 23px;
+}
+header .gnb_contents nav ol,
+header .gnb_contents nav ul,
+header .gnb_contents nav h3{
+    min-height: 60px;
+    border-top: 1px solid #e5e5e5;
+    display: none;
+    background: #f6f3f2;
+}
+header .gnb_contents .gnb_sub_title{
+    font-weight: 900;
+    padding-left: 30px;
+}
+header .gnb_contents nav .open{
+    display: block;
+}
+header .gnb_contents nav span img{
+    width: 7px;
+    position: relative;
+    top: 28px;
+    right: 24px;
+    transition: transform 0.5s;
+    float: right;
+}
+header .gnb_contents h3 span img{
+    width: 11px;
+}
+header .gnb_contents nav ol .detail{
+    font-size: 12px;
+    color: #00aad2;
+    position: absolute;
+    right: 50px;
+    float: right;
+    display: none;
+}
+header .gnb_contents nav ol .detail i{
+    font-size: 16px;
+}
+/* 모델 메뉴 */
+header .gnb_contents nav .model_open span{
+    color: #00aad2;
+}
+header .gnb_contents nav .model_open .detail{
+    display: inline-block;
+}
+header .gnb_contents .model div{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-flow: row wrap;
+}
+header .gnb_contents .model div li{
+    display: none;
+    width: 50%;
+    line-height: 1;
+    padding: 20px;
+    text-align: center;
+}
+header .gnb_contents .model .model_show li{
+    display: block
+}
+header .gnb_contents .model div li img{
+    width: 150px;
+}
+header .gnb_contents .model div li p{
+    font-size: 13px;
+    line-height: 22px;
+}
+header .gnb_contents .model div li p strong{
+    font-weight: 600;
+}
+/* NEW 태그 */
+.new_car{
+    position: relative;
+}
+.new_tag{
+    width: 36px;
+    height: 14px;
+    border: 1px solid #007FA8;
+    line-height: 12px;
+    color: #007fa8;
+    background: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    font-stretch: narrower;
+    letter-spacing: 0.5px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 9;
+}
+/* 텍스트 메뉴 */
+header .gnb_contents ul .show .up_down{
+    transform: rotate(180deg);
+    top: -28px;
+}
+header .gnb_contents ul li span img{
+    top: -20px;
+}
+header .gnb_contents ul li{
+    border-top: 1px solid #e5e5e5;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 45px;
+    color: #666;
+    display: none;
+}
+header .gnb_contents ul .detail{
+    font-size: 12px;
+    color: #00aad2;
+    position: absolute;
+    right: 50px;
+    float: right;
+    display: none;
+}
+header .gnb_contents ul .show{
+    display: block;
+    color: #00aad2;
+}
+header .gnb_contents ul li img{
+    width: 11px;
+    position: relative;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* 현대 Shop */
+header .gnb_contents .shop{
+    height: 60px;
+    padding: 0 15px;
+}
+header .gnb_contents .shop img{
+    vertical-align: middle;
+}
+/* 이벤트 메뉴 */
+header .event_menu{
+    width: 412px;
+    overflow: hidden;
+    position: relative;
+}
+header .event_menu .event_slide,
+header .event_menu .event_slide div{
+    width: 100%;
+    background: #fff;
+    border: none;
+}
+header .event_menu .event_slide{
+    display: flex;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    z-index: 2;
+    transition: all .5s;
+}
+header .event_menu .event_slide:nth-child(2){
+    z-index: 0;
+    transform:translateX(412px);
+}
+header .event_menu .event_slide:nth-child(3){
+    z-index: 0;
+    transform:translateX(-412px);
+}
+header .event_menu .event_slide img,
+header .event_menu .event_slide div{
+    width: 170px;
+    height: 95px;
+}
+header .event_menu .event_slide img{
+    margin-right: 20px;
+}
+header .event_menu .event_slide div{
+    line-height: 1;
+}
+header .event_menu .event_slide h4{
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    color: #000;
+}
+header .event_menu .event_slide span{
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.5px;
+    display: block;
+    margin-top: 24px;
+    color: #888;
+}
+/* 이벤트 컨트롤 */
+header .event_menu div{
+    border: none;
+}
+header .event_menu .event_slide_control{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 32px;
+    display: flex;
+}
+header .event_menu .event_slide_control .event_dot_list{
+    display: flex;
+    justify-content: center;
+}
+header .event_menu .event_slide_control .event_dot_list div{
+    width: 16px;
+    padding: 12px 4px;
+    margin-right: 4px;
+    position: relative;
+}
+header .event_menu .event_slide_control .event_dot_list div .event_dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 60%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+}
+header .event_menu .event_slide_control .event_dot_list div:first-child .event_dot{
+    background: #007fa8;
+}
+/* 다이렉트 버튼 */
+header .direct_button{
+    display: flex;
+    flex-flow: row wrap;
+}
+header .direct_button .btn_img{
+    width: 50%;
+    height: 60px;
+    line-height: 21px;
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    color: #444;
+    background: #f6f3f2;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    padding-left: 33px;
+    display: flex;
+    align-items: center;
+}
+header .direct_button .btn_img div{
+    width: 66.6%;
+    text-align: center;
+}
+header .direct_button .btn_img img{
+    width: 22px;
+    height: 18px;
+}

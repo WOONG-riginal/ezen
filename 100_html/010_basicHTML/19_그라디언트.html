@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 그라디언트</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            background-color: red;
+            display: inline-block;
+        }
+        .grad1 {
+            /* CSS3 미지원 브라우저 | 크롬 */
+            background: blue;
+            /* 선형 그라디언트 linear */
+            /* 접두사(prefix)사용 */
+            background: -webkit-linear-gradient(left bottom, #a173bf, #eaf205);
+            background: -moz-linear-gradient(left bottom, #a173bf, #eaf205);
+            background: -o-linear-gradient(left bottom, #a173bf, #eaf205);
+            background: -ms-linear-gradient(left bottom, #a173bf, #eaf205);
+            background: linear-gradient(left bottom, #a173bf, #eaf205);
+        }
+        .grad2 {
+            /* CSS3 미지원 브라우저 | 크롬 */
+            background: blue;
+            /* 접두사(prefix)사용 */
+            background: -webkit-linear-gradient(top, red, white 30%, red);
+            background: -moz-linear-gradient(top, red, white 30%, red);
+            background: -o-linear-gradient(top, red, white 30%, red);
+            background: -ms-linear-gradient(top, red, white 30%, red);
+            background: linear-gradient(top, red, white 30%, red);
+        }
+        .grad3 {
+            /* CSS3 미지원 브라우저 | 크롬 */
+            background: blue;
+            /* 접두사(prefix)사용 */
+            /* 각도 설정 방법 : 45deg */
+            background: -webkit-linear-gradient(45deg, #a173bf, #eaf205);
+            background: -moz-linear-gradient(45deg, #a173bf, #eaf205);
+            background: -o-linear-gradient(45deg, #a173bf, #eaf205);
+            background: -ms-linear-gradient(45deg, #a173bf, #eaf205);
+            background: linear-gradient(45deg, #a173bf, #eaf205);
+        }
+        .grad4 {
+            /* CSS3 미지원 브라우저 | 크롬 */
+            background: blue;
+            /* 원형 그라디언트 radial */
+            /* 접두사(prefix)사용 */
+            background: -webkit-radial-gradient(white, yellow, red);
+            background: -moz-radial-gradient(white, yellow, red);
+            background: -o-radial-gradient(white, yellow, red);
+            background: -ms-radial-gradient(white, yellow, red);
+            background: radial-gradient(white, yellow, red);
+        }
+        .grad5 {
+            /* CSS3 미지원 브라우저 | 크롬 */
+            background: blue;
+            /* 접두사(prefix)사용 */
+            background: -webkit-radial-gradient(circle, #a173bf, #eaf205, #0da64f);
+            background: -moz-radial-gradient(circle, #a173bf, #eaf205, #0da64f);
+            background: -o-radial-gradient(circle, #a173bf, #eaf205, #0da64f);
+            background: -ms-radial-gradient(circle, #a173bf, #eaf205, #0da64f);
+            background: radial-gradient(circle, #a173bf, #eaf205, #0da64f);
+        }
+        </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+    <div class="grad5"></div>
+</body>
+</html>

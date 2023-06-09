@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 효과 메서드 + 기본 이벤트</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <style>
+        button{
+            padding: 20px;
+            background-color: darkgray;
+            border: none;
+            outline: none;
+            color: #000;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        img{
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('button').eq(0).click(function(){
+                $('img').fadeIn();
+            });
+            $('button').eq(1).click(function(){
+                $('img').fadeOut();
+            });
+            $('button').eq(2).click(function(){
+                $('img').fadeToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>fadeIn</button>
+    <button>fadeOut</button>
+    <button>fadeToggle</button>
+    <p>
+        <img src="./images/img05.png" alt="이미지1">
+    </p>
+</body>
+</html>

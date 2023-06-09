@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230201 복습</title>
+    <style>
+        #event{
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            margin-top: 20px;
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        /* 1. location 객체 = 브라우저 주소창 */
+        // 현재주소
+        document.write(location.href+'<br>');
+        // 현재사용하는프로토콜
+        document.write(location.protocol+'<br>');
+        // 현재사용하는포트번호
+        document.write(location.host+'<br>');
+        /* 2. navigator 객체 = 브라우저 정보 */
+        // 브라우저코드명
+        document.write(navigator.appCodeName+'<br>');
+        // 브라우저이름명
+        document.write(navigator.appName+'<br>');
+        // 브라우저버전명
+        document.write(navigator.appVersion+'<br>');
+        // 브라우저사용언어
+        document.write(navigator.language+'<br>');
+        // 브라우저엔진이름
+        document.write(navigator.product+'<br>');
+        // 브라우저환경
+        document.write(navigator.platform+'<br>');
+        // 운영체제종합정보
+        document.write(navigator.userAgent+'<br>');
+        /* 사용자 OS 환경이 윈도우 사용자면 MS Windows OS 사용자(도큐먼트)
+        아니면, MS Windows OS 이외의 사용자(도큐먼트) */
+        var OS=navigator.userAgent;
+        OS=OS.toLowerCase();
+        if(OS.indexOf("windows")>0){
+            document.write('MS Windows OS 사용자 <br>');
+        }else{
+            document.write('MS Windows OS 이외의 사용자<br>');
+        }
+        // UI제외너비
+        document.write(screen.availWidth+'<br>');
+        // UI제외높이
+        document.write(screen.availHeight+'<br>');
+        // UI포함너비
+        document.write(screen.width+'<br>');
+        // UI포함높이
+        document.write(screen.height+'<br>');
+        /* 현재 사용자가 모바일을 사용하고 있으면 (브라우저)모바일사용자
+        현재 사용자가 PC를 사용하고 있으면 (브라우저)PC사용자 */
+        var user=screen.availWidth;
+        if(user>400){
+            document.write('PC 사용자 <br>');
+        }else{
+            document.write('모바일 사용자 <br>');
+        }
+        /* 1. DOM 객체 변수에 할당 */
+        window.onload=function(){
+            var event=document.getElementById("event");
+            /* 2. EventListener 설정 */
+            /* 2-1. (기능) JS Event 방식의 글자색을 레드로 바꾸기 */
+            function chFontColor(){
+                event.style.color="red";
+            }
+            /* 3. Event DOM에 EventListener 연결 */
+            // 3-1. addEventListener 사용
+            var btn1=document.querySelector("#fontRed");
+            btn1.addEventListener("click",chFontColor);
+            /* 2-2. (기능) JS Event 방식을 새로운 텍스트노드로 바꾸기 */
+            function chKorEng(){
+                event.innerHTML="EVENT";
+            }
+            // 3-2. onclick 사용
+            var btn2=document.getElementById("korEng");
+            btn2.onclick=chKorEng;
+            
+            /* 3개의 버튼을 만들어서 각각 배경색을 바꾸는 이벤트 설정 */
+            // function chBgColor(bgColor){
+            //     document.getElementById("event").style.backgroundColor=bgColor;
+            // }
+
+            /* innerHTML을 활용해 버튼누르면 리스트 만들어지도록 코딩 */
+            function table(){
+                var tb='<ul>'
+                    tb+='<li>메뉴1</li>'
+                    tb+='<li>메뉴2</li>'
+                    tb+='<li>메뉴3</li>'
+                    tb+='</ul>'
+                event.innerHTML=tb;
+            }
+            var btn6=document.getElementById("listUp");
+            btn6.onclick=table;
+        }
+
+        /* 5초마다 addNum 1씩증가, subNum 1씩감소 */
+        var addNum=0;
+        var subNum=100;
+
+        var plusNum=setInterval(function(){
+            addNum++;
+            console.log(addNum);
+        },5000);
+        var minusNum=setInterval(function(){
+            subNum--;
+            console.log(subNum);
+        },5000);
+        /* 10초뒤에 addNum 1증가, subNum 1감소 */
+        var addNum2=100000;
+        var subNum2=100000;
+        
+        var plusNum2=setTimeout(function(){
+            addNum2++;
+            console.log(addNum2);
+        },10000);
+        var minusNum2=setTimeout(function(){
+            subNum2--;
+            console.log(subNum2);
+        },10000);
+
+    </script>
+</head>
+<body>
+    <button id="fontRed">글자색 RED</button>
+    <button id="korEng">영문으로 변경</button>
+    <button onclick="chBgColor('red')";>배경색 RED</button>
+    <button onclick="chBgColor('green')";>배경색 GREEN</button>
+    <button onclick="chBgColor('blue')";>배경색 BLUE</button>
+    <button id="listUp">리스트</button>
+    <div id="event">이벤트</div>
+
+<script>
+    function chBgColor(bgColor){
+        document.getElementById("event").style.backgroundColor=bgColor;
+    }
+</script>
+</body>
+</html>

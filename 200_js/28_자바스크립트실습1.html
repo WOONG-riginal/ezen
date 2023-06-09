@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM2 실습</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+            cursor: pointer;
+        }
+        #container img{
+            width: 100%;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            /* 1. DOM 객체 할당 */
+            var pic=document.getElementById("pic");
+            /* 2. EventListener 작성 */
+            function whenOver(){
+                pic.setAttribute("src","./images/img2.jpg");
+            }
+            function whenOut(){
+                pic.src="./images/img1.jpg";
+            }
+            /* 3. EventListener 연결 */
+            pic.addEventListener("mouseenter",whenOver);
+            pic.addEventListener("mouseleave",whenOut);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <img src="./images/img1.jpg" alt="꽃이미지" id="pic">
+    </div>
+</body>
+</html>

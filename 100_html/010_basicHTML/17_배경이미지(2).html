@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지 위치 속성</title>    
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body {
+            background-image: url(./images/bg3.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: right bottom;
+            /* 배경이미지 고정 -> 콘텐츠에 상관없이 브라우저에 맞춘 절대값 적용 */
+            background-attachment: fixed;
+            /* 한 줄 표기법 (size는 따로 써야함) */
+            background: url(./images/bg3.jpg) no-repeat right bottom fixed;
+            background-size: auto;
+        }
+        /* 각 id마다 공통되는 속성을 div로 한 번에 설정하는 것도 가능 */
+        div {
+            width: 500px;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-image: url(./images/bg2.jpg);
+            background-repeat: no-repeat;
+            background-size: 40% 40%;
+        }
+        #bg1 {            
+            background-position: right bottom;
+        }
+        #bg2 {
+            background-position: center center;
+        }
+        #bg3 {
+            background-position: 20px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg1">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequuntur in distinctio modi! Totam, excepturi ipsum sapiente reprehenderit repudiandae nobis vel velit debitis iste dignissimos sunt aliquam accusantium? Omnis, aliquid?</p>
+    </div>
+    <div id="bg2">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequuntur in distinctio modi! Totam, excepturi ipsum sapiente reprehenderit repudiandae nobis vel velit debitis iste dignissimos sunt aliquam accusantium? Omnis, aliquid?</p>
+    </div>
+    <div id="bg3">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequuntur in distinctio modi! Totam, excepturi ipsum sapiente reprehenderit repudiandae nobis vel velit debitis iste dignissimos sunt aliquam accusantium? Omnis, aliquid?</p>
+    </div>
+</body>
+</html>

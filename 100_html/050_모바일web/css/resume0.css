@@ -1,0 +1,97 @@
+@charset "utf-8";
+body{
+    font-family: "Roboto", sans-serif;
+    background: #fefefe;
+}
+#wrap{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 16px;
+    border: none;
+    /* 336/722 */
+}
+header{
+    position: relative;
+}
+header h1{
+    font-size: 1rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+    /* 플롯 */
+    float: left;
+}
+header p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    /* 플롯 */
+    float: right;
+}
+.visual{
+    width: 70%;
+    position: fixed;
+    right: -30%;
+    bottom: 0;
+    z-index: 10;
+}
+.visual img{
+    width: 100%;
+}
+.info{
+    margin-top: 86px;
+    position: relative;
+}
+.info h2{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.title p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.tel_mail{
+    font-size: 0.7rem;
+    margin-top: 26px;
+}
+.tel_mail p:first-child{
+    margin-bottom: 12px;
+}
+.tel_mail .telmail_c{
+    color: #959595;
+}
+.sns{
+    margin-top: 30px;
+}
+.sns li{
+    margin-right: 12px;
+    text-align: center;
+    float: left;
+}
+.skill{
+    margin-top: 38px;
+}
+.skill p{
+    font-size: 0.7rem;
+    color: #959595;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.skill p span{
+    color: #000;
+}
+.backColor{
+    width: 175px;
+    height: 270px;
+    background-color: #f1f1f1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+footer p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 실습 최종</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            background-color: #000;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header h1 {
+            margin: 20px 0;
+            float: left;
+        }
+        nav ul li {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            margin: 25px 0 25px 20px;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            background-color: red;
+            color: white;
+            float: right;
+        }
+        li:hover {
+            background-color: green;
+            color: yellow;
+            font-weight: 700;
+        }        
+        section h2 {
+            width: 300px;
+            height: 200px;
+            margin: 30px 0;
+            float: left;
+        }
+        .red {
+            background-color: red;
+        }
+        .white {
+            background-color: white;
+        }
+        .blue {
+            width: 400px;
+            background-color: blue;
+        }
+        footer {
+            color: white;
+        }
+        footer span {
+            color: red;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="cf">
+            <h1><img src="https://via.placeholder.com/95x40.png" alt="95x40"></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">COMPANY</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main">
+            <article>
+                <img src="https://via.placeholder.com/1000x600.png" alt="1000x600">
+            </article>
+            <section class="cf">
+                <h2 class="red"></h2>
+                <h2 class="white"></h2>
+                <h2 class="blue"></h2>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; All Rights Reserved., <span>MCSSAM</span></p>
+        </footer>
+    </div>
+</body>
+</html>

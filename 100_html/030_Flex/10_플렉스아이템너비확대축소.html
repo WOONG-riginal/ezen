@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        플렉스 아이템 너비 확대 축소(flex) => [플렉스 아이템]에 설정
+        : 플렉스 아이템의 너비를 설정하는 방법
+          증가너비 [기본값 0] | # 속성명 = flex-grow,
+          감소너비 [기본값 1] | # 속성명 = flex-shrink,
+          기본너비 [기본값 auto] | # 속성명 = flex-basis
+
+        코드예시
+        선택자 {
+            flex: 1 1 0; // 증가너비 감소너비 기본너비
+            flex: 1 0; // 증가너비 감소너비
+            flex: 1 20px; // 증가너비 기본너비(단위를 사용하면 기본너비가 적용)
+        }
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/flex_grow.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Remember to Photos</h1>
+        </header>
+        <section id="menus">
+            <div id="menus1">
+                <h2>열기구</h2>
+            </div>
+            <div id="menus2">
+                <h2>카메라</h2>
+            </div>
+            <div id="menus3">
+                <h2>독서</h2>
+            </div>
+            <div id="menus4">
+                <h2>아침식사</h2>
+            </div>
+            <div id="menus5">
+                <h2>호수</h2>
+            </div>            
+        </section>
+        <footer>
+            <p>MCSSAM's PhotoGraphy</p>
+        </footer>
+    </div>
+</body>
+</html>

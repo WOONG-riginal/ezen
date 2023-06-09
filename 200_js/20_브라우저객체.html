@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM, 브라우저 객체</title>
+    <script>
+        /* 1. location 객체 = 브라우저 주소창 */
+        var infoBrowser="현재 주소는 : "+location.href+" 입니다.<br>";
+        document.write(infoBrowser);
+        infoBrowser="현재 사용하는 프로토콜 : "+location.protocol+" 입니다.<br>";
+        document.write(infoBrowser);
+        infoBrowser="현재 사용하는 포트번호 : "+location.host+" 입니다.<br><br>";
+        document.write(infoBrowser);
+
+        /* 2. navigator 객체 = 브라우저 정보 */
+        var infoBrowser2="";
+        infoBrowser2="브라우저 코드명 : "+navigator.appCodeName+"<br>";
+        document.write(infoBrowser2);
+        infoBrowser2="브라우저 이름명 : "+navigator.appName+"<br>";
+        document.write(infoBrowser2);
+        infoBrowser2="브라우저 버전 : "+navigator.appVersion+"<br>";
+        document.write(infoBrowser2);
+        infoBrowser2="브라우저 사용언어 : "+navigator.language+"<br>";
+        document.write(infoBrowser2);
+        infoBrowser2="브라우저 엔진이름 : "+navigator.product+"<br>";
+        document.write(infoBrowser2);
+        infoBrowser2="브라우저 환경 : "+navigator.platform+"<br><br>";
+        document.write(infoBrowser2);
+        // 중요 (★)
+        infoBrowser2="운영체제 종합정보 : "+navigator.userAgent+"<br>";
+        document.write(infoBrowser2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Resume</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon/W32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <link rel="stylesheet" href="./css/resume.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="cf">
+            <h1 class="logo">WOONG</h1>
+            <p><a href="#">eggmoneyna</a></p>
+        </header>
+        <main role="main">
+            <section class="info">
+                <h2>SHIN HYUNWOONG</h2>
+                <div class="title">
+                    <p>
+                        ahdzlaksen
+                    </p>
+                    <p>
+                        <a href="https://ahdzlaksen.cafe24.com/">ahdzlaksen.cafe24.com</a>
+                    </p>
+                </div>
+                <div class="tel_mail">
+                    <p>
+                        <span class="telmail_c">TEL</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010.7203.****
+                    </p>
+                    <p>
+                        <span class="telmail_c">MAIL</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egg_money_na@naver.com
+                    </p>
+                </div>
+                <div class="sns cf">
+                    <li><a href="http://www.facebook.com" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="http://www.twitter.com" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="http://www.instgram.com" class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </div>
+                <div class="skill">
+                    <p>
+                        <span>WEB-DESIGN</span>&nbsp;:<br>ADOBE&nbsp;PHOTOSHOP&nbsp;&nbsp;|<br>ADOBE&nbsp;ILLUSTRATOR&nbsp;&nbsp;|<br>ADOBE&nbsp;XD&nbsp;&nbsp;|
+                    </p>
+                    <p>
+                        <span>WEB-PUBLISHING</span>&nbsp;:<br>HTML&nbsp;&nbsp;|<br>CSS&nbsp;&nbsp;|<br>JAVASCRIPT&nbsp;&nbsp;|<br>JQUERY
+                    </p>
+                </div>
+            </section>
+        </main>
+        <aside class="image"></aside>
+        <footer>
+            <p>COPYRIGHT 2023 WOONG ALL RIGHTS RESERVED</p>
+        </footer>
+    </div>
+    <script>
+        var nowHeight=$(window).height();
+        $('#wrap').css({height:nowHeight});
+        if(nowHeight>650){
+            if(nowHeight>700){
+            $('.skill p span').css({color:'#000',background:'#fff'});
+            }else{
+            $('.skill p span').css({color:'#fff',background:'none'});
+            }
+        }else{
+            $('.sns').css({color:'#fff'});
+        }
+    </script>
+</body>
+</html>

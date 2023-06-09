@@ -1,0 +1,92 @@
+@charset "utf-8";
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
+}
+.sys{
+    padding-top: 120px;
+}
+h2{
+    font-size: 18px;
+    font-family: 'Noto Sans KR',sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+h2 span{
+    font-size: 120px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 900;
+    letter-spacing: -2px;
+    padding-right: 30px;
+    display: inline-block;
+    text-shadow: 0 0 8px #000;
+}
+/* 0. HOME */
+.section1{
+    background-image: url(../images/section1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    padding-top: 36px;
+}
+.logo{
+    float: left;
+}
+.gnb{
+    float: right;
+}
+.gnb li{
+    float: left;
+    margin-left: 145px;
+}
+.gnb li:nth-child(1){
+    margin-left: 0;
+}
+.gnb li a{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+/* 1. Section */
+.section2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(../images/avengers1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section2 .sys{
+    padding-top: 150px;
+}
+/* 2. Section */
+.section3{
+    background: url(../images/avengers2.jpg) no-repeat;
+    background-size: cover;
+}
+/* 3. Section */
+.section4{
+    background: url(../images/avengers3.jpg) no-repeat;
+    background-size: cover;
+}
+/* 4. Section */
+.section5{
+    background: url(../images/avengers4.jpg) no-repeat;
+    background-size: cover;
+}
+/* 5. Section */
+.section6{
+    background: url(../images/avengers5.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.section6 p{
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Noto Sans KR',sans-serif;
+    position: absolute;
+    left: 825px;
+    bottom: 50px;
+    z-index: 999;
+}

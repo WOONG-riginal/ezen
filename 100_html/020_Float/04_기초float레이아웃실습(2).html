@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 float 레이아웃 실습 2</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        #wrap {
+            width: 900px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        h1, h2, p {
+            font-size: 24px;
+            color: white;
+        }
+        header h1 {
+            width: 300px;
+            background-color: yellow;
+            /* 플롯 */
+            float: left;
+        }
+        header p {
+            width: 600px;
+            background-color: green;
+            /* 플롯 */
+            float: right;
+        }
+        /* 플롯해제 */
+        header::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        section.slide h2 {
+            width: 450px;
+            background-color: lightgrey;
+            /* 플롯 */
+            float: left;
+        }
+        section.slide p {
+            width: 450px;
+            background-color: darkolivegreen;
+            /* 플롯 */
+            float: right;
+        }
+        section.section h2 {
+            width: 300px;
+            background-color: red;
+            /* 플롯 */
+            float: left;
+        }
+        section.section p.box1 {
+            width: 450px;
+            background-color: lightcyan;
+            /* 플롯 */
+            float: left;
+        }
+        section.section p.box2 {
+            width: 150px;
+            background-color: blue;
+            /* 플롯 */
+            float: right;
+        }
+        /* 플롯해제 */
+        section::after {            
+            content: "";
+            display: block;
+            clear: both;
+        }
+        footer {
+            width: 900px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>로고 영역</h1>
+            <p>GNB 메뉴</p>
+        </header>
+        <main role="main">
+            <section class="slide">
+                <h2>슬라이드 왼쪽</h2>
+                <p>슬라이드 오른쪽</p>
+            </section>
+            <section class="section">
+                <h2>섹션 왼쪽</h2>
+                <p class="box1">섹션 가운데</p>
+                <p class="box2">섹션 오른쪽</p>
+            </section>
+        </main>
+        <footer>
+            <p>하단 메뉴</p>
+        </footer>
+    </div>
+</body>
+</html>

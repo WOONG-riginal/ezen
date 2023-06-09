@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 float 레이아웃 1</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        h1 {
+            background-color: #ccc;
+            text-align: center;
+            font-size: 42px;
+            padding: 10px 0;
+        }
+        #container {
+            width: 640px;
+            margin: 0 auto;
+        }
+        #container h2 {
+            font-size: 200%;
+            padding: 10px;
+            color: red;
+        }
+        #container ul {
+            background-color: lightblue;
+            /* 플롯해제 (연습용) */
+            overflow: hidden;
+        }
+        #container ul li {
+            width: 160px;
+            /* 플롯 */
+            float: left;
+        }
+        #container ul li>h2 {
+            font-size: 32px;
+            background-color: #c00;
+            color: #fff;
+            padding: 10px 0;
+            width: 120px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #container ul li p {
+            padding: 10px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>나의 아름다운 정원</h1>
+    <section id="container">
+        <ul>
+            <li class="flower_1">
+                <h2>튜울립</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero soluta doloremque sapiente molestiae, alias, harum nemo nulla a sequi beatae expedita, unde rem quaerat quos eveniet distinctio deserunt similique?</p>
+            </li>
+            <li class="flower_2">
+                <h2>제비꽃</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero soluta doloremque sapiente molestiae, alias, harum nemo nulla a sequi beatae expedita, unde rem quaerat quos eveniet distinctio deserunt similique?</p>
+            </li>
+            <li class="flower_3">
+                <h2>개나리</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero soluta doloremque sapiente molestiae, alias, harum nemo nulla a sequi beatae expedita, unde rem quaerat quos eveniet distinctio deserunt similique?</p>
+            </li>
+            <li class="flower_4">
+                <h2>장미</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero soluta doloremque sapiente molestiae, alias, harum nemo nulla a sequi beatae expedita, unde rem quaerat quos eveniet distinctio deserunt similique?</p>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,269 @@
+@charset "utf-8";
+body,html{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+/* Background Video */
+.vid{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -99;
+}
+.vid video{
+    width: 100%;
+}
+/* Video 제어버튼 */
+.vid button{
+    position: absolute;
+    left: 60px;
+    bottom: 20px;
+    z-index: 999;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    font-size: 40px;
+    color: #ccc;
+}
+.vid .soundBtn{
+    left: 120px;
+}
+/* 우측상단 SNS */
+#sns{
+    position: fixed;
+    right: 80px;
+    top: 50px;
+}
+#sns li{
+    display: inline-block;
+}
+#sns li i{
+    font-size: 30px;
+    color: #fff;
+    padding-left: 20px;
+    opacity: 0.8;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+/* SNS Hover 효과 */
+#sns li:hover i{
+    transform: scale(1.2);
+    opacity: 1;
+}
+/* Header 왼쪽메뉴 */
+header{
+    width: 700px;
+    height: 100%;
+    position: fixed;
+    left: -440px;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.9));
+    transform: skewX(-40deg);
+}
+header h1{
+    /* 포지션 */
+    position: absolute;
+    right: 160px;
+    top: 40px;
+    z-index: 1;
+    /* 로고 바로 세우기 */
+    transform: skewX(40deg);
+}
+header h1 img{
+    width: 300px;
+}
+#gnb{
+    position: absolute;
+    right: 0;
+    top: 200px;
+}
+/* Menu 1 Depth */
+#gnb li a{
+    display: block;
+    width: 240px;
+    color: #999;
+    font: bold 18px/3 Play, sans-serif;
+    text-align: center;
+}
+#gnb li:hover a{
+    background-color: #222;
+    color: #fff;
+}
+#gnb span{
+    display: inline-block;
+    transform: skewX(40deg);
+}
+#gnb li{
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+/* Menu 2 Depth */
+#gnb .snb{
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    /* 2 depth 안보이다가 보이도록 */
+    opacity: 0;
+    transition: all 0.5s;
+}
+#gnb .snb a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    font: 16px/2.5 Play, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+#gnb .snb li:hover a{
+    background: #000;
+    color: #fff;
+}
+/* 1depth 호버하면 2depth가 나오는 효과 */
+#gnb li:hover .snb{
+    left: 220px;
+    opacity: 0.8;
+}
+/* Image Text */
+.txt{
+    position: fixed;
+    right: 40px;
+    bottom: 10px;
+    z-index: 10;
+}
+.txt .p2{
+    font-size: 34px;
+    font-family: 'play',sans-serif;
+    color: #bbb;
+    letter-spacing: -2px;
+}
+/* 우측하단 호버 버튼 */
+#side{
+    width: 800px;
+    height: 100%;
+    background: #111;
+    position: fixed;
+    right: -800px;
+    top: 0;
+    z-index: 1;
+    transform: skewX(-40deg);
+    opacity: 0.5;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+/* 호버 시 효과 */
+#side:hover{
+    right: -500px;
+    opacity: 0.8;
+}
+#side .inner{
+    width: 400px;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+/* 호버 시 효과 */
+#side:hover .inner{
+    left: 50px;
+}
+/* Image Button */
+#side .inner p{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    transform: translateX(200px);
+    overflow: hidden;
+}
+#side .inner p img{
+    height: 100px;
+    opacity: 0.3;
+    transition: all 0.5s;
+    transform: skewX(40deg);
+}
+#side .inner p img:hover{
+    opacity: 1;
+}
+/* Image Button 각각 위치 설정 */
+#side .inner p:nth-child(1){
+    bottom: 270px;
+    transition: all 0.4s;
+}
+#side .inner p:nth-child(1) img{
+    position: absolute;
+    right: 24px;
+}
+#side .inner p:nth-child(2){
+    bottom: 160px;
+    transition: all 0.8s;
+}
+#side .inner p:nth-child(2) img{
+    position: absolute;
+    left: -118px;
+}
+#side .inner p:nth-child(3){
+    bottom: 50px;
+    transition: all 1.2s;
+}
+#side .inner p:nth-child(3) img{
+    position: absolute;
+    left: -30px;
+}
+#side:hover .inner p{
+    transform: translateX(0px);
+}
+/* Animation Arrow */
+#side .arrBtn{
+    position: absolute;
+    left: 200px;
+    bottom: 40px;
+    z-index: 999;
+    transform: skewX(40deg);
+}
+#side .arrBtn i{
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+/* 애니메이션 효과 */
+#side .arrBtn i:nth-child(1){
+    animation: arrowAni 1.5s linear 0s infinite;
+}
+#side .arrBtn i:nth-child(2){
+    animation: arrowAni 1.5s linear 0.5s infinite;
+}
+#side .arrBtn i:nth-child(3){
+    animation: arrowAni 1.5s linear 1s infinite;
+}
+/* 애니메이션 키프레임 */
+@keyframes arrowAni {
+    from{
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+    }
+    to{
+        opacity: 0;
+        transform: scale(1.2);
+        right: 100px;
+    }
+}

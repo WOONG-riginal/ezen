@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플롯 기초 실습 최종</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            background-color: #000;
+            font-size: 14px;
+            font-family: "Noto Sans KR", sans-serif;
+            margin: 20px;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;            
+        }
+        /* 플롯 해제 */
+        header:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        header h1 {
+            width: 95px;
+            /* 플롯 */
+            float: left;
+        }
+        header nav {
+            /* 플롯 */
+            float: right;
+            padding-top: 5px;
+        }
+        header nav ul li {
+            /* 플롯 */
+            float: left;
+            margin-right: 20px;
+        }
+        header nav ul li:last-child {
+            margin-right: 0 !important;
+        }
+        header nav ul li a {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+        header nav ul li a:hover {
+            background-color: blue;
+        }
+        /* 플롯 해제 */
+        section:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        article {
+            margin-bottom: 24px;
+        }
+        section div {
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            /* 플롯 */
+            float: left;
+        }
+        section div:first-child {
+            background-color: red;
+        }
+        section div:last-child {
+            width: 400px;
+            background-color: blue;
+        }
+        footer {
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 24px;
+        }
+        footer span {
+            font-family: "Oswald", sans-serif;
+            color: red;
+            font-weight: 500;
+            padding-left: 8px;
+        }
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header class="cf">
+            <h1><img src="https://via.placeholder.com/95x40.png" alt="95x40"></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">COMPANY</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /Header -->
+
+        <!-- Contents -->
+        <main role="main">
+            <!-- Slide -->
+            <article>
+                <img src="https://via.placeholder.com/1000x600.png" alt="1000x600">
+            </article>
+            <!-- /Slide -->
+            <!-- Section -->
+            <section class="cf">
+                <div class="sec_part1"></div>
+                <div class="sec_part2"></div>
+                <div class="sec_part3"></div>
+            </section>
+            <!-- /Section -->
+        </main>
+        <!-- /Contents -->
+
+        <!-- Footer -->
+        <footer>
+            <p>Copyright &copy; All Rights Reserved., <span>MCSSAM</span></p>
+        </footer>
+        <!-- /Footer -->
+    </div>
+</body>
+</html>

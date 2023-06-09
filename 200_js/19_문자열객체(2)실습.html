@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체 실습</title>
+    <script>
+        /* 실습1.(프롬프트)비밀번호를 입력받아,
+            (경고창)8자 미만이면 "8자 이상으로 다시 입력하시오"
+            (브라우저)8자 이상이면 "비밀번호 ???자가 입력되었습니다."
+            소스캡쳐,캡쳐 넘버링 */
+        // var pw=String(prompt('비밀번호를 입력하세요.'));
+        // if(pw.length>=8){
+        //     document.write('비밀번호 '+pw.length+'자가 입력되었습니다.');
+        // }else{
+        //     alert('8자 이상으로 다시 입력하시오.');
+        //     location.reload();
+        // }
+
+        /* 실습2. (프롬프트) 이름을 영문소문자로 입력받아, 대문자로 치환
+            (브라우저)"입력한 이름은 ??? 입니다."
+            캡쳐, 넘버링 */
+            // var name=prompt('이름을 영문으로 입력하세요.','paul');
+            // var largeName=name.toUpperCase();
+            // document.write('입력한 이름은 '+largeName+'입니다.');
+
+        /* 실습3. (프롬프트)영문 이름 입력받아, 대문자입력시 소문자로 치환
+            (도큐먼트) 입력받은 이름은 ??? 입니다.
+            (프롬프트) 전화번호 입력받아, 끝 네자리를 "****"로 치환 = substr(),replace()
+            (도큐먼트) 전화번호는 0101234**** 입니다.
+            소스캡쳐,캡쳐 넘버링 */
+        var name=prompt('이름을 영문으로 입력하세요.','PAUL');
+        var smallName=name.toLowerCase();
+        var tel=prompt('전화번호를 입력하세요.','01023456789');
+        // 방법1. replace(), substr() 사용
+        // var replace=tel.replace(tel.substr((tel.length-4),4), "****");
+        document.write('입력받은 이름은 <strong>'+smallName+'</strong>입니다.<br>');
+        // document.write('전화번호는 <strong>'+replace+'</strong>입니다.');
+        
+        // 방법2. substring() 사용
+        // substring(시작인덱스, 끝인덱스전까지) 리턴
+        var result=tel.substring(0,tel.length-4);
+        document.write('전화번호는 <strong>'+result+'****</strong>입니다.');
+    </script>
+    <style>
+        strong{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

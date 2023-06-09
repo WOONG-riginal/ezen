@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 레이아웃 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        #wrap {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        header h1 {
+            height: 40%;
+            background-color: red;
+        }
+        header p {
+            height: 60%;            
+            background-color: orange;
+        }
+        section {
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+        }
+        section h2 {
+            width: 50%;
+            background-color: yellowgreen;
+        }
+        section p {
+            width: 50%;
+            background-color: yellow;
+        }
+        article {
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+        }
+        article h2 {
+            background-color: green;
+            width: 33.33%;
+        }
+        article p {
+            background-color: blue;
+            width: 33.33%;
+        }
+        article p+p {
+            background-color: darkblue;
+            width: 33.33%;
+        }
+        aside {
+            background-color: skyblue;
+            width: 5%;
+            height: 200px;
+            font-size: 12px;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            z-index: 1;
+        }
+        footer {
+            background-color: purple;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>SNB메뉴</h1>
+            <p>GNB메뉴</p>
+        </header>
+        <main role="main">
+            <section>
+                <h2>슬라이드역역1</h2>
+                <p>슬라이드영역2</p>
+            </section>
+            <article>
+                <h2>콘텐츠영역1</h2>
+                <p>콘텐츠영역2</p>
+                <p>콘텐츠영역3</p>
+            </article>
+        </main>
+        <aside>
+            <p>별도영역</p>
+        </aside>
+        <footer>
+            <p>푸터영역</p>
+        </footer>
+    </div>
+</body>
+</html>

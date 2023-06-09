@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ 탭메뉴</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/tab_jq.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo">EACHTAB EFFECT</h1>
+        </header>
+        <!-- Tab Menu -->
+        <nav>
+            <div id="menu_gnb">
+                <ul class="gnb">
+                    <li class="active" onclick=tabNum(0)><a href="#">MENU1</a></li>
+                    <li onclick=tabNum(1)><a href="#">MENU2</a></li>
+                    <li onclick=tabNum(2)><a href="#">MENU3</a></li>
+                    <li onclick=tabNum(3)><a href="#">MENU4</a></li>
+                    <li onclick=tabNum(4)><a href="#">MENU5</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /Tab Menu -->
+        <!-- 탭메뉴 클릭시 나오게 될 콘텐츠들 -->
+        <section>
+            <!-- 콘텐츠 영역01 -->
+            <div class="tab_content_00">
+                <h2><img src="./images/img1.jpg" alt="이미지1"></h2>
+            </div>
+            <!-- /콘텐츠 영역01 -->
+            <!-- 콘텐츠 영역02 -->
+            <div class="tab_content_01">
+                <h2><img src="./images/img2.jpg" alt="이미지2"></h2>
+            </div>
+            <!-- /콘텐츠 영역02 -->
+            <!-- 콘텐츠 영역03 -->
+            <div class="tab_content_02">
+                <h2><img src="./images/img3.jpg" alt="이미지3"></h2>
+            </div>
+            <!-- /콘텐츠 영역03 -->
+            <!-- 콘텐츠 영역04 -->
+            <div class="tab_content_03">
+                <h2><img src="./images/img4.jpeg" alt="이미지4"></h2>
+            </div>
+            <!-- /콘텐츠 영역04 -->
+            <!-- 콘텐츠 영역05 -->
+            <div class="tab_content_04">
+                <h2><img src="./images/img5.jpg" alt="이미지5"></h2>
+            </div>
+            <!-- /콘텐츠 영역05 -->
+        </section>
+        <!-- /탭메뉴 클릭시 나오게 될 콘텐츠들 -->
+        <!-- Footer -->
+        <footer>
+            Copyright &copy; EGGMONEYNA All Rights Reserved
+        </footer>
+        <!-- /Footer -->
+    </div>
+    
+<script src="./js/tab_jq.js"></script>
+</body>
+</html>

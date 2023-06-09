@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Shin" content="Woong">
+    <meta name="description" content="Portfolio, RWD Template">
+    <title>Portfolio, RWD Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="shortcut icon" href="./images/favicon/sambypen32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/rwd_template.css">
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 박스 슬라이더 JS -->
+    <script src="./js/jquery.bxslider.js"></script>    
+    <style>
+        article{
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        article .slide_gallery{
+            max-width: 1920px;
+        }
+        article .slide_gallery img{
+            width: 100%;
+        }
+    </style>
+    <!-- 모듈화 스크립트 -->
+    <script>
+        $(function(){
+            $('.header').load('./include/header.html',hamburger);
+            $('.footer').load('./include/footer.html');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1. Header -->
+        <header class="header container cf">
+            
+        </header>
+        <!-- /1. Header -->
+
+        <!-- 2. Slider -->
+        <!-- <article class="slider">
+            <h2 class="slider_img">
+                <img src="./images/img_bxSlider/slideimg1.jpg" alt="슬라이드이미지">
+            </h2>
+        </article> -->
+        <!-- 2-2. 슬라이드 제이쿼리 플러그인 작업 -->
+        <article class="slider">
+            <ul class="slide_gallery">
+                <li><img src="./images/img_bxSlider/slideimg1.jpg" alt="슬라이드01"></li>
+                <li><img src="./images/img_bxSlider/slideimg2.jpg" alt="슬라이드02"></li>
+                <li><img src="./images/img_bxSlider/slideimg3.jpg" alt="슬라이드03"></li>
+            </ul>
+        </article>
+        <!-- /2. Slider -->
+
+        <!-- 3. Contents -->
+        <main role="main">
+            <section class="content">
+                <!-- 3-1. Display -->
+                <section class="display_section container">
+                    <div class="cf">
+                        <h2 class="sec_title">WHO&nbsp;IS</h2>
+                        <p class="desc">
+                            SAMBYPEN (Sam Kim) is an artist based in appropriation. He parodies certain brands and <br>culturally significant objects through his own interpretation in a way that him, as an individual can relate to.
+                        </p>
+                    </div>
+                </section>
+                <!-- /3-1. Display -->
+                <!-- 3-2. Promotion -->
+                <section class="promotion_section container">
+                    <h2>
+                        <ul class="promotion_list cf">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_png/icon1.png" alt="홈 아이콘">
+                                    <h3>SPEEKER</h3>
+                                    <p>Talking to creative people & contents @speeker_official @speeker_contents</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_png/icon2.png" alt="회원정보 아이콘">
+                                    <h3>ABOUT</h3>
+                                    <p>His interest in parody art and appropriation comes from a loss of self and identity.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_png/icon3.png" alt="작업물 아이콘">
+                                    <h3>WORK</h3>
+                                    <p>His most recent work involved the Michelin Bibendum character with a BIC head.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_png/icon4.png" alt="글쓰기 아이콘">
+                                    <h3>CONTACT</h3>
+                                    <p>If you have any fresh ideas you want to express with us, please contact us.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </h2>
+                </section>
+                <!-- /3-2. Promotion -->
+                <hr class="divider">
+                <!-- 3-3. Work -->
+                <section class="work_section cf">
+                    <div>
+                        <h2 class="sec_title container">GRAPHICS</h2>
+                        <ul class="work_list">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>PIKA</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img0.jpg" alt="포트폴리오1">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>GUNDAM</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img2.jpg" alt="포트폴리오2">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>PUKE</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img3.jpg" alt="포트폴리오3">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>MONEYFIGHT</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img4.jpg" alt="포트폴리오4">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>RAITITCH</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img5.jpg" alt="포트폴리오5">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>THANOS</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img6.jpg" alt="포트폴리오6">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>PLAY&nbsp;STATION</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img7.jpg" alt="포트폴리오7">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>BBIBBI</h3>
+                                        <span>by&nbsp;SAMBYPEN</span>
+                                    </div>
+                                    <img src="./images/img_jpg/img8.jpg" alt="포트폴리오8">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- /3-3. Work -->
+                <hr class="m_divider">
+                <!-- 3-4. Blog -->
+                <section class="blog_section container">
+                    <div class="cf">
+                        <h2 class="sec_title">SHOP</h2>
+                        <ul class="blog_list">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_jpg/goods2.jpg" alt="블로그이미지2">
+                                </a>
+                                <p>Kakao Friends x Sambypen</p>
+                                <a href="#">
+                                    <h3>춘식이</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_jpg/goods3.jpg" alt="블로그이미지3">
+                                </a>
+                                <p>Kakao Friends x Sambypen</p>
+                                <a href="#">
+                                    <h3>라이트박스</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/img_jpg/goods1.jpg" alt="블로그이미지1">
+                                </a>
+                                <p>Kakao Friends x Sambypen</p>
+                                <a href="#">
+                                    <h3>고양이&nbsp;친구</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- /3-4. Blog -->
+                <!-- 3-5. Contact -->
+                <section class="contact_section container">
+                    <div class="cf">
+                        <h2 class="sec_title">CONTACT</h2>
+                        <form action="#" class="form_box">
+                            <fieldset>
+                                <legend class="blind">CONTACT&nbsp;US</legend>
+                                <!-- Input Form -->
+                                <div class="form">
+                                    <label for="name" class="blind">Name</label>
+                                    <input type="text" id="name" placeholder="Name">
+                                    <label for="phone" class="blind">Phone</label>
+                                    <input type="tel" id="phone" placeholder="Phone">
+                                    <label for="email" class="blind">E-Mail</label>
+                                    <input type="email" id="email" placeholder="Email Address">
+                                </div>
+                                <!-- /Input Form -->
+                                <!-- Textarea Form -->
+                                <div class="txta">
+                                    <label for="message" class="blind">Message</label>
+                                    <textarea id="message" placeholder="Message"></textarea>
+                                </div>
+                                <!-- /Textarea Form -->
+                            </fieldset>
+                            <!-- Button -->
+                            <div class="send_btn">
+                                <button>SEND&nbsp;MESSAGE</button>
+                            </div>
+                            <!-- /Button -->
+                        </form>
+                    </div>
+                </section>
+                <!-- /3-5. Contact -->
+            </section>
+        </main>
+        <!-- /3. Contents -->
+
+        <!-- 4. Footer -->
+        <footer class="footer">
+            
+        </footer>
+        <!-- /4. Footer -->
+    </div>
+<!-- 페이지 JS -->
+<script>
+    function hamburger(){
+        $('.menu_toggle_btn').click(function(){
+            $('.gnb').stop().slideToggle();
+        });
+    }
+    $('.slide_gallery').bxSlider({
+        auto: true,
+		speed: 500,
+		pause: 4000,
+		mode:'fade',
+		autoControls: false,
+		pager:true,
+    });
+</script>
+</body>
+</html>

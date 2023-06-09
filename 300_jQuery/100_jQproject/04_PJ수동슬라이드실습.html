@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ 수동슬라이드</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/pjfullmenu.css">
+    <link rel="stylesheet" href="./css/manual_carousel.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header>
+            <h1 class="logo">MANUAL CAROUSEL</h1>
+        </header>
+        <!-- /Header -->
+
+        <!-- Nav -->
+        <nav>
+            <div id="menu">
+                <ul class="gnb">
+                    <li><a href="#">MENU_01</a></li>
+                    <li><a href="#">MENU_02</a></li>
+                    <li><a href="#">MENU_03</a></li>
+                    <li><a href="#">MENU_04</a></li>
+                    <li><a href="#">MENU_05</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /Nav -->
+
+        <!-- Image Slider Area -->
+        <article class="slideshow_container">
+            <!-- Slider Image 1 -->
+            <h2 class="slide fade">
+                <div class="text">007</div>
+                <img src="./images/img1.jpg" alt="슬라이드 이미지1">
+                <div class="number_text">1 / 3</div>
+            </h2>
+            <!-- /Slider Image 1 -->
+
+            <!-- Slider Image 2 -->
+            <h2 class="slide fade">
+                <div class="text">BECKHAM</div>
+                <img src="./images/img2.jpg" alt="슬라이드 이미지2">
+                <div class="number_text">2 / 3</div>
+            </h2>
+            <!-- /Slider Image 2 -->
+
+            <!-- Slider Image 3 -->
+            <h2 class="slide fade">
+                <div class="text">CAMERA</div>
+                <img src="./images/img4.jpeg" alt="슬라이드 이미지3">
+                <div class="number_text">3 / 3</div>
+            </h2>
+            <!-- /Slider Image 3 -->
+
+            <!-- Button Prev, Next -->
+            <a href="#" class="prev" onclick="plusSlides(-1);"><i class="fa fa-angle-double-left"></i></a>
+            <a href="#" class="next" onclick="plusSlides(1);"><i class="fa fa-angle-double-right"></i></a>
+            <!-- /Button Prev, Next -->
+        </article>
+        <!-- /Image Slider Area -->
+
+        <!-- Aside Dot Dot Dot -->
+        <aside class="circle">
+            <span class="dot" onclick="currentSlides(1);"></span>
+            <span class="dot" onclick="currentSlides(2);"></span>
+            <span class="dot" onclick="currentSlides(3);"></span>
+        </aside>
+        <!-- /Aside Dot Dot Dot -->
+
+        <!-- Contents -->
+        <main role="main">
+            <section>
+                <h2>Contents Area</h2>
+            </section>
+        </main>
+        <!-- /Contents -->
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                COPYRIGHT &copy; EGGMONEYNA ALL RIGHTS RESERVED
+            </p>
+        </footer>
+        <!-- /Footer -->
+
+    </div>
+<script src="./js/manual_carousel.js"></script>
+</body>
+</html>

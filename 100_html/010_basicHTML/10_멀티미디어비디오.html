@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어 비디오</title>
+</head>
+<body>
+    <h1>비디오 파일 재생하기</h1>
+    <figure>
+        <figcaption>비디오 영상 불러오기</figcaption>
+        <video muted autoplay loop controls poster="./images/flowers.jpg">
+        <!-- muted: 음소거 autoplay: 자동재생 loop: 반복 controls: 재생 툴 생성 poster: 재생 안될 시 대체 이미지 -->
+            <source src="./media/Painting.mp4" type="video/mp4">
+            <source src="./media/Painting.webm" type="video/webm">
+            이 영상이 보고 싶으시면 최신 브라우저를 설치하여 보세요.
+            <!-- 탑-다운 방식에 의해 1번 영상 재생시 끝, 재생 안될 시 2번 영상 재생, 
+            2번 영상도 재생 안될 시 텍스트 출력 -->
+        </video>
+    </figure>
+    <iframe width="710" height="399" src="https://www.youtube.com/embed/dwFy_RcyM1Q" title="호날두가 더 이상 특별하지 않은 이유" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

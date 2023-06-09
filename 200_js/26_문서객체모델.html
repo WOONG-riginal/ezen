@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM, 문서객체모델</title>
+</head>
+<body>
+    <script>
+        /* A. 요소 노드와 텍스트 노드 모두를 추가하는 경우 */
+        // 1. 요소 노드 생성
+        var heading=document.createElement("h1");
+        // 2. 텍스트 노드 생성
+        var text=document.createTextNode("텍스트 노드를 생성");
+        // 3. 요소 노드와 텍스트 노드 도큐먼트 연결
+        heading.appendChild(text);
+        document.body.appendChild(heading);
+
+        /* B. 요소 노드만 있는 경우(속성값 추가) */
+        var img=document.createElement("img");
+        img.src="./images/img1.jpg";
+        img.alt="꽃";
+        img.width=200;
+        img.height=200;
+        document.body.appendChild(img);
+                
+        function btn1(direction){
+                img.setAttribute("src", "./images/img1.jpg");
+                img.setAttribute('alt', '바뀐이미지');
+            }
+        function btn2(){
+                img.setAttribute("src", "./images/img2.jpg");
+                img.setAttribute('alt', '원래이미지');
+            }
+    </script>
+    <input type="button" value="이미지바꾸기" onclick="btn1()";>
+    <input type="button" value="이미지되돌리기" onclick="btn2()";>
+</body>
+</html>

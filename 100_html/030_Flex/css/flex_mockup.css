@@ -1,0 +1,80 @@
+@charset "utf-8";
+#wrap {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+header {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    position: relative;
+}
+header h1 {
+    width: 12.5%;
+    height: 142px;
+    line-height: 142px;
+    background-color: #ff6b57;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+header nav {
+    width: 87.5%;
+    min-height: 80px;
+    line-height: 80px;
+    background-color: #ff6b57;
+}
+.slide_section {
+    width: 50%;
+    height: 440px;
+    line-height: 440px;
+    background-color: #3c8fbd;
+}
+.gallery_section {
+    width: 25%;
+    height: 440px;
+    line-height: 440px;
+    background-color: #f7dd73;
+}
+.rankup_section {
+    width: 25%;
+    height: 440px;
+    background-color: #00d1a4;
+}
+.latest_section {
+    width: 25%;
+    height: 270px;
+    background-color: #9baae3;
+}
+.popular_section {
+    width: 25%;
+    height: 270px;
+    background-color: #d66817;
+}
+.banner_section {
+    width: 25%;
+    height: 270px;
+}
+.banner_section>h2 {
+    height: 50%;
+    background-color: #0175ba;
+}
+.banner_section>div {
+    height: 50%;
+    background-color: #1d4a65;
+}
+.social_section {
+    width: 25%;
+    height: 270px;
+    background-color: #fd6ed9;
+}
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: #474747;
+}

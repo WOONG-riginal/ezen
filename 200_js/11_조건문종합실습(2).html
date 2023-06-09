@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 종합 실습2</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+        /* A. 삼항조건연산자 */
+        /* 실습1. (프롬프트)이름,신장,몸무게를 입력받아, 
+            적정체중이 아니면, ???님 건강을 위해 체중관리 요망
+            적정체중이면, ???님 건강관리 잘 하셨네요
+            (브라우저출력) */
+        var name = (prompt('이름을 입력하세요', '홍길동'));
+        var tall = Number(prompt('신장을 입력하세요', 175));
+        var weight = Number(prompt('체중을 입력하세요', 70));
+        var good = Number((tall-100)*0.9);
+        var result = weight<=good?name+'님 건강관리 잘하셨네요':name+'님 건강을 위해 체중관리 요망';
+        document.write(result);
+        document.write('<br><br>'+name+'님의 적정체중은 '+good+'kg 입니다.');
+        document.write('<br><br>'+name+'님은 추가로 '+(weight-good)+'kg의 체중을 감량하는 것이 필요합니다.');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

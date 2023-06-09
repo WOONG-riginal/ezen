@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 이벤트 1</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <style>
+        h5{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            /* 1. 단일 이벤트 */
+            // $('h5').click(function(){
+            //     alert('단일 이벤트 실행!!');
+            // });
+
+            /* 2. one() 이벤트 메서드 : 이벤트 한 번만 실행 */
+            // $('h5').one('click',function(){
+            //     alert('one 이벤트 실행');
+            // });
+
+            /* 3-1. on() 이벤트 메서드 : 하나의 DOM요소에 여러 개 이벤트 등록 가능 */
+            // $('h5').on('click',function(){
+            //     alert('on 이벤트 실행');
+            // });
+            /* 3-2. on() 이벤트 메서드 : 여러 개 이벤트 등록 */
+            // $('h5').on({'mouseenter':function(){
+            //     alert('마우스 엔터');
+            // },'mouseleave':function(){
+            //     alert('마우스 리브');
+            // }});
+
+            /* 4. hover() : mouseenter() + mouseleave() */
+            // $('h5').hover(function(){
+            //     // mouseenter()시 이벤트 리스너
+            //     alert('마우스 엔터시');
+            // },function(){
+            //     // mouseleave()시 이벤트 리스너
+            //     alert('마우스 리브시');
+            // });
+
+            /* 실습. 버튼을 클릭했을때, h6에 "이벤트작동완료!!" 텍스트노드 삽입 */
+            $('button').click(function(){
+                $('h6').text('이벤트작동완료!!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h5>제이쿼리 이벤트 사용방법</h5>
+    <h6></h6>
+    <button>버튼</button>
+</body>
+</html>

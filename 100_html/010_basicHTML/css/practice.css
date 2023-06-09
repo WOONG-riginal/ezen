@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {
+    width: 960px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    color: #666;
+    padding: 24px;
+    font-size: 14px;
+}        
+.gnb {
+    color: #666;
+    margin-top: 54px;
+    margin-bottom: 54px;
+}
+.gnb li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.gnb li a:hover {
+    font-weight: 700;
+    color: red;
+    background-color: black;
+}
+section {
+    margin-bottom: 54px;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    margin-bottom: 32px;
+    text-shadow: 2px 4px 4px grey;
+    letter-spacing: 1px;
+}
+.date {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+fieldset {
+    padding: 20px;
+    margin-bottom: 32px;
+    line-height: 1.5rem;
+}
+.submit_a {
+    margin-bottom: 42px;
+}
+.top {            
+    border: 2px solid #999;
+    width: 100px;
+    padding: 8px;
+    text-align: center;
+    margin: 20px;
+    background-color: #999;
+    color: #fff;
+    margin: 0 auto;
+}

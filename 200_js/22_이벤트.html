@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event, DOM2</title>
+    <style>
+        button, h3{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            /* 1. DOM 객체 변수에 할당 */
+            var btn=document.getElementById("button");
+            var contents=document.getElementById("heading");
+            console.log(btn, contents);
+    
+            /* 2. EventListener 설정 */
+            function whenClick1(){
+                /* 2-1. (기능) JS Event 방식의 글자색을 레드로 바꾸기 */
+                contents.style.color="red";
+            }
+            function whenClick2(){
+                /* 2-2. (기능) JS Event 방식을 새로운 텍스트노드로 바꾸기 */
+                contents.innerHTML="새로운 텍스트노드";
+            }
+    
+            /* 3. Event DOM에 EventListener 연결 */
+            btn.addEventListener("click",whenClick1);
+            btn.addEventListener("click",whenClick2);
+
+            /* EventListener 제거 */
+            btn.removeEventListener("click",whenClick1);
+        }
+    </script>
+</head>
+<body>
+    <button id="button">DOM 이벤트</button>
+    <h3 id="heading">JS Event 방식</h3>
+</body>
+</html>

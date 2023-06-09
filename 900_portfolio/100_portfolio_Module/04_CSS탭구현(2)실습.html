@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="mcssam">
+    <meta name="description" content="Portfolio, Mobileweb">
+    <title>Module, CSS 탭 구현</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="shortcut icon" href="./images/favicon/W32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <!-- JS 플러그인 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+</head>
+<style>
+    .tabbox{
+        width: 960px;
+        margin: 0 auto;
+        font-family: 'Noto Sans KR', sans-serif;
+        text-align: left;
+        padding-top: 100px;
+        font-size: 0;
+    }
+    .tabbox input[type='radio']{
+        display: none;
+    }
+    .tabbox input[type='radio']+label{
+        border: 1px solid #000;
+        border-right: none;
+        padding: 10px;
+        font-size: 1rem;
+        display: inline-block;
+        background: yellowgreen;
+        cursor: pointer;
+    }
+    #tab3+label{
+        border-right: 1px solid #000;
+    }
+    .tabbox input[type='radio']:checked+label{
+        background: orange;
+    }
+    .content{
+        width: 600px;
+        height: 400px;
+        background: skyblue;
+        font-size: 16px;
+        display: none;
+        text-align: center;
+        padding: 20px;
+    }
+    .tabbox input[id='tab1']:checked~.cont1{
+        display: block;
+    }
+    .tabbox input[id='tab2']:checked~.cont2{
+        display: block;
+    }
+    .tabbox input[id='tab3']:checked~.cont3{
+        display: block;
+    }
+</style>
+<body>
+    <div class="tabbox">
+        <input type="radio" name="tab" id="tab1" checked>
+        <label for="tab1">버튼1</label>
+        <input type="radio" name="tab" id="tab2">
+        <label for="tab2">버튼2</label>
+        <input type="radio" name="tab" id="tab3">
+        <label for="tab3">버튼3</label>
+
+        <div class="content cont1">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, optio necessitatibus saepe et placeat unde illo enim aut architecto minus qui impedit quia, porro quam? Debitis odit cumque ab inventore.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, optio necessitatibus saepe et placeat unde illo enim aut architecto minus qui impedit quia, porro quam? Debitis odit cumque ab inventore.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, optio necessitatibus saepe et placeat unde illo enim aut architecto minus qui impedit quia, porro quam? Debitis odit cumque ab inventore.</p>
+        </div>
+        <div class="content cont2">
+            <img src="./images/image3.jpg" alt="이미지">
+        </div>
+        <div class="content cont3">
+            <p>가나다라마바사아자차카타파하</p>
+        </div>
+    </div>
+</body>
+</html>

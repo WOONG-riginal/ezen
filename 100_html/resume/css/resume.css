@@ -1,0 +1,60 @@
+@charset "utf-8";
+body {
+    font-family: 'Noto Sans Kr', sans-serif;
+    background-color: #ebecee;
+}
+#wrap {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 76px 60px;
+}
+header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+header h1 {
+    font-size: 48px;
+    font-size: 3rem;
+    color: #275459;
+    font-weight: 600;
+    /* 글씨 들여쓰기 | 자간 */
+    letter-spacing: -1px;
+    font-family: 'Montserrat', sans-serif;
+}
+.h_title {
+    font-size: 14;
+    color: #275459;
+}
+.h_title2 {
+    font-size: 24px;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #4f4f51;
+    margin-bottom: 24px;
+}
+section {
+    color: #3d3d3f;
+    line-height: 2;
+    margin-bottom: 80px;
+}
+section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a67b56;
+    border-bottom: 1px solid #d1d2f4;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+}
+section span {
+    font-weight: bolder;
+}
+footer {
+    text-align: center;
+    color: #0d0d0d;
+    font-size: 14px;
+}
+footer span {
+    font-weight: 700;
+    color: #275459;
+    font-size: 18px;
+    letter-spacing: -1px;
+}

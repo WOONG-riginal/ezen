@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Watch</title>
+    <link rel="shortcut icon" href="./images/favicon/W32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <style>
+        #wrap{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .tomorrowWatch{
+            display: none;
+        }
+        button{
+            width: 87px;
+            margin: 4px;
+            height: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img src="./images/todaywhat.png" alt="오늘의 시계" id="todayWatch">
+        <div id="everyWatches">
+            <img src="./images/watch1.png" alt="내일의 시계" class="tomorrowWatch">
+            <img src="./images/watch2.png" alt="내일의 시계" class="tomorrowWatch">
+            <img src="./images/watch3.png" alt="내일의 시계" class="tomorrowWatch">
+            <img src="./images/watch4.png" alt="내일의 시계" class="tomorrowWatch">
+        </div>
+        <button onclick="btnClick()";>오늘의 시계</button>
+    </div>
+
+    <script>
+        var todayWatch=document.getElementById("todayWatch");
+        var tomorrowWatch=document.getElementsByClassName("tomorrowWatch");
+        function btnClick(){
+            var todayNum=Math.floor(Math.random()*4);
+            todayWatch.src=tomorrowWatch[todayNum].src;
+        }
+    </script>
+</body>
+</html>

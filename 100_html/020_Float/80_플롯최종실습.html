@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플롯 최종 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        #wrap {
+            font: 12px "Noto Sans KR", sans-serif;
+        }
+        .snb:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header .snb {
+            background-color: #666;
+        }
+        header .snb ul {
+            width: 960px;
+            margin: 0 auto;
+            line-height: 2;
+        }
+        header .snb ul li {
+            padding-left: 20px;
+            color: silver;
+            float: right;
+        }
+        a:hover {
+            background-color: black;
+            color: yellow;
+        }
+        .gnb:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header .gnb {
+            margin: 0 auto;
+            width: 960px;
+        }
+        header .gnb h1 {
+            margin: 10px;
+            float: left;
+        }
+        header .gnb h1 img {
+            width: 100px;
+            height: 40px;
+        }        
+        header .gnb ul {
+            float: right;
+        }
+        header .gnb ul li {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 30px;
+            float: left;
+        }
+        section {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            text-align: center;
+        }
+        section img {
+            width: 960px;
+            height: 300px;
+        }
+        article {
+            width: 960px;
+            margin: 15px auto;
+        }
+        article:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        article li {
+            width: 310px;
+            height: 200px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            background-color: skyblue;
+            float: left;
+        }
+        article li:nth-child(3),
+        article li:nth-child(6) {
+            margin-right: 0;
+        }
+        article li:nth-child(4),
+        article li:nth-child(5),
+        article li:nth-child(6) {
+            margin-bottom: 0;
+        }
+        article li img {
+            width: 310px;
+            height: 200px;
+        }
+        article a:hover {
+            background-color: skyblue;
+        }
+        article a:hover img {
+            transform: scale(1.2);
+        }
+        footer {
+            width: 960px;
+            margin: 0 auto;
+            font-size: 12px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header>
+            <nav class="snb">
+                <ul>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                </ul>
+            </nav>            
+            <nav class="gnb">
+                <h1><img src="https://getlogo.net/wp-content/uploads/2020/03/ac-milan-logo-vector.png" alt="로고"></h1>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /Header -->
+        <!-- Contents -->
+        <main role="main">
+            <section>
+                <img src="https://www.freepnglogos.com/uploads/2023-png/2023-glow-cutout-png-clipart-22.png" alt="2023">
+            </section>
+            <article>
+                <ul>
+                    <li><a href="#"><img src="https://www.pngarts.com/files/7/January-PNG-Free-Download-420x219.png" alt="jan"></a></li>
+                    <li><a href="#"><img src="https://www.pngall.com/wp-content/uploads/11/February-PNG-Image.png" alt="feb"></a></li>
+                    <li><a href="#"><img src="https://www.pngmart.com/files/7/March-PNG-Transparent-Image.png" alt="mar"></a></li>
+                    <li><a href="#"><img src="https://www.pngarts.com/files/7/April-PNG-Photo.png" alt="apr"></a></li>
+                    <li><a href="#"><img src="https://www.pngall.com/wp-content/uploads/11/May-PNG-Photo.png" alt="may"></a></li>
+                    <li><a href="#"><img src="https://www.pngall.com/wp-content/uploads/12/Hello-June-PNG-Image.png" alt="jun"></a></li>
+                </ul>
+            </article>
+        </main>
+        <!-- /Contents -->
+        <aside><hr></aside>
+        <!-- Footer -->
+        <footer>
+            <p><a href="#">개인정보처리</a> | <a href="#">고객정보</a> | <a href="#">고객지원</a> | <a href="#">접수처</a></p>
+            <p>Copyright All Rights Reserved., MCSSAM</p>
+        </footer>
+        <!-- /Footer -->
+    </div>
+</body>
+</html>

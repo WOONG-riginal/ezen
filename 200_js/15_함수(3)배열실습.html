@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수사용, 이벤트사용, 배열사용</title>
+    <style>
+        #bgc {
+            width: 100%;
+            height: 480px;            
+        }
+        button {
+            width: 120px;
+            height: 80px;
+            background-color: silver;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }        
+    </style>
+    <script>
+        // 1. 배열명 color에 문자열 red,green,blue,black,pink 할당, 콘솔 red출력
+        var color = ['red','orange','yellow','green','blue','darkblue','blueviolet'];
+        console.log(color[0]);
+        // 2. 전역변수 i에 숫자형 초기값 세팅
+        var i=0;
+        // 3. 선언적 함수 = 이벤트 리스너 = 이벤트연결(button을 클릭했을때)
+        function chColor(){
+            // a. 적용된 DOM 객체 선택 (ex. id값 선택)
+            var selectId = document.getElementById("bgc");
+            console.log(selectId);
+            // b. js에서 CSS 적용 : js에서는 선택 방법이 복잡            
+            selectId.style.backgroundColor = color[i++%color.length];
+            // c. 이벤트 호출할 때마다 i값 1씩 증가
+            // i++;
+            // if(i>=color.length){
+            //     i=0;
+            // }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="bgc">
+        <!-- 3. 인라인 이벤트 호출방식 = 클릭시 이벤트 리스터 chColor 호출 -->
+        <button onclick="chColor();">배경색 바꾸기</button>
+    </div>
+</body>
+</html>

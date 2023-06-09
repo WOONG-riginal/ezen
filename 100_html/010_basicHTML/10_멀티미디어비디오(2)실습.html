@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어 실습</title>
+    <style>
+        #wrap {
+            margin: 0 auto;
+            width: 960px;
+            text-align: center;
+        }
+        figcaption {
+            font-size: 16px;
+            font-weight: bold;
+            color: red;
+            background-color: skyblue;
+        }
+        video {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id=wrap>
+        <figure>
+            <figcaption>First.MP4</figcaption>
+            <video src="./media/flame.mp4" muted autoplay loop></video>
+            <figcaption>Second.MP4</figcaption>
+            <video src="./media/cars.mp4" muted autoplay loop></video>
+        </figure>        
+    </div>
+</body>
+</html>

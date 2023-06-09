@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 사용</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Open+Sans:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Open+Sans:ital@1&family=Oswald&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR&display=swap');
+        /* 도큐먼트 전체에 해당 서체 적용 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #wrap {
+            width: 960px;
+            margin: 0 auto;            
+        }
+        h1 {
+            font-size: 24px;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            /* a(alpha) = 투명도 | 0 ~ 1 */
+            color: rgba(0,0,0,0.5);
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 18px;
+            color: #f00;
+            margin-bottom: 24px;
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30px;
+            font-size: 1.875em;
+            font-size: 187.5%;
+            /* (14/16) */
+            font-size: 14px;
+            font-size: 0.875em;
+            font-size: 87.5%;
+            margin-bottom: 24px;
+
+            /* rem 단위 | root + em */
+            font-size: 1rem;
+        }
+        .font {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-size: 1.875em;
+            font-weight: 400;
+            font-style: italic;
+            color: purple;
+            /* 행간 */
+            font-size: 16px;
+            line-height: 1.5em;
+            /* 폰트 한 줄 쓰기 */
+            font: bold 16px/1.5 'Montserrat', sans-serif;
+            color: aqua;
+        }
+        .seoul {
+            color: #0000ff;
+            color: #00f;
+            color: blue;
+            color: rgb(0, 0, 255);
+            color: rgba(0, 0, 255, 1);
+            /* 대문자로 표기 */
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Web Standard Publishing</h1>
+        <h2>웹표준 방식 코딩</h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ea quaerat, quae dolores libero, velit cupiditate repudiandae odit eveniet totam quibusdam modi sequi deserunt ipsum magnam aliquid mollitia rerum ratione?
+        </p>
+        <p class="font">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ea quaerat, quae dolores libero, velit cupiditate repudiandae odit eveniet totam quibusdam modi sequi deserunt ipsum magnam aliquid mollitia rerum ratione?
+        </p>
+        <p>
+            서울<span class="seoul">(Seoul)</span>, 대한민국
+        </p>
+    </div>
+</body>
+</html>

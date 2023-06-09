@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적 변수 실습</title>
+    <script>
+        var num1 = 100;
+        var num2 = 0.9;
+        var name = prompt("당신의 이름은 무엇입니까?","김명철");
+        console.log(name);
+        console.log(typeof(name));
+        var tall = prompt("당신의 키는 ?",174);
+        var weight = prompt("당신의 몸무게는 ?",74);
+        var result = (tall-num1)*num2;
+        tall = Number(tall);
+        weight = Number(weight);
+        document.write("접속자의 이름은 " + name + "입니다.<br>")
+        document.write("계산식의 사용된 키는 <b>" + tall + "</b> cm입니다.<br>")
+        document.write("계산식의 사용된 몸무게는 " + weight + "kg입니다.<br>")
+        document.write("적정 몸무게는 " + result + "kg입니다.<br>")
+        console.log(tall);
+        console.log(typeof(tall));
+        console.log(weight);
+        console.log(typeof(weight));        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

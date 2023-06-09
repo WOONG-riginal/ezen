@@ -1,0 +1,122 @@
+@charset "utf-8";
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+#wrap {
+    width: 1162px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+#wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 38px;
+}
+hr {
+    width: 594px;
+    margin: 36px auto;
+}
+#left_side>div {
+    border-bottom: 1px solid #999;
+    padding-bottom: 28px;
+    width: 430px;
+    margin-right: 78px;
+    margin-bottom: 28px;
+}
+section#left_side {
+    width: 508px;
+    float: left;
+}
+img {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+.intro>p {
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+}
+.webhard>h2 {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+#left_side .skill_main:after {
+    content: "0개";
+    font-size: 9px;
+    color: #aeb5bd;
+    padding: 0px 8px;
+}
+#left_side .skill_tag:after {
+    content: "0개";
+    font-size: 10px;
+    color: #aeb5bd;
+    padding: 0px 8px;
+}
+.skill h2 {
+    margin-bottom: 12px;
+}
+.skill p {
+    margin-bottom: 20px;
+}
+#button_a {
+    background-color: #283943;
+    border: 1px solid #283943;
+    border-radius: 4px;
+    padding: 4px;
+    color: #fff;
+    font-size: 12px;
+}
+#button_b {
+    background-color: #e8ecef;
+    border: 1px solid #e8ecef;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 12px;    
+}
+section#right_side {
+    width: 654px;
+    float: right;
+}
+#right_side>div {
+    border: 1px solid #999;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+#right_side h2 {
+    width: 190px;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+#right_side strong {
+    font-size: 20px;
+    font-weight: 700;
+}
+#right_side p {
+    line-height: 2rem;
+}
+.flex h3 {
+    width: 190px;
+    font-size: 14px;
+    color: #b1b0b5;
+}
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+}
+.flex .lv {
+    width: 80px;
+    height: 80px;
+    background-color: #eeedf2;
+    margin-right: 10px;
+}
+.lv img {
+    width: 90%;
+    height: 90%;
+}

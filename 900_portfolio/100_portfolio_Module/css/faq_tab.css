@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* 전체 탭메뉴 부모박스 */
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+/* Tab Menu */
+.tabs {
+    width: 100%;
+}
+.tabs li {
+    width: 25%;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+    line-height: 46px;
+    background-color: #eaeaea;
+    cursor: pointer;
+    /* 플롯 */
+    float: left;
+}
+/* on클래스 기법 */
+.tabs li.on {
+    background: #fff;
+    border: 1px solid #000;
+    border-bottom: none;
+}
+/* 탭내용 부모박스 */
+.tab_contents {
+    max-width: 940px;
+    width: 100%;
+    height: auto;
+}
+/* 로딩 시 전체탭 내용 가리기 */
+.tab_contents .list {
+    display: none;
+}
+/* 로딩 시 첫번째탭만 보이기 */
+.tab_contents .list:first-child {
+    display: block;
+}
+/* 로딩 시 모든 답변내용 가리기 */
+.tab_contents .list .answer {
+    display: none;
+}
+/* 질문영역 */
+.list .question {
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.list .question dt {
+    width: 60px;
+    width: 6.38%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a4b4b;
+    /* 플롯 */
+    float: left;
+}
+.list .question dd {
+    width: 880px;
+    width: 93.6%;
+    padding-right: 50px;
+    /* 플롯 */
+    float: right;
+}
+.list .question dt,
+.list .question dd {
+    line-height: 52px;
+}
+/* 답변영역 */
+.list .answer {
+    background-color: #eaeaea;
+    padding: 20px 0;
+    line-height: 24px;
+}
+.list .answer dt {
+    width: 60px;
+    text-align: center;
+    /* 플롯 */
+    float: left;
+}
+.list .answer dd {
+    width: 880px;
+    padding-right: 2%;
+    /* 플롯 */
+    float: right;
+}
+/* 배경 화살표 */
+.list .question dd.down {
+    background: url('../images/down.png') no-repeat;
+    background-position: right center;
+}
+.list .question dd.up {
+    background: url('../images/up.png') no-repeat;
+    background-position: right center;
+}

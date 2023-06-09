@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜정보객체 실습 남은 날짜 구하기</title>
+    <script>
+        /* 1. 날짜객체 생성 now변수에 할당 */
+        var now=new Date();
+        /* 2. 해당년도 구하기 = 경고창 */
+        var nowYear=now.getFullYear();
+        // alert(nowYear);
+        /* 3. 디데이 설정 */
+        var dDay=new Date(nowYear,11,25);
+        // alert(dDay);
+        /* 4. 디데이 설정 날짜 - 현재날짜 */
+        var theDay=dDay.getTime()-now.getTime();
+        console.log("남은 시간(1/1000초) : "+theDay);
+        /* 5. 1/1000초 단위를 일수로 단위 맞추기 */
+        var result=theDay/(1000*60*60*24);
+        result=Math.ceil(result);
+
+        document.write("<h1>D-Day까지 남은 날</h1>");
+        document.write("<p>D-Day : <strong>"+result+"</strong>일 남았습니다.</p>");
+    </script>
+    <style>
+        strong{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

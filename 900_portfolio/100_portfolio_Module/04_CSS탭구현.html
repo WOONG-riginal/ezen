@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="mcssam">
+    <meta name="description" content="Portfolio, Mobileweb">
+    <title>Module, CSS 탭 구현</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="shortcut icon" href="./images/favicon/W32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <!-- JS 플러그인 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <style>
+        .tab_content{
+            max-width: 960px;
+            margin: 100px auto;
+            text-align: center;
+            /* 빈공간 없애기 */
+            font-size: 0;
+        }
+        /* Tab Button */
+        input[type="radio"]{
+            display: none;
+        }
+        input[type="radio"]+label{
+            display: inline-block;
+            font-size: 14px;
+            padding: 20px;
+            background: #ccc;
+            cursor: pointer;
+            border: 1px solid #000;
+            border-right: 0;
+        }
+        #tab03+label{
+            border-right: 1px solid #000;
+        }
+        /* Tab Button 효과 */
+        input[type="radio"]:checked+label{
+            background: #222;
+            color: #fff;
+        }
+        /* Tab Contents */
+        .content{
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            background: darkgray;
+            padding: 32px;
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            /* 로딩시 가리기 */
+            display: none;
+        }
+        /* Tab Button과 Tab Contents 연동 */
+        input[id="tab01"]:checked~.con1{
+            display: block;
+        }
+        input[id="tab02"]:checked~.con2{
+            display: block;
+        }
+        input[id="tab03"]:checked~.con3{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab_content">
+        <!-- Tab Button -->
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">BUTTON01</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">BUTTON02</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">BUTTON03</label>
+        <!-- /Tab Button -->
+
+        <!-- Tab Contents -->
+        <!-- .content.con${Tab content 0$}*3 -->
+        <div class="content con1">Tab content 01</div>
+        <div class="content con2">Tab content 02</div>
+        <div class="content con3">Tab content 03</div>
+        <!-- /Tab Contents -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+@charset "utf-8";
+html{
+    /* 1rem을 10px로 설정하면 이후 가변설정시 편리함 (root는 HTML) */
+    font-size: 62.5%;
+}
+#wrap{
+    width: 100%;
+    height: 1200px;
+    background-image: url(../images/main_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Header */
+header{
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 80px;
+}
+header h1{
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #000;
+}
+.gnb{
+    margin-left: -25%;
+}
+.gnb ul{
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #434343;
+}
+.gnb ul li{
+    padding-left: 78px;
+}
+.gnb ul li:first-child{
+    padding-left: 0 !important;
+}
+.icon ul{
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+}
+.icon ul li:last-child{
+    padding-left: 38px;
+}
+
+/* gnb메뉴 가상클래스 */
+.gnb li a:hover{
+    color: red;
+}
+
+/* Article */
+article{
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+article .visual{
+    /* 포지션 */
+    position: absolute;
+    right: 10%;
+    top: -136px;
+    z-index: 1;
+}
+
+/* Contents */
+section{
+    padding: 0 80px;
+}
+section h3{
+    font-size: 11rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-top: 200px;
+    line-height: 1.2;
+}
+section p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-top: 60px;
+}
+section p+p{
+    margin-top: 90px;
+}
+
+/* Footer */
+footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 100px;
+}

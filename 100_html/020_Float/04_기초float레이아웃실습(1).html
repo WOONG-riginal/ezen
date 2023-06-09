@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 float 레이아웃 실습 1</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        #wrap {
+            width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        /* 플롯해제 */
+        section::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        h1 {
+            width: 900px;
+            height: 80px;
+            line-height: 80px;
+            background-color: skyblue;
+        }
+        h2.menu {
+            width: 300px;
+            height: 240px;
+            line-height: 240px;
+            background-color: salmon;
+            /* 플롯 */
+            float: left;
+        }
+        h2.contents {
+            width: 600px;
+            height: 240px;
+            line-height: 240px;
+            background-color: lightcyan;
+            /* 플롯 */
+            float: right;
+        }
+        footer {
+            width: 900px;
+            height: 80px;
+            line-height: 80px;
+            background-color: lightgoldenrodyellow;
+            /* 플롯해제 2nd */
+            /* clear: both; */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>GNB메뉴</h1>
+        </header>
+        <main role="main">
+            <section>
+                <h2 class="menu">LNB메뉴</h2>
+                <h2 class="contents">CONTENTS</h2>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright All Rights Reserved.,</p>
+        </footer>
+    </div>
+</body>
+</html>

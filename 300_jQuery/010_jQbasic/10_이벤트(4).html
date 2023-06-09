@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 기타 이벤트</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            width: 3000px;
+            height: 5000px;
+        }
+        #wrap{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(window).on('scroll',function(){
+                var scrT=$(this).scrollTop();
+                var scrL=$(this).scrollLeft();
+                console.log("스크롤 탑 값 : "+scrT,"스크롤 레프트 값 : "+scrL);
+                $('.top').text(scrT);
+                $('.left').text(scrL);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h2>SCROLL</h2>
+        <p>
+            scrollTop : <span class="top">0</span>px
+            <br><br><br>
+            scrollLeft : <span class="left">0</span>px
+        </p>
+    </div>
+</body>
+</html>

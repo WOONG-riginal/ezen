@@ -1,0 +1,9 @@
+$('.bx-start').hide();
+$('.bx-start').click(function(){
+    $('.bx-stop').show();
+    $('.bx-start').hide();
+});
+$('.bx-stop').click(function(){
+    $('.bx-start').show();
+    $('.bx-stop').hide();
+});

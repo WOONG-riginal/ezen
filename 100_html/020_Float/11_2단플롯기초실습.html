@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단 플롯 기초 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        #wrap {
+            background-color: skyblue;
+            margin: auto;
+            width: 1000px;
+            padding: 10px 30px;
+        }
+        /* 플롯해제 */
+        header:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header {
+            background-color: lightgreen;
+            width: 940px;
+            height: 80px;
+            line-height: 80px;
+            margin: 20px auto;
+        }
+        header h1 {
+            font-size: 32px;
+            width: 540px;
+            float: left;
+        }
+        header nav ul li {
+            width: 100px;            
+            text-align: center;
+            font-size: 18px;
+            float: left;
+        }
+        a:hover {
+            background-color: black;
+            color: red;
+        }
+        /* 플롯해제 */
+        main:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        main {
+            margin-bottom: 20px;
+        }
+        article {
+            width: 620px;
+            height: 120px;
+            padding: 10px 20px;
+            background-color: yellow;
+            float: left;
+        }
+        section {
+            width: 220px;
+            height: 120px;
+            padding: 10px 20px;
+            background-color: #fff;
+            float: right;
+        }
+        h2, p {
+            font-size: 18px;
+        }
+        footer {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: lightgrey;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>사이트제목</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">MENU1</a></li>
+                    <li><a href="#">MENU2</a></li>
+                    <li><a href="#">MENU3</a></li>
+                    <li><a href="#">MENU4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main">
+            <article>
+                <h2>본문</h2>
+                <p>HTML (Hypertext Markup Language, 하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로 하여금 알 수 있도록 하는 마크업 언어입니다.</p>
+            </article>
+            <section>
+                <h2>사이드바</h2>
+                <p>HTML 요소는 대소문자를 구분하지 않습니다.(소문자사용 추천)</p>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright MCSSAM., All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

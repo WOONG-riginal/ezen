@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 구조 연습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            background-color: #777;
+        }
+        #wrap {            
+            width: 960px;
+            margin: 0 auto;
+        }
+        header, footer {
+            border: 1px solid #000;
+            background-color: #eee;
+            text-align: center;
+        }
+        header nav ul li {
+            font-size: 18px;
+            display: inline-block;
+            padding: 30px;
+        }
+        a:hover {
+            background-color: #000;
+            color: #f00;
+        }
+        img {
+            width: 960px;
+            height: 240px;
+        }        
+        section, form {
+            background-color: #fff;
+            border: 1px solid #000;
+            margin: 40px auto;
+            border-radius: 5px;
+        }
+        section h2 {
+            font-size: 24px;
+        }
+        section h2, section p {
+            text-align: center;
+            padding: 10px;
+        }
+        fieldset {
+            width: 880px;
+            padding: 24px;
+            border: 1px solid #ccc;
+            margin: 40px auto;
+        }
+        legend {
+            font-weight: 700;
+            text-align: center;
+        }
+        fieldset label, fieldset input {
+            display: block;
+            text-align: center;
+            margin: 16px auto;
+        }
+        fieldset input {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            padding: 6px 24px;
+            border-radius: 16px;
+            margin-left: 380px;
+        }
+        footer {            
+            height: 60px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">MENU1</a></li>
+                    <li><a href="#">MENU2</a></li>
+                    <li><a href="#">MENU3</a></li>
+                    <li><a href="#">MENU4</a></li>
+                </ul>
+            </nav>            
+        </header>
+        <article><img src="./images/flowerboom.jpg" alt="꽃"></article>
+        <main role="main">
+            <section>
+                <h2>섹션 영역</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus architecto illo pariatur facilis sint. Itaque et vitae, minima dicta aliquid ex quibusdam animi consequatur sit nisi eum quos nesciunt quam!</p>
+            </section>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>개인정보</legend>
+                    <ul>
+                        <li>
+                            <label for="a_name">이름</label>
+                            <input type="text" id="a_name" size="100" required>
+                        </li>
+                        <li>
+                            <label for="a_tel">연락처</label>
+                            <input type="tel" id="a_tel" size="100">
+                        </li>
+                    </ul>
+                    <button type="submit">제출</button>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p>Copyright all Rights Reserved., 2022</p>
+        </footer>
+    </div>
+</body>
+</html>

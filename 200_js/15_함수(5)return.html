@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return</title>
+    <script>
+        /* 1. return : 호출하는 곳으로 결과값을 돌려줌 */
+        // var num=0;
+        // function plusNum(num){
+        //     return num+10;
+        // }
+        // alert(plusNum(10));
+
+        /* 2. return 2 : return false; = 여기까지만 실행 */
+        var int=10;
+        var sum=0;
+        var mul=0;
+        function cal(int1) {
+            sum=int1+int;
+            mul=int1*int;
+            return sum;
+            return mul;
+        }
+        document.write(cal(100));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

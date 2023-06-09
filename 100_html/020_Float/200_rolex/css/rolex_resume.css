@@ -1,0 +1,107 @@
+@charset "utf-8";
+body{
+    font-family: "Roboto", sans-serif;
+}
+#wrap{
+    width: 1280px;
+    height: 720px;
+    margin: 40px auto;
+    border: 1px solid #000;
+    padding: 39px;
+}
+header{
+    height: 40px;
+}
+/* 플롯 해제 */
+header:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header h1{
+    font-size: 36px;
+    font-weight: bold;
+    /* 플롯 */
+    float: left;
+    margin-top: -13px;
+}
+header nav{
+    /* 플롯 */
+    float: right;
+}
+header .gnb{
+    font-size: 24px;
+    font-weight: bold;
+    /* 플롯 */
+    float: left;
+    margin-right: 20px;
+    margin-top: -5px;
+}
+header .icon{
+    /* 플롯 */
+    float: left;
+    padding-top: 4px;
+}
+/* 플롯 해제 */
+section:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.keyvisual{
+    width: 470px;
+    margin-top: 30px;
+    margin-left: 150px;
+    /* 플롯 */
+    float: left;
+}
+.info{
+    width: 567px;
+    margin-top: 60px;
+    margin-bottom: 48px;
+    /* 플롯 */
+    float: right;
+}
+.info h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 48px;
+}
+.info .title{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 54px;
+    margin-bottom: 88px;
+}
+.info .tel_mail{
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+.info .tel_mail p:nth-child(1){
+    margin-bottom: 24px;
+}
+.info .telmail_c{
+    color: #959595;
+}
+.info .sns{
+    margin-bottom: 60px;
+}
+.info .sns img{
+    margin-right: 12px;
+}
+.info .skill{
+    font-size: 14px;
+    color: #000;
+}
+.info .skill p:nth-child(1){
+    margin-bottom: 14px;
+}
+.info .skill span{
+    color: #959595;
+    font-weight: 500;
+}
+footer{
+    font-size: 14px;
+    color: #494949;
+    text-align: center;
+}

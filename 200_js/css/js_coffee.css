@@ -1,0 +1,58 @@
+@charset "utf-8";
+#container{
+    width: 600px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: rosybrown;
+    text-align: center;
+    text-shadow: 1px 1px 2px #777;
+}
+h2{
+    font-size: 24px;
+    color: rosybrown;
+    font-weight: 600;
+}
+h3{
+    font-size: 18px;
+    color: rosybrown;
+    font-weight: 400;
+}
+/* 상품 이미지 */
+#proc_pic, #desc{
+    display: inline-block;
+}
+#proc_pic{
+    margin: 20px 20px auto 10px;
+}
+#cup{
+    box-shadow: 1px 1px 2px #eee;
+}
+#small_pic{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.small{
+    width: 60px;
+    height: 60px;
+}
+#small_pic img:hover{
+    cursor: pointer;
+}
+/* 상품 상세설명 */
+#desc{
+    width: 300px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+.blue_text{
+    color: #4343ff;
+    font-weight: bold;
+}
+.red_text{
+    color: red;
+    font-size: 90%;
+}

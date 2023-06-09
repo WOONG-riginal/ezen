@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 함수</title>
+    <script>
+        /* 1. 함수 만들기 */
+        /* 1-1. 익명함수 만들기 */
+        // [형식]
+        // var 참조변수명 = function(인자값){
+        //     실행문;
+        // }
+        // var count=0;
+        // var noName=function(){
+        //     count++;
+        //     document.write('익명함수 : '+count+'<br>');
+        // }
+        // console.log(noName);
+
+        /* 1-2. 선언적함수 만들기 */
+        // [형식]
+        // function 함수명(인자값){
+        //     실행문;
+        // }
+        // function pub(){
+        //     count++
+        //     document.write('선언적함수 : '+count+'<br>')
+        // }
+
+        /* 2. 함수 호출 */
+        /* 2-1. 익명함수 호출 : 호출시 반드시 익명함수 아래에서 호출(Top-Down) */
+        // noName();
+        
+        /* 2-2. 선언적함수 호출 : 호이스팅 방식, 호출위치 상관없음 */
+        // pub();
+
+        /* 실습1. (익명함수)
+        (기능) (프롬프트) 숫자를 입력받아,
+        (경고창) 입력받은 숫자에 +10을 한 결과값을 반환하는 함수 제작 */
+        var plusTen=function(){
+            var num=Number(prompt('숫자를 입력하세요', 1));
+            alert(num+=10);
+        }
+        // plusTen();
+
+        /* 실습2. (선언적함수) 함수명 print
+        (기능) (경고창) "자바스크립트 선언적함수 호출" 반환하는 함수 제작 */
+        function print(){
+            alert('자바스크립트 선언적함수 호출');
+        }
+        // print();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

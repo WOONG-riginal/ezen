@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS + JS</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+        var num = prompt('1-웹디자인, 2-웹개발, 3-웹기획 중 숫자 하나 선택', '1');
+        var sub = null;
+        var room = null;
+        switch(num){
+            case '1':
+                sub='웹디자인';
+                room='401호';
+                break;
+            case '2':
+                sub='웹개발';
+                room='402호';
+                break;
+            case '3':
+                sub='웹기획';
+                room='403호';
+                break;
+            default:
+                alert('다시 입력하세요');
+                location.reload();
+        }
+        if(num){
+            document.write(sub+' 섹션은 <strong>'+room+'</strong>에서 진행');
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            background-color: blue;
+            font-size: 40px;
+            color: white;
+        }
+        strong {
+            font-size: 1.2em;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

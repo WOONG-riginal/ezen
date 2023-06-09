@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event, 인라인 매개변수</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        ul{
+            width: 500px;
+            margin: 40px auto;
+        }
+        li{
+            width: 120px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            display: inline-block;
+        }
+        #result{
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li onclick="changeBg('red')";><a href="#">RED</a></li>
+        <li onclick="changeBg('green')";><a href="#">GREEN</a></li>
+        <li onclick="changeBg('blue')";><a href="#">BLUE</a></li>
+    </ul>
+    <div id="result">배경색출력</div>
+
+<script>
+    function changeBg(chColor){
+        document.getElementById("result").style.backgroundColor=chColor;
+        document.querySelector("#result").style.backgroundColor=chColor;
+    }    
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체 실습</title>
+    <script>
+        var userEmail=prompt('당신의 이메일은?','egg_money_na@naver.com');
+        // 배열명 url, 할당 문자열 co.kr, net, com, go.kr, or.kr
+        var url=["co.kr","net","com","go.kr","or.kr"]
+        // 초기값 설정
+        var chk1=false;
+        var chk2=false;
+
+        /* 1. @유효성 검사 = 입력받은 데이터에 @이 포함되어 있으면, chk1에 true할당 */
+        if(userEmail.indexOf("@")>0) {//문자열 @이 있으면
+            chk1=true; //변수값 true로 할당
+        }
+        
+        /* 2. 이메일 형식 유효성 검사 = 입력받은 데이터에 배열에 할당한 문자열이 포함되어 있으면, chk2에 true할당 */
+        for(var i=0;i<url.length;i++){
+            if(userEmail.indexOf(url[i])>0){
+                console.log(userEmail.indexOf(url[i]));
+                chk2=true;
+            }
+        }
+        console.log(chk1,chk2);
+
+        /* 3. 출력=@과 이메일의 유효성 형식이 맞으면 (도큐먼트)에 이메일 주소 출력,
+            아니면 (경고창)이메일 형식 오류!! */
+        if(chk1 && chk2){
+            document.write(userEmail);
+        }else{
+            alert('올바른 이메일을 입력하세요.');
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

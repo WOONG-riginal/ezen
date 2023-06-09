@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3단 Float 레이아웃</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        div {
+            padding: 20px;
+        }
+        #wrap {
+            width: 960px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        #header {
+            background-color: dodgerblue;
+        }
+        #container {
+            background-color: grey;
+        }
+        #container:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #container #cover {
+            background-color: red;
+            float: left;
+        }
+        #cover:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #container #content1 {
+            width: 130px;
+            background-color: orange;
+            float: left;
+        }
+        #container #content2 {
+            width: 450px;
+            background-color: hotpink;
+            margin: 0 20px;
+            float: right;
+        }
+        #container #content3 {
+            width: 130px;
+            float: right;
+            background-color: deeppink;
+        }
+        #footer {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>사이트제목</h1>
+        </div>
+        <div id="container">
+            <div id="cover">
+                <div id="content1">
+                    <h2>사이드바</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">메뉴1</a></li>
+                            <li><a href="#">메뉴2</a></li>
+                            <li><a href="#">메뉴3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="content2">
+                    <h2>본문</h2>
+                    <p>이번 회의에서는 폐막 세션을 포함해 모두 5개의 공식 세션이 마련됐다. 첫날 낮 오찬과 함께 시작되는 첫 세션은 '세계 경제·무역 투자'를 주제로 열리며 이어 '혁신'을 주제로 한 두 번째 세션이 진행된다.</p>
+                    <p>첫 세션에서 정상들은 세계 경제의 성장을 견인하고 지속가능한 성장을 실현하기 위해 모든 정책수단을 활용하기로 뜻을 모을 예정이다.</p>
+                    <p>또 자유롭고 공정한 무역의 중요성을 공유하는 한편 세계무역기구(WTO) 개혁의 속도를 높이기로 할 것으로 예상된다. 이 세션에서는 문재인 대통령이 발언자로 나선다.</p>
+                </div>
+            </div>
+            <div id="content3">
+                <h2>사이드바</h2>
+                    <ul>
+                        <li><a href="#">우측메뉴1</a></li>
+                        <li><a href="#">우측메뉴2</a></li>
+                        <li><a href="#">우측메뉴3</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <h2>푸터영역</h2>
+            <p>Copyright All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

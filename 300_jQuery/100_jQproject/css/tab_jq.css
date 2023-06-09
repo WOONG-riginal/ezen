@@ -1,0 +1,66 @@
+@charset "utf-8";
+#wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+header{
+    height: 60px;
+    text-align: center;
+    background-color: #333;
+    line-height: 60px;
+}
+header .logo{
+    color: #fff;
+    font-size: 1.5rem;
+}
+/* Tab Menu */
+nav{
+    background-color: #555;
+    color: #fff;
+}
+nav #menu_gnb{
+    height: 45px;
+    line-height: 45px;
+}
+nav .gnb{
+    /* 플렉스 */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+nav .gnb li{
+    background-color: red;
+}
+nav .gnb li a{
+    display: inline-block;
+    width: 192px;
+    transition: all 0.5s;
+}
+/* (중요)처음 로딩시 해당 영역에 스타일 적용을 위한 클래스 || 이벤트 발생시 적용되는 클래스 */
+nav .gnb li.active a{
+    background-color: #ccc;
+    color: darkred;
+}
+/* 탭메뉴 클릭시 나오게 될 콘텐츠들 */
+section div{
+    width: 100%;
+}
+section div img{
+    min-width: 100%;
+    width: 100%;
+}
+/* (중요)처음 로딩시 첫번째 콘텐츠 영역만 보이도록 코딩 */
+section div:nth-child(2),
+section div:nth-child(3),
+section div:nth-child(4),
+section div:nth-child(5){
+    display: none;
+}
+/* Footer */
+footer{
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    line-height: 80px;
+    font-size: 14px;
+}

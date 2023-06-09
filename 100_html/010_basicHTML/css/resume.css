@@ -1,0 +1,72 @@
+@charset "utf-8";
+body {
+    background-color: rgb(235, 236, 238);
+    font-family: 'nanum gothic';
+}        
+#wrap {
+    width: 960px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 30px;
+}
+hr {
+    margin-bottom: 10px;
+}
+#no1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#no2, #no3, #no4, #no5 {
+    margin-bottom: 70px;
+}        
+#no6 {
+    margin-bottom: 10px;
+}        
+.eng {
+    font-family: 'trana', sans-serif;
+    font-size: 20px;
+    color: darkcyan;
+    font-weight: bold;
+}
+.int {
+    font-family: 'nanum pen script';
+    font-size: 20px;
+}
+h1 {
+    font-family: 'east sea dokdo';
+    font-size: 40px;
+    font-weight: bold;
+    color: darkcyan;
+    margin-bottom: 5px;            
+}
+h2 {
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 10px;
+}        
+.bld {
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 30px;
+}
+.bld2 {
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 50px;
+}
+.bld3 {
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 40px;
+}
+.fin {
+    text-align: right;
+    margin-right: 140px;
+}
+.final {
+    font-family: 'ubuntu';
+    font-size: 16px;
+    font-weight: bold;
+    color: darkcyan;
+}

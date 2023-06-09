@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Shin" content="Woong">
+    <meta name="description" content="포트폴리오, 플렉스 레이아웃">
+    <title>Portfolio, RWD Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="shortcut icon" href="./images/favicon/favtudor.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/rwd_template.css">
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 페이지 JS -->
+
+    <style>
+        body{
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #eee;
+        }
+        /* 1. Header */
+        .header{
+            height: 60px;
+            line-height: 60px;
+            background-color: red;
+        }
+        /* 2. Slider */
+        .slider{
+            height: 520px;
+            line-height: 520px;
+            background-color: orange;
+        }
+        /* 3. Contents */
+        .content{
+            height: 500px;
+            background-color: green;
+        }
+        .display_section,
+        .promotion_section,
+        .work_section,
+        .blog_section,
+        .contact_section{
+            height: 100px;
+            line-height: 100px;
+        }
+        .display_section{background-color: yellow;}
+        .promotion_section{background-color: yellowgreen;}
+        .work_section{background-color: green;}
+        .blog_section{background-color: blue;}
+        .contact_section{background-color: navy;}
+        /* 4. Footer */
+        .footer{
+            height: 80px;
+            line-height: 80px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1. Header -->
+        <header class="header">
+            1. 로고와 메뉴가 배치 | <br>
+               모바일 + 태블릿 => 햄버거 버튼 GNB메뉴 출력(제이쿼리 사용)
+        </header>
+        <!-- /1. Header -->
+
+        <!-- 2. Slider -->
+        <article class="slider">
+            2. 슬라이더 영역 <br>
+            :  사이트 아이덴티티 이미지가 표현되는 영역 = 키비쥬얼 이미지
+            #. 가로 전체 너비 사용
+        </article>
+        <!-- /2. Slider -->
+
+        <!-- 3. Contents -->
+        <section class="content">
+            <!-- 3-1. Display -->
+            <section class="display_section">
+                3-1. 디스플레이 영역
+                :  타이틀, 내용이 들어감
+                모바일 + 태블릿 => 세로배치, PC => 가로배치
+            </section>
+            <!-- /3-1. Display -->
+            <!-- 3-2. Promotion -->
+            <section class="promotion_section">
+                3-2. 프로모션 영역
+                :  아이콘, 타이틀, 간단한 내용, 광고를 위한 영역
+                   흥미를 위해 아이콘 등을 배치 => 클릭을 유도
+                   모바일 => 세로배치, 태블릿 + PC => 가로배치
+            </section>
+            <!-- /3-2. Promotion -->
+            <hr class="divider">
+            <!-- 3-3. Work -->
+            <section class="work_section">
+                3-3. 최근작업 영역 => 홍보상품, 포트폴리오
+                :  최근에 작업한 작업물을 보여주기 위한 영역
+                   최대한 잘 보이도록 퀄리티 높은 이미지 사용
+                   모바일 => 세로배치, 태블릿 + PC => 가로배치
+            </section>
+            <!-- /3-3. Work -->
+            <!-- 3-4. Blog -->
+            <section class="blog_section">
+                3-4. 블로그 영역 => 게시판, 공지사항, 뉴스 등
+                :  최근에 작성한 글들을 보여주는 영역
+                   모바일 + 태블릿 => 세로배치, PC => 가로배치
+            </section>
+            <!-- /3-4. Blog -->
+            <!-- 3-5. Contact -->
+            <section class="contact_section">
+                3-5. 연락처 영역
+                :  웹사이트 관리자에게 연락하기 위한 영역
+                   모바일 + 태블릿 => 세로배치, PC => 가로배치
+            </section>
+            <!-- /3-5. Contact -->
+        </section>
+        <!-- /3. Contents -->
+
+        <!-- 4. Footer -->
+        <footer class="footer">
+            4. 푸터 영역
+            :  웹사이트 저작권, 회사 주소, 회사 지도, 로도 등을 보여줌
+        </footer>
+        <!-- /4. Footer -->
+    </div>
+</body>
+</html>

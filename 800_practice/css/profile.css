@@ -1,0 +1,152 @@
+@charset "utf-8";
+#wrap{
+    width: 700px;
+    margin-top: 20px;
+    margin-left: 100px;
+    padding: 20px 10px;
+    background-color: #f5f2f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 -3px 2px #999;
+}
+#h_fir{
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.points{
+    font-size: 18px;
+    color: #9b8575;
+}
+a.points:hover{
+    color: #222;
+}
+header h2{
+    color: #9b8575;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+header ul{
+    margin-bottom: 10px;
+    display: flex;
+}
+header li {
+    font-size: 15px;
+    padding: 6px;
+    color: #9b8575;
+}
+.bar{
+    font-size: 6px;
+    color: #9b8575;
+}
+header li a {
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+header li a:hover{
+    background-color: #9b8575;
+    color: white;
+    font-weight: bold;
+}
+#box{
+    width: 680px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+}
+#video{
+    width: 100%;
+    height: 260px;
+    background-image: url(https://i0.wp.com/theubj.com/wp-content/uploads/2022/12/the.jpeg?fit=1920%2C1080&ssl=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#video h2, #video h3{
+    color: #fff;
+    margin-left: 12px;
+    position: relative;
+    top: 215px;
+    left: 0;
+    z-index: 1;
+}
+#video h2{
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+#video h3{
+    font-size: 12px;
+    font-weight: bold;
+}
+.inbox_w640{
+    width: 640px;
+    margin: 10px auto 0;
+}
+#profile{
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+    float: left;
+}
+#arrow{
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+}
+#left1,#left2,#left3,#left4,#left5,#left6{
+    display: flex;
+}
+dt{
+    width: 80px;
+    padding: 2px 0px 8px 10px;
+    color: #aaa;
+    border-left: 3px solid #eee;
+}
+dd{
+    width: 450px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+dd a{
+    color: blue;
+}
+#leftSide{
+    float: left;
+}
+#rightSide{
+    float: right;
+}
+#rightSide>img{
+    width: 100px;
+    border-radius: 6px;
+
+}
+.cut{
+    width: 640px;
+    border-bottom: 1px solid #eee;
+    margin: 20px auto 10px;
+    float: left;
+}
+#info{
+    font-size: 12px;
+    float: left;
+}
+#info h3{
+    margin-bottom: 10px;
+    color: #aaa;
+}
+#info h3 a>img{
+    margin-top: 1px;
+    width: 11px;
+}

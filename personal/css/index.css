@@ -1,0 +1,90 @@
+@charset "utf-8";
+body,html{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.sys{
+    padding-top: 120px;
+}
+/* Header */
+header{
+    background-image: url(../images/moon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+}
+header h1{
+    font-family: 'Righteous', cursive;
+    font-size: 32px;
+    font-size: 3.4188vh;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    z-index: 9;
+}
+header img{
+    position: relative;
+    top: 280px;
+    transition: all 0.5s;
+}
+section span i:nth-child(3){
+    animation: arrowAni 1.5s linear 0.5s infinite;
+}
+/* Contents */
+section{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    cursor: pointer;
+}
+section h2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    z-index: 111;
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+    font-size: 5.1282vh;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    letter-spacing: 2px;
+    text-align: center;
+}
+section span i:nth-child(1){
+    animation: arrowAni 1.5s linear 0s infinite;
+}
+section span i:nth-child(2){
+    animation: arrowAni 1.5s linear 0.5s infinite;
+}
+@keyframes arrowAni {
+    from{
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+    }
+    to{
+        opacity: 0;
+        transform: scale(1.2);
+        right: 100px;
+    }
+}
+section span:hover{
+    color: gold;
+}
+.section2{background-image: url(../images/portfolio01.jpg);}
+.section3{background-image: url(../images/portfolio02.jpg);}
+.section4{background-image: url(../images/portfolio03.jpg);}
+.section5{background-image: url(../images/portfolio04.jpg);}
+.section6{background-image: url(../images/portfolio05.jpg);}
+.section7{background-image: url(../images/portfolio06.jpg);}
+.section8{background-image: url(../images/portfolio07.jpg);}
+.section9{background-image: url(../images/portfolio08.jpg);}

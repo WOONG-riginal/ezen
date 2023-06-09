@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 기본 클래스 너비 적용</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        /* Safe Area 너비 클래스화 */
+        .w1320 {
+            width: 1320px;
+            margin: 0 auto;
+        }
+        #wrap {
+            margin: 0 auto;
+            background-color: darkgrey;
+            height: 640px;
+        }
+        section, article {
+            background-color: grey;
+            height: 100px;
+            line-height: 100px;
+            margin-bottom: 32px !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section class="w1320">
+            <h2>Section Width 클래스 적용</h2>
+        </section>
+        <article class="w1320">
+            <h2>Article Width 클래스 적용</h2>
+        </article>
+        <section>
+            <h2>Section Width 클래스 적용 안함</h2>
+        </section>
+        <article>
+            <h2>Article Width 클래스 적용 안함</h2>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3단플롯, 루브르</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #a9a9a9;
+        }
+        #wrap {
+            width: 640px;
+            margin: 0 auto;
+        }
+        header {
+            padding: 5px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #fea900;
+            color: white;
+        }
+        header h1 {
+            font-size: 88px;
+            font-weight: 700;
+        }
+        main {
+            background-color: #fff;
+        }
+        #sub {
+            background-color: #cbcbcb;
+            padding: 5px;
+            text-align: center;
+            font-size: 10px;
+        }
+        #sub span {
+            font-size: 12px;
+            font-weight: 700;
+            color: blue;
+        }        
+        #artist {
+            width: 160px;
+            /* 플롯 */
+            float: left;
+        }
+        #artist h2 {
+            padding: 10px;
+            background-color: #980000;
+            color: #fff;
+            font-size: 18px;
+        }
+        #artist li {
+            padding: 10px;
+        }
+        #artist li a {
+            border-bottom: 1px dashed #000;
+        }
+        #artist li a:hover {
+            font-weight: 700;
+            background-color: yellowgreen;
+        }
+        #masterpiece {
+            background-color: #cbcbcb;
+            width: 320px;
+            /* 플롯 */
+            float: right;
+        }
+        #masterpiece h2 {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #123456;
+            font-size: 18px;
+            color: white;
+            padding: 5px;
+        }
+        #masterpiece h3 {
+            color: #123456;            
+            font-size: 16px;
+            font-weight: 700;
+            padding: 25px 15px;
+        }
+        #masterpiece p {
+            color: #123456;
+            font-size: 12px;
+            padding: 0 20px 15px;
+        }
+        #cover {
+            /* 플롯 */
+            float: left;
+        }
+        article {
+            padding: 14px;
+            /* 플롯 */
+            float: left;
+        }
+        article h2 {
+            font-size: 18px;
+        }
+        article .nor {
+            margin-bottom: 20px;
+        }
+        article .bl, article .yl {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        article .yl {
+            color: #fea900;
+        }
+        article p {
+            font-size: 12px;
+        }
+        footer {
+            font-style: italic;
+            font-size: 12px;
+            padding: 8px;
+            text-align: center;
+            background-color: #123456;
+            color: white;
+        }
+        footer span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1. Header -->
+        <header>
+            <h1>Musee d'Orsa</h1>
+            <p>Musee d'OrsaMusee d'OrsaMusee d'OrsaMusee d'OrsaMusee d'OrsaMusee d'Orsa</p>
+        </header>
+        <!-- 2. Main Contents -->
+        <main role="main" class="cf">
+            <div id="sub">Royal Academy of Arts, <span>THE REAL VANGOGH</span> THE ARTIST AND HIS LETTERS</div>
+            <section id="cover">
+                <div id="artist">
+                    <h2>ARTIST</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">작가의 작품</a></li>
+                            <li><a href="#">작가의 시대</a></li>
+                            <li><a href="#">작가의 일생</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="masterpiece">
+                    <h2>피리부는 소년</h2>
+                    <h3>에두아르마</h3>
+                    <p>1866 Musee d'OrsaMusee d'Orsa 161*97cm</p>
+                    <h2>반고흐의 방</h2>
+                    <h3>에두아르마</h3>
+                    <p>1866 Musee d'OrsaMusee d'Orsa 161*97cm</p>
+                    <h2>황색 그리스도가 있는 화가의 자화상</h2>
+                    <h3>에두아르마</h3>
+                    <p>1866 Musee d'OrsaMusee d'Orsa 161*97cm</p>
+                    <h2>오페라좌의 관현악단</h2>
+                    <h3>에두아르마</h3>
+                    <p>1866 Musee d'OrsaMusee d'Orsa 161*97cm</p>
+                    <h2>만종</h2>
+                    <h3>에두아르마</h3>
+                    <p>1866 Musee d'OrsaMusee d'Orsa 161*97cm</p>
+                    <h2>제비꽃 장식을 단 베르트모리조</h2>
+                    <h3>에두아르마</h3>
+                    <p>1866 Musee d'OrsaMusee d'Orsa 161*97cm</p>
+                </div>
+            </section>
+            <article>
+                <h2 class="bl">전 세계인에게</h2>
+                <h2 class="yl">제일 사랑받는</h2>
+                <h2 class="nor">서양 미술사 시대</h2>
+                <p>WorkShop Go</p>
+                <p>Life drawing workshop</p><br>
+                <p>Summer Exhibition</p>
+                <p>Summer Exhibition</p><br>
+                <p>RA Collection</p>
+                <p>RA Collection</p>
+            </article>
+        </main>
+        <!-- 3. Footer -->
+        <footer>
+            2022 Muse d'Orsa Mesee. All Rights Reserved. <span>admin@OrsaMusee.com</span> Legal status
+        </footer>
+    </div>
+</body>
+</html>

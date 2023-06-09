@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 트랜지션</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        .tr1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid #000;
+            cursor: pointer;
+            /* 접두어(prefix) 필요 */
+            /* 원본 박스에 transition 속성 설정 */
+            /* transition 시킬 CSS 속셩명 */
+            transition-property: width,height,background-color;
+            /* transition 시킬 시간 */
+            transition-duration: 1s,1s,1s;
+            /* 한줄표기법 */
+            transition: all 1s;
+        }
+        .tr1:hover {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transform: rotate(180deg);
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tr1">
+        <h1>1</h1>
+    </div>
+</body>
+</html>

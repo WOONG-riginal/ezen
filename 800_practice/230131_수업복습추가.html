@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수업복습 추가</title>
+    <script>        
+        var strKor="가나다라마바사아자차카타파하";
+        document.write(strKor.substr(0,4)+'<br>');
+        document.write(strKor.substring(0,4)+'<br>');
+
+        var sub_str=strKor.substr(7);
+        document.write(sub_str+'<br>');
+        var sub_string=strKor.substring(7);
+        document.write(sub_string+'<br>');
+
+        var mail=prompt('이메일을 입력하세요.','egg_money_na@naver.com');
+        var domainId, domain;
+        domainId=mail.substr(0,mail.indexOf('@'));
+        domain=mail.substr(mail.indexOf('@'));
+        document.write('<strong>'+domainId+'</strong>'+domain);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

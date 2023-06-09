@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜정보객체</title>
+    <script>
+        /* 1. 날짜 객체 생성 */
+        var today=new Date();
+        console.log(today);
+        var thisMonth=today.getMonth(); //월(0~11로 표시)
+        var thisDate=today.getDate(); //날짜
+        var thisDay=today.getDay(); //요일(0~6으로 표시)
+        var thisHour=today.getHours(); //시간
+        var thisMin=today.getMinutes(); //분
+        var thisSec=today.getSeconds(); //초
+        var thisMiliSec=today.getMilliseconds(); //1/1000초
+        
+        // 1970년 1월 1일부터 1/1000초로 경과된 시간
+        var thisTime=today.getTime();
+        
+        /* 실습. switch~case문을 이용하여 해당 요일을 
+        (도큐먼트) 해당요일은 ??? 요일 입니다. */
+        switch(thisDay){
+            case 0:
+                thisDay="일";
+                break;
+            case 1:
+                thisDay="월";
+                break;
+            case 2:
+                thisDay="화";
+                break;
+            case 3:
+                thisDay="수";
+                break;
+            case 4:
+                thisDay="목";
+                break;
+            case 5:
+                thisDay="금";
+                break;
+            case 6:
+                thisDay="토";
+                break;
+            default:
+                document.write("빠잉<br>");
+        }
+
+        // var Days=["일","월","화","수","목","금","토"];
+        // thisDay=Days[thisDay];
+
+        document.write("이번 달은 <strong>"+(thisMonth+1)+"월</strong> 입니다.<br>");
+        document.write("오늘은 <strong>"+thisDate+"일</strong> 입니다.<br>");
+        document.write("오늘은 <strong>"+thisDay+"요일</strong> 입니다.<br>");
+        document.write("지금은 <strong>"+thisHour+"시</strong> 입니다.<br>");
+        document.write("지금은 <strong>"+thisMin+"분</strong> 입니다.<br>");
+        document.write("지금은 <strong>"+thisSec+"초</strong> 입니다.<br>");
+        document.write("지금은 <strong>"+(thisMiliSec/1000)+"초</strong> 입니다.<br><br>");
+        document.write("현재 getTime은 <strong>"+(thisTime/1000)+"초</strong> 입니다.<br>");
+    </script>
+    <style>
+        strong{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

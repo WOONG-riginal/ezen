@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 자식필터 선택자2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 1. 제이쿼리 코어파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>        
+    <!-- 2. 제이쿼리 CDN방식 이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 순서는 1부터 시작
+            $('#nations tbody tr:nth-child(even)').css({backgroundColor:'lightgray'});
+            $('#nations tbody tr:nth-child(odd)').css({backgroundColor:'gray'});
+            $('#nations tbody tr:nth-child(3)').css({backgroundColor:'orange'});
+            // 첫번째, 마지막 자식 선택자
+            $('#nations tbody tr:first-child').css({backgroundColor:'black',color:'white'});
+            $('#nations tbody tr:last-child').css({backgroundColor:'black',color:'white'});
+            // 규칙을 가지는 자식 선택자
+            $('#nations_two tbody tr:nth-child(3n)').css({backgroundColor:'pink'});
+            $('#nations_two tbody tr:nth-child(3n+1)').css({backgroundColor:'skyblue'});
+            $('#nations_two tbody tr:nth-child(3n-1)').css({backgroundColor:'yellowgreen'});
+            $('#nations_two tbody tr:nth-child(3n+2)').css({backgroundColor:'yellowgreen'});            
+        });
+    </script>
+</head>
+<body>
+    <div class="card-body">
+        <table class="table" id="nations">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>국가명</th>
+                    <th>수도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>대한민국</td>
+                    <td>서울</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>미국</td>
+                    <td>워싱턴DC</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>중국</td>
+                    <td>베이징</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>일본</td>
+                    <td>도쿄</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>영국</td>
+                    <td>런던</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>프랑스</td>
+                    <td>파리</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>독일</td>
+                    <td>베를린</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>스페인</td>
+                    <td>마드리드</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>이탈리아</td>
+                    <td>로마</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>이스라엘</td>
+                    <td>예루살렘</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>브라질</td>
+                    <td>상파울루</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>아르헨티나</td>
+                    <td>부에노스아이레스</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <table class="table" id="nations_two">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>국가명</th>
+                    <th>수도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>대한민국</td>
+                    <td>서울</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>미국</td>
+                    <td>워싱턴DC</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>중국</td>
+                    <td>베이징</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>일본</td>
+                    <td>도쿄</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>영국</td>
+                    <td>런던</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>프랑스</td>
+                    <td>파리</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>독일</td>
+                    <td>베를린</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>스페인</td>
+                    <td>마드리드</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>이탈리아</td>
+                    <td>로마</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>이스라엘</td>
+                    <td>예루살렘</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>브라질</td>
+                    <td>상파울루</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>아르헨티나</td>
+                    <td>부에노스아이레스</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

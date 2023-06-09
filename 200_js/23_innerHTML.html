@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner HTML</title>
+    <script>
+        window.onload=function(){
+            var inner=document.getElementById("inner");
+            // inner.innerHTML="<ul><li>내용1</li><li>내용2</li><li>내용3</li></ul>";
+            var table="<ul>";
+                table+="<li>내용1</li>";
+                table+="<li>내용2</li>";
+                table+="<li>내용3</li>";
+                table+="</ul>";
+            inner.innerHTML=table;
+        }
+    </script>
+</head>
+<body>
+    <div id="inner"></div>
+</body>
+</html>

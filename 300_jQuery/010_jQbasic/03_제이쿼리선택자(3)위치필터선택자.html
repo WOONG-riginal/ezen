@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 위치필터 선택자</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 1. 제이쿼리 코어파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>        
+    <!-- 2. 제이쿼리 CDN방식 이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#foods>tbody>tr').css({backgroundColor:'lightgray'});
+            $('#foods>tbody>tr:nth-child(2n)').css({backgroundColor:'pink'});
+
+            // 인덱스 번호 0번부터 시작
+            $('#foods>tbody>tr:even').css({backgroundColor:'gray'});
+            $('#foods>tbody>tr:odd').css({backgroundColor:'lightgray'});
+
+            // 첫번째, 마지막 요소 선택
+            $('#foods>tbody>tr:first').css({backgroundColor:'black',color:'white'});
+            $('#foods>tbody>tr:last').css('background-color','black').css('color','white');
+
+            // 인덱스 번호로 선택 = eq
+            $('#foods tr:eq(2)').css({backgroundColor:'orange'});
+            $('#foods tr').eq(2).css({backgroundColor:'orange'});
+            
+            // less than(lt) ~미만, greater than(gt) ~초과
+            $('#foods_two tr:lt(3)').css('background-color','gray');
+            $('#foods_two tr:gt(3)').css({backgroundColor:'lightgray'});
+            $('#foods_two tr:eq(3)').css({backgroundColor:'orange'});
+        });
+    </script>
+</head>
+<body>
+    <div class="card-body">
+        <h3>좋아하는 음식들</h3>
+        <table class="table" id="foods">
+            <tr>
+                <th>ID</th>
+                <th>먹을거리</th>
+                <th>분류</th>
+            </tr>
+            <tr>
+                <td>F001</td>
+                <td>짜장면</td>
+                <td>중식</td>
+            </tr>
+            <tr>
+                <td>F002</td>
+                <td>햄버거</td>
+                <td>패스트푸트</td>
+            </tr>
+            <tr>
+                <td>F003</td>
+                <td>불고기</td>
+                <td>한식</td>
+            </tr>
+            <tr>
+                <td>F004</td>
+                <td>돈가스</td>
+                <td>일식</td>
+            </tr>
+            <tr>
+                <td>F005</td>
+                <td>파스타</td>
+                <td>양식</td>
+            </tr>
+            <tr>
+                <td>F006</td>
+                <td>떡볶이</td>
+                <td>분식</td>
+            </tr>
+        </table>
+        <br><br>
+        <table class="table" id="foods_two">
+            <tr>
+                <th>ID</th>
+                <th>먹을거리</th>
+                <th>분류</th>
+            </tr>
+            <tr>
+                <td>F007</td>
+                <td>탕수육</td>
+                <td>중식</td>
+            </tr>
+            <tr>
+                <td>F008</td>
+                <td>핫도그</td>
+                <td>패스트푸트</td>
+            </tr>
+            <tr>
+                <td>F009</td>
+                <td>파전</td>
+                <td>한식</td>
+            </tr>
+            <tr>
+                <td>F010</td>
+                <td>소바</td>
+                <td>일식</td>
+            </tr>
+            <tr>
+                <td>F011</td>
+                <td>스테이크</td>
+                <td>양식</td>
+            </tr>
+            <tr>
+                <td>F012</td>
+                <td>김밥</td>
+                <td>분식</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

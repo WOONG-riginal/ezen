@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 종합 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+        /* 실습1. (프롬프트)나이를 입력받아, 
+            만약, 40세 이상이면 "건강검진대상"(경고창), 아니면 "건강검진대상 아님"(경고창) */
+        // var age = prompt("나이를 입력하세요", 30);
+        // age = Number(age);
+        // if(age>=40){
+        //     alert('건강검진대상');
+        // }else{
+        //     alert('건강검진대상 아님');
+        // }
+
+        /* 실습2. (프롬프트)나이를 입력받아, 
+            만약, 20세 이상 40세 미만이면 "서류심사통과"(경고창), 아니면 "서류심사보류"(경고창) */
+        // var age = prompt('나이를 입력하세요', 30);
+        // age = Number(age);
+        // if(age>=20){
+        //     if(age<40){
+        //         alert('서류심사통과');
+        //     }else{
+        //         alert('서류심사보류');
+        //     }
+        // }else{
+        //     alert('서류심사보류');
+        // }
+        // if(age>=20 && age<40){
+        //     alert('서류심사통과');
+        // }else{
+        //     alert('서류심사보류');
+        // }
+
+        /* 실습3. (프롬프트)ID를 입력받아, 
+            만약, ID가 입력되면 "???님 반갑습니다!!"(브라우저),
+            입력하지 않았으면 "ID를 입력해주세요"(경고창) */
+        // var id = prompt('아이디를 입력하세요');
+        // if(id){
+        //     document.write(id + "님 반갑습니다!!");
+        // }else{
+        //     alert('ID를 입력해주세요');
+        //     location.reload()
+        // }
+
+        /* 실습4. (프롬프트)국어,영어,수학 점수를 입력받아, 
+            만약, 3과목 평균이 80점이상이고, 각과목의 점수가 60점 이상이면 
+            "시험통과!!"(경고창),
+            아니면, "재시험!!"(경고창) */
+        var korean_grade = Number(prompt('국어 점수를 입력하세요', 80));
+        var english_grade = Number(prompt('영어 점수를 입력하세요', 80));
+        var math_grade = Number(prompt('수학 점수를 입력하세요', 80));
+        var avg = (korean_grade+english_grade+math_grade)/3;
+        var result = avg>=80 && korean_grade>=60 && english_grade>=60 && math_grade>=60;
+        if(result){
+            alert('시험통과!!');
+        }else{
+            alert('재시험!!');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
