@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 =>
+        구조분해할당(destructuring)
+        : 객체나 배열의 특정값을 손쉽게 추출할 수 있는 표현식
+          객체나 배열의 속성을 해체하여, 그 값을 개별 변수에 담을 수 있게 하는 JS 표현식
+          (중요) 구조분해할당은 JSON 데이터로 변환 시 유용하므로 명칭 기억
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+        /* 1. 배열 구조분해 할당 */
+        var a, b, test;
+        [a,b]=[10,20];
+        console.log(a); // 10
+        console.log(b); // 20
+
+        [a,b,...test]=[10,20,30,40,50];
+        console.log(a); // 10
+        console.log(b); // 20
+        console.log(test); // [30, 40, 50]
+        console.log(test[1]); // 40
+
+        /* 2. 객체 구조분해 할당 */
+        ({a,b}={a:10,b:20});
+        console.log(a); // 10
+        console.log(b); // 20
+
+        ({a,b,...test}={a:10,b:20,c:30,d:40,e:50});
+        console.log(a); // 10
+        console.log(b); // 20
+        console.log(test); // {c: 30, d: 40, e: 50}
+        console.log(test.d); // 40
+
+
+        /* 3. 배열 기본 변수 할당 */
+        var num=["one","two","three"];
+        var[red,green,blue]=num;
+        console.log(red); // one
+        console.log(green); // two
+        console.log(blue); // three
+
+
+        /* 4. 변수 값 교환 */
+        var a=10;
+        var b=30;
+        [a,b]=[b,a];
+        console.log(a); // 30
+        console.log(b); // 10
+
+
+        /* 5. 객체 값 교환 */
+        // 객체명 obj에 숫자값 10, 20을 할당 | (콘솔)객체 값 출력을 20,10으로 나오도록 코딩
+        var obj={a:10,b:20};
+        var {b:num2,a:num1}=obj;
+        console.log(num2); // 20
+        console.log(num1); // 10
+        console.log(obj); // {a: 10, b: 20}
+        console.log(obj.b,obj.a); // 20 10
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

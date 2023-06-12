@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 =>
+        템플릿 리터럴
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+        let name='Gimssam';
+        console.log(`My name is ${name}.`);
+        
+        /* (중요) 객체 내 변수는 this를 참조 */
+        let obj={
+            name:'Mcssam',
+            age:33,
+            child:['one','two'],
+            info:{
+                tel: '010-2345-6789',
+                address: 'Seoul'
+            },
+            toString: function(){
+                console.log(`${this.name}님의 나이는 ${this.age}세 입니다.`);
+                console.log(`${this.name}님은 ${this.info.address}에 살고 있고, 전화번호는 ${this.info.tel} 입니다.`);
+            }
+        }
+        obj.toString();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

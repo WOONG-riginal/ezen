@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 => 
+        가변변수 / 불변변수
+        : 기본 가바스크립트 문법 변수 선언 = var 키워드 사용
+          ES6 = 값을 수정할 수 있는 가변변수 = let 키워드 사용
+          ES6 = 값을 수정할 수 없는 불변변수 = const 키워드 사용
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script>
+    /* 1. const 불변변수 = 변수명, 변수값을 바꿀 수 없음 */
+    // a. 숫자형 데이터
+    const num=1;
+    // num=3; // 타입에러 발생
+    console.log(num);
+
+    // b. 문자형 데이터
+    const str='김쌤';
+    // str='gimssam'; // 타입에러 발생
+    console.log(str);
+
+    // c. 논리형 데이터
+    const bool=true;
+    // bool=false; // 타입에러 발생
+    console.log(bool);
+
+    // d. 배열형 데이터
+    const arr=[];
+    // arr=[1,2,3]; // 타입에러 발생
+    console.log(arr);
+
+    // e. 객체 데이터
+    const obj={};
+    // obj={name:'mc'}; // 타입에러 발생
+    console.log(obj);
+
+
+    /* 2. let 가변변수 = 변수명을 바꿀 수 없음 */
+    const array=[1,2,3];
+    // a. for문
+    for(let i=0;i<array.length;i++){
+        document.write(array[i],"<br>");
+        console.log(array[i]);
+    }
+
+    // b. for-in문 = iterator 방식
+    for(const item in array){
+        document.write(array[item],"<br>");
+        console.log('for-in구문', item);
+    }
+
+    // c. forEach (화살표 함수 사용)
+    array.forEach((item,index)=>{
+        console.log(`배열 index값 = ${index} : 배열 item값 = ${item}`);
+    });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

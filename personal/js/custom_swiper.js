@@ -19,12 +19,12 @@ function showPreview() {
   }else{
     linkText=`<a href="./portfolio/pf${currSlide-1}.html">`;
   }
-  show.innerHTML=`${linkText}<h3>클릭 시 해당 포트폴리오로 이동합니다</h3>
+  show.innerHTML=`${linkText}<h3>GO TO THIS PORTFOLIO</h3>
     <img src="./personal/images/portfolio${currSlide-1}.jpg" alt="미리보기">
     </a>`;
 };
 function defaultPreview() {
-  show.innerHTML=`<h3>프리뷰를 투입해 주세요</h3>`;
+  show.innerHTML=`<h3>INSERT PREVIEW</h3>`;
 };
 
 inArrow();
@@ -87,7 +87,7 @@ window.addEventListener("resize", () => {
   slideWidth = slide.clientWidth/3;
 });
 
-// PC 드래스 시 스크립트
+// PC 드래그 시 스크립트
 slide.addEventListener("mousedown", (e) => {
   startPoint = e.pageX;
 });
@@ -123,3 +123,11 @@ slide.addEventListener("touchend", (e) => {
 // prevBtn.addEventListener("click", () => {
 //   prevMove();
 // });
+
+new fullScroll({
+  mainElement: 'wrap',
+  displayDots: true,
+  dotsPosition: 'right',
+  animateTime: 0.7,
+  animateFuction: 'ease'
+});
