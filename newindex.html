@@ -17,22 +17,48 @@
     <script src="./personal/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
+    <div id="wrap">
+        <header class="w1440">
+            <h1 class="logo">EGGMONEYNA</h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside>
+            <div class="red topbottom"></div>
+            <div class="yellow"></div>
+            <div class="green"></div>
+            <div class="blue"></div>
+            <div class="purple"></div>
+        </aside>
+        <main role="main">
+            <section id="about">
+                about
+            </section>
+            <section id="portfolio">portfolio</section>
+            <section id="contact">contact</section>
+        </main>
+    </div>
     <a><div class="circle"></div></a>
 </body>
 <script>
-    $(function () {
-        $("a").click(function () {
-            var url = $(this).attr("href");
-            $(".circle").animate({
-                width: '3000',
-                height: '3000',
-                'border-radius': '9999px'
-            },500, function () {
-                document.location.href = './index.html';
-            });
+    // $(function () {
+    //     $("a").click(function () {
+    //         var url = $(this).attr("href");
+    //         $(".circle").animate({
+    //             width: '3000',
+    //             height: '3000',
+    //             'border-radius': '9999px'
+    //         },500, function () {
+    //             document.location.href = './index.html';
+    //         });
             
-            return false;
-        });
-    });
+    //         return false;
+    //     });
+    // });
 </script>
 </html>
