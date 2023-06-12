@@ -1,90 +1,261 @@
 @charset "utf-8";
-body,html{
-    width: 100vw;
-    height: 100vh;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* 한페이지 넘어가면 가림 */
     overflow: hidden;
+    background-color: #000;
 }
-.sys{
-    padding-top: 120px;
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
 }
-/* Header */
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container section{
+    width: 100%;
+    height: 100%;
+}
+
+/*우측 도트 CSS*/
+/*1. 도트박스 설정*/
+.dots {	
+	z-index: 1;
+/*	list-style: none;*/
+	padding: 0;
+    /*포지션*/
+	position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.dots li a {
+	padding: 10px;
+	width: 4px;
+	height: 5px;
+	display: block;
+}
+.dots li a:before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: rgba(255, 255, 255, 0.48);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;	
+	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	-moz-transition: -moz-transform 0.3s ease, background-color 0.3s ease;
+	-ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
+	-o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.dots li a.active:before {
+	content: '';
+	background-color: #FFFFFF;
+	background-color: #000;
+	width: 14px;
+	height: 14px;
+	margin-top: -4px;
+	left: 7px; 
+	background-color: white;
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
+}
+.dots-right {
+	right: 10px;
+}
+.dots-left {
+	left: 10px;
+}
+
+/* ========================= 메인페이지 ========================= */
+
 header{
-    background-image: url(../images/moon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-    height: 100vh;
+    padding-top: 36px;
 }
-header h1{
-    font-family: 'Righteous', cursive;
-    font-size: 32px;
-    font-size: 3.4188vh;
+.logo{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
     color: #fff;
-    text-shadow: 2px 2px 4px #000;
-    position: fixed;
-    left: 50px;
-    top: 50px;
-    z-index: 9;
+    float: left;
 }
-header img{
+.gnb{
+    float: right;
+}
+.gnb li{
+    float: left;
+    margin-left: 145px;
+}
+.gnb li:nth-child(1){
+    margin-left: 0;
+}
+.gnb li a{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+/* ========================= 자기소개 ========================= */
+.about_wrapper h2{
+    color: #fff;
+    text-align: center;
+}
+
+/* ========================= 포트폴리오 ========================= */
+
+.portfolio{
     position: relative;
-    top: 280px;
-    transition: all 0.5s;
 }
-section span i:nth-child(3){
-    animation: arrowAni 1.5s linear 0.5s infinite;
+.portfolio_wrapper{
+    width: 100%;
+    position: absolute;
+    top: 20%;
 }
-/* Contents */
-section{
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.portfolio_wrapper h2{
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 28px;
+    color: #fff;
+    margin: 12px 0;
+}
+.preview{
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    box-shadow: 0 0 5px #777;
+    margin-bottom: 10px;
+    float: left;
+    position: absolute;
+    left: 8.3%;
+    z-index: 10;
+}
+.preview .show{
+    width: 100%;
+    height: 100%;
     position: relative;
-    cursor: pointer;
+    background: #999;
 }
-section h2{
+.preview .show h3{
+    width: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 40%;
-    z-index: 111;
-    font-family: 'Righteous', cursive;
-    font-size: 48px;
-    font-size: 5.1282vh;
+    top: 44%;
+    z-index: 9;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 5vh;
     color: #fff;
     text-shadow: 2px 2px 4px #000;
     letter-spacing: 2px;
     text-align: center;
 }
-section span i:nth-child(1){
+.preview .show img{
+    width: 100%;
+    height: 100%;
+}
+.insert_slide{
+    width: 50%;
+    height: 100%;
+    float: right;
+    position: relative;
+    right: 8.3%;
+}
+.slide_in,.slide_out,.slide_wrap{
+    width: 100%;
+    height: 33.3%;
+    line-height: 3;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}
+.slide_in h3,.slide_out h3{
+    letter-spacing: -8px;
+    opacity: 0.3;
+    color: #fff;
+    transition: all 0.7s;
+}
+.slide_in h3 i:nth-child(3),
+.slide_out h3 i:nth-child(1){
     animation: arrowAni 1.5s linear 0s infinite;
 }
-section span i:nth-child(2){
+.slide_in h3 i:nth-child(2),
+.slide_out h3 i:nth-child(2){
     animation: arrowAni 1.5s linear 0.5s infinite;
+}
+.slide_in h3 i:nth-child(1),
+.slide_out h3 i:nth-child(3){
+    animation: arrowAni 1.5s linear 1s infinite;
 }
 @keyframes arrowAni {
     from{
-        opacity: 1;
+        opacity: 0.7;
         transform: scale(1);
         right: 0;
     }
     to{
-        opacity: 0;
+        opacity: 0.3;
         transform: scale(1.2);
         right: 100px;
     }
 }
-section span:hover{
-    color: gold;
+.slide {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    user-select: none;
 }
-.section2{background-image: url(../images/portfolio01.jpg);}
-.section3{background-image: url(../images/portfolio02.jpg);}
-.section4{background-image: url(../images/portfolio03.jpg);}
-.section5{background-image: url(../images/portfolio04.jpg);}
-.section6{background-image: url(../images/portfolio05.jpg);}
-.section7{background-image: url(../images/portfolio06.jpg);}
-.section8{background-image: url(../images/portfolio07.jpg);}
-.section9{background-image: url(../images/portfolio08.jpg);}
+.slide_item {
+    width: 33.3%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.slide_item:nth-child(2) {
+    background-image: url(../images/portfolio1.jpg);
+}
+.slide_item:nth-child(3) {
+    background-image: url(../images/portfolio2.jpg);
+}
+.slide_item:nth-child(4) {
+    background-image: url(../images/portfolio3.jpg);
+}
+.slide_item:nth-child(5) {
+    background-image: url(../images/portfolio4.jpg);
+}
+.slide_item:nth-child(6) {
+    background-image: url(../images/portfolio5.jpg);
+}
+.slide_item:nth-child(7) {
+    background-image: url(../images/portfolio6.jpg);
+}
+.slide_item:nth-child(8) {
+    background-image: url(../images/portfolio7.jpg);
+}
+.slide_item:nth-child(9) {
+    background-image: url(../images/portfolio8.jpg);
+}
