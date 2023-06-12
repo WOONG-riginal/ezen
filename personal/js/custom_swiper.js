@@ -87,7 +87,7 @@ window.addEventListener("resize", () => {
   slideWidth = slide.clientWidth/3;
 });
 
-// PC 드래스 시 스크립트
+// PC 드래그 시 스크립트
 slide.addEventListener("mousedown", (e) => {
   startPoint = e.pageX;
 });
