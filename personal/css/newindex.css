@@ -1,5 +1,5 @@
 @charset "utf-8";
-.circle{
+/* .circle{
     width: 50px;
     height: 50px;
     border-radius: 9999px;
@@ -8,4 +8,38 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+} */
+body,html{
+    font-family: 'Fjalla One', sans-serif;
 }
+.w1440{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header .logo{
+    margin-top: 40px;
+    font-size: 20px;
+}
+header nav{
+    margin-top: 40px;
+    width: 33.3%;
+}
+header .gnb{
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+}
+aside div{
+    width: 100px;
+    height: 100px;
+}
+aside .red{background-color: red;}
+aside .yellow{background-color: yellow;}
+aside .green{background-color: green;}
+aside .blue{background-color: blue;}
+aside .purple{background-color: purple;}
