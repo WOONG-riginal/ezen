@@ -1,17 +1,131 @@
 @charset "utf-8";
-#wrap{
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* 한페이지 넘어가면 가림 */
+    overflow: hidden;
+    background-color: #000;
+}
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container section{
     width: 100%;
     height: 100%;
 }
+
+/*우측 도트 CSS*/
+/*1. 도트박스 설정*/
+.dots {	
+	z-index: 1;
+/*	list-style: none;*/
+	padding: 0;
+    /*포지션*/
+	position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.dots li a {
+	padding: 10px;
+	width: 4px;
+	height: 5px;
+	display: block;
+}
+.dots li a:before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: rgba(255, 255, 255, 0.48);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;	
+	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	-moz-transition: -moz-transform 0.3s ease, background-color 0.3s ease;
+	-ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
+	-o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.dots li a.active:before {
+	content: '';
+	background-color: #FFFFFF;
+	background-color: #000;
+	width: 14px;
+	height: 14px;
+	margin-top: -4px;
+	left: 7px; 
+	background-color: white;
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
+}
+.dots-right {
+	right: 10px;
+}
+.dots-left {
+	left: 10px;
+}
+
+/* ========================= 메인페이지 ========================= */
+
+header{
+    padding-top: 36px;
+}
+.logo{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    float: left;
+}
+.gnb{
+    float: right;
+}
+.gnb li{
+    float: left;
+    margin-left: 145px;
+}
+.gnb li:nth-child(1){
+    margin-left: 0;
+}
+.gnb li a{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* ========================= 포트폴리오 ========================= */
+
+.portfolio{
+    position: relative;
+}
 .portfolio_wrapper{
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    top: 20%;
 }
 .portfolio_wrapper h2{
     text-align: center;
-    font-family: "Anton", sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 28px;
+    color: #fff;
     margin: 12px 0;
 }
 .preview{
@@ -22,7 +136,7 @@
     box-shadow: 0 0 5px #777;
     margin-bottom: 10px;
     float: left;
-    position: relative;
+    position: absolute;
     left: 8.3%;
     z-index: 10;
 }
@@ -39,9 +153,8 @@
     transform: translateX(-50%);
     top: 44%;
     z-index: 9;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 5vh;
-    font-weight: bold;
     color: #fff;
     text-shadow: 2px 2px 4px #000;
     letter-spacing: 2px;
@@ -69,6 +182,7 @@
 .slide_in h3,.slide_out h3{
     letter-spacing: -8px;
     opacity: 0.3;
+    color: #fff;
     transition: all 0.7s;
 }
 .slide_in h3 i:nth-child(3),

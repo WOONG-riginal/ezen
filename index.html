@@ -12,49 +12,72 @@
     <link rel="stylesheet" href="./personal/css/font.css">
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="./personal/css/new_index.css">
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
     <!-- JS 플러그인 파일 -->
     <script src="./personal/js/jquery-1.12.4.min.js"></script>
     <script src="./personal/js/jquery-3.3.1.min.js"></script>
     <script src="./personal/js/jquery-3.4.1.min.js"></script>
+    <script src="./personal/js/full-page-scroll.js"></script>
 </head>
 <body>
-    <div id="wrap">
-        <div class="portfolio_wrapper cf">
-            <h2>PORTFOLIO PREVIEW</h2>
-            <div class="preview">
-                <div class="show">
-                    <h3>프리뷰를 투입해 주세요</h3>
+    <div id="wrap" class="container">
+        <section class="main-page">
+            <header class="w1440">
+                <h1 class="logo"><a href="#">logo</a></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="#0">main</a></li>
+                        <li><a href="#1">about</a></li>
+                        <li><a href="#2">portfolio</a></li>
+                        <li><a href="#3">contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </section>
+        <section class="about">
+            <div class="about_wrapper">
+                <h2>자기소개</h2>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="portfolio_wrapper cf">
+                <h2>PORTFOLIO PREVIEW</h2>
+                <div class="preview">
+                    <div class="show">
+                        <h3>INSERT PREVIEW</h3>
+                    </div>
+                </div>
+                <div class="insert_slide">
+                    <div class="slide_in">
+                        <h3>
+                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                        </h3>
+                    </div>
+                    <div class="slide slide_wrap">
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                        <div class="slide_item"></div>
+                    </div>
+                    <div class="slide_out">
+                        <h3>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </h3>
+                    </div>
                 </div>
             </div>
-            <div class="insert_slide">
-                <div class="slide_in">
-                    <h3>
-                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                    </h3>
-                </div>
-                <div class="slide slide_wrap">
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                    <div class="slide_item"></div>
-                </div>
-                <div class="slide_out">
-                    <h3>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </h3>
-                </div>
-            </div>
-        </div>
+        </section>
+        <section class="contact"></section>
     </div>
 <script src="./personal/js/custom_swiper.js"></script>
 </body>
