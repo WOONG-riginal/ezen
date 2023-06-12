@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 : 템플릿 문자열 = 문자열 안에 변수와 연산식을 혼합하여 사용</title>
+</head>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/font.css">
+<style>
+    body{
+        line-height: 2;
+    }
+</style>
+<script>
+/* 1. ES5 SCRIPT */
+    // a. 문자열과 변수 연결 시 = +연산자 사용
+    var str1="ES5 안녕하세요";
+    var str2="반갑습니다";
+    var greeting=str1+" "+str2;
+    document.write(greeting + "<br>");
+
+    // b. 객체 데이터
+    var product={name: '도서', price: '4200원'};
+    console.log(typeof(product));
+    // b-1. 객체 데이터 접근방법
+    var message='ES5 제품 ' + product.name + '의 가격은 ' + product.price + '입니다.';
+    document.write(message + "<br>");
+
+    // c. 숫자 데이터
+    var value1=1;
+    var value2=2;
+    var op1= '곱셈값은 ' + (value1*value2) + '입니다.';
+    document.write(op1 + "<br>");
+
+    // d. 논리 데이터
+    var boolValue = false;
+    var op2 = '논리값은 ' + (boolValue? "참" : "거짓") + '입니다.';
+    document.write(op2 + "<br>");
+
+
+/* 2. ES6 SCRIPT */
+    // a. 문자열과 변수 연결 시 = `(백틱)으로 묶은 후 ${변수 또는 식}
+    //                        = +연산자를 개선한 템플릿 문자열 도입 | `(백틱)사용
+    var str1= "ES6 안녕하세요";
+    var str2= "반갑습니다.";
+    var greeting = `${str1} ${str2}`;
+    document.write(greeting, "<br>");
+
+    // b. 객체 데이터
+    var product={name: '도서', price: '4200원'};
+    // b-1. 객체 데이터 접근방법
+    var message=`ES6 제품 ${product.name}의 가격은 ${product.price}입니다.`;
+    document.write(message, "<br>");
+
+    // c. 숫자 데이터
+    var value1=1;
+    var value2=2;
+    var op1= `곱셈값은  ${value1*value2} 입니다.`;
+    document.write(op1, "<br>");
+
+    // d. 논리 데이터
+    var boolValue = false;
+    var op2 = `논리값은 ${boolValue?"참":"거짓"}입니다.`;
+    document.write(op2 + "<br>");
+</script>
+<body>
+    
+</body>
+</html>
