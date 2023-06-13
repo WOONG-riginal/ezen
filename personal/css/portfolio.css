@@ -6,8 +6,9 @@ body,html{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     animation: fadein 2s;
+    position: relative;
 }
 @keyframes fadein {
     from {
@@ -16,4 +17,24 @@ body,html{
     to {
         opacity:1;
     }
+}
+.slider{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    height: 400px;
+    top: 25%;
+    left: 40%;
+    transition: all 0.3s;
+}
+.slider .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 200px 0 0;
+    border: 1px solid black;
+    border-radius: 200px;
 }

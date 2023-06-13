@@ -10,20 +10,36 @@
     <link rel="stylesheet" href="./css/font.css">
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
     <!-- JS 플러그인 파일 -->
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/full-page-scroll.js"></script>
 </head>
 <body>
-    <div id="wrap">
-        <div class="container">
-            <div class="box">box0</div>
-            <div class="box">box1</div>
-            <div class="box">box2</div>
-            <div class="box">box3</div>
+    <div id="wrap" class="container">
+        <div class="slider">
+            <div class="box"><img src="./images/portfolio1.jpg" alt="포트폴리오"><a href="../900_portfolio/011_portfolio_롤렉스/010_rolex.html"></a></div>
+            <div class="box"><img src="./images/portfolio2.jpg" alt="포트폴리오"><a href="../900_portfolio/021_portfolio_튜더/021_튜더.html"></a></div>
+            <div class="box"><img src="./images/portfolio3.jpg" alt="포트폴리오"><a href="../900_portfolio/000_portfolio_MultiParrellax/01_multiParrellax.html"></a></div>
+            <div class="box"><img src="./images/portfolio4.jpg" alt="포트폴리오"><a href="../900_portfolio/031_RWDT_gshock/gshock.html"></a></div>
+            <div class="box"><img src="./images/portfolio5.jpg" alt="포트폴리오"><a href="../900_portfolio/051_portfolio_gshockEvent/gshockEvent.html"></a></div>
+            <div class="box"><img src="./images/portfolio6.jpg" alt="포트폴리오"><a href="../900_portfolio/040_MobileWeb_Parasite/mobile_iframe.html"></a></div>
+            <div class="box"><img src="./images/portfolio7.jpg" alt="포트폴리오"><a href="../900_portfolio/061_portfolio_wnw2023/01_wnw2023.html"></a></div>
+            <div class="box"><img src="./images/portfolio8.jpg" alt="포트폴리오"><a href="../900_portfolio/901_portfolio_teamHyundai/index.html"></a></div>
         </div>
     </div>
+<script src="./js/portfolio.js"></script>
+<script>
+    $(".box").click(function(){
+        var url = $(this).find('a').attr("href");
+        $(this).animate({
+            height:'9999px',
+            'border-radius':'9999px'
+        },1000,function(){
+            location.href=url;
+        });
+    });
+</script>
 </body>
 </html>
