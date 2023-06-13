@@ -6,6 +6,15 @@ body {
     width: 1162px;
     padding-top: 40px;
     margin: 0 auto;
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 #wrap:after {
     content: "";
