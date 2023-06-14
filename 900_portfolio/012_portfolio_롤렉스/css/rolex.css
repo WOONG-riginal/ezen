@@ -2,18 +2,19 @@
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
+#wrap{
+    margin: 0 auto;
+    --rolex-green: rgb(0,96,57);
+    --light-green: rgb(69,165,122);
+}
+
 /* Safe Area */
 .w1280{
     width: 1280px;
     margin: 0 auto;
 }
 
-#wrap{
-    max-width: 1920px;
-    margin: 0 auto;
-}
-
-/* Header */
+/* ===================== Header ===================== */
 header{
     height: 700px;
     position: relative;
@@ -26,11 +27,17 @@ header video{
     top: 100px;
     z-index: -1;
 }
-/* Logo, GNB */
+/* ===================== Logo, GNB ===================== */
 header .logo_gnb{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     padding-top: 24px;
+    width: 100%;
     height: 100px;
-    background-color: rgb(0,96,57);
+    background: linear-gradient(90deg,#0b3e27,#197149);
 }
 header .menu_btn{
     float: left;
@@ -39,10 +46,10 @@ header .menu_btn{
     cursor: pointer;
 }
 header .menu_btn:hover p{
-    color: rgb(27, 143, 96);
+    color: var(--light-green);
 }
 header .menu_btn:hover .ham div{
-    background-color: rgb(27, 143, 96);
+    background-color: var(--light-green);
 }
 header .menu_btn .ham{
     float: left;
@@ -51,17 +58,26 @@ header .menu_btn .ham div{
     width: 24px;
     height: 2px;
     background-color: #fff;
-    transition: all 0.3s;
 }
 header .menu_btn .ham div:nth-child(1){
     margin-top: 4px;
     margin-bottom: 8px;
+}
+header .menu_btn .X-btn div:nth-child(1){
+    transform: rotate(45deg) translateY(350%);
+}
+header .menu_btn .X-btn div:nth-child(2){
+    transform: rotate(-45deg) translateY(-350%);
 }
 header .menu_btn p{
     margin-left: 10px;
     float: left;
     color: #fff;
     transition: all 0.3s;
+    display: none;
+}
+header .menu_btn p.show{
+    display: inline-block;
 }
 header .logo{
     margin-left: 480px;
@@ -86,9 +102,9 @@ header .gnb li a{
     transition: all 0.3s;
 }
 header .gnb li a:hover {
-    color: rgb(27, 143, 96);
+    color: var(--light-green);
 }
-header .detail{
+header .detail_btn{
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -107,9 +123,115 @@ header .detail{
     cursor: pointer;
     transition: all 0.3s;
 }
-header .detail:hover{
+header .detail_btn:hover{
     opacity: 0.8;
 }
+
+/* ===================== LNB ===================== */
+header .lnb_wrapper{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    overflow: hidden;
+    top: -400px;
+    z-index: 7;
+    background: linear-gradient(90deg,#0b3e27,#197149);
+    padding-top: 70px;
+    transition: all 0.7s;
+}
+header .active{
+    top: 100px;
+}
+header .lnb_wrapper .lnb{
+    float: left;
+}
+header .lnb_wrapper .lnb li{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--light-green);
+    cursor: pointer;
+}
+header .lnb_wrapper .lnb li:nth-child(3),
+header .lnb_wrapper .lnb li:nth-child(5){
+    margin-bottom: 40px;
+}
+header .lnb_wrapper .lnb li.on{
+    color: #fff;
+}
+header .lnb_wrapper .sub_lnb{
+    float: right;
+    width: 1080px;
+    padding-left: 40px;
+}
+.up-btn,.down-btn{
+    position: absolute;
+    left: 56%;
+    z-index: 2;
+    cursor: pointer;
+}
+.up-btn{
+    top: 50px;
+    display: none;
+}
+.down-btn{
+    top: 350px;
+}
+.up-btn i,.down-btn i{
+    font-size: 30px;
+    color: #eee;
+    opacity: 0.7;
+}
+.up-btn i:hover,.down-btn i:hover{
+    color: #aaa;
+    opacity: 1;
+}
+
+
+header .lnb_wrapper .sub_lnb .sub_menu{
+    overflow: hidden;
+    height: 300px;
+    display: none;
+}
+header .lnb_wrapper .sub_lnb .display{
+    display: block;
+}
+
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box{
+    width: 32.66%;
+    height: 280px;
+    margin-right: 1%;
+    margin-bottom: 20px;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box:nth-child(3n){
+    margin-right: 0;
+}
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box .img_box{
+    overflow: hidden;
+}
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box img{
+    width: 100%;
+    transition: all 0.7s;
+}
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box:hover img{
+    scale: 110%;
+}
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box .small_title{
+    display: block;
+    font-size: 12px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
 /* Section CarBox */
 .card_box{
     background-color: #dcdcdc;
