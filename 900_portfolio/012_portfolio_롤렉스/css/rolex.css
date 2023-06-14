@@ -4,8 +4,10 @@ body{
 }
 #wrap{
     margin: 0 auto;
+    --rolex-gold: rgb(163,126,44);
     --rolex-green: rgb(0,96,57);
     --light-green: rgb(69,165,122);
+    --dark-green: rgb(11,62,39);
 }
 
 /* Safe Area */
@@ -57,6 +59,7 @@ header .menu_btn .ham{
 header .menu_btn .ham div{
     width: 24px;
     height: 2px;
+    transition: all 0.3s;
     background-color: #fff;
 }
 header .menu_btn .ham div:nth-child(1){
@@ -77,7 +80,7 @@ header .menu_btn p{
     display: none;
 }
 header .menu_btn p.show{
-    display: inline-block;
+    display: block;
 }
 header .logo{
     margin-left: 480px;
@@ -92,6 +95,10 @@ header nav{
 header .gnb{
     color: #fff;
     font-weight: 400;
+    transition: all 0.7s;
+}
+header .gnbhide{
+    display: none;
 }
 header .gnb li{
     margin-top: 24px;
@@ -105,7 +112,6 @@ header .gnb li a:hover {
     color: var(--light-green);
 }
 header .detail_btn{
-    display: inline-block;
     width: 150px;
     height: 40px;
     background-color: #eee;
@@ -131,7 +137,7 @@ header .detail_btn:hover{
 header .lnb_wrapper{
     width: 100%;
     height: 500px;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     top: -400px;
     z-index: 7;
@@ -243,11 +249,49 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     background-color: #fff;
     margin-right: 40px;
     float: left;
-    /* 포지션 3단 CardBox 겹치기 */
     position: relative;
     top: -80px;
     left: 0;
     z-index: 1;
+}
+.card_box .card_view div{
+    overflow: hidden;
+}
+.card_box .card_view img{
+    width: 100%;
+    transition: all 0.7s;
+}
+.card_box .card_view img:hover{
+    scale: 110%;
+}
+.card_box .card_view .card_text{
+    padding: 30px 20px;
+}
+.card_box .card_view button{
+    width: 150px;
+    height: 40px;
+    background-color: var(--rolex-gold);
+    border: none;
+    border-radius: 40px;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.card_box .card_view h2,
+.card_box .card_view h3,
+.card_box .card_view p{
+    color:#616161;
+}
+.card_box .card_view p{
+    line-height: 1.2;
+}
+.card_box .card_view h3{
+    margin: 10px 0 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 /* CardBox Tex */
 .card_box_info{

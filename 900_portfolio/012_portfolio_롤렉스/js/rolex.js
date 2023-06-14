@@ -16,12 +16,14 @@ videoBtn.addEventListener('click', function(){
 const hamBtn = document.querySelector('.menu_btn');
 const hams = document.querySelector('.ham');
 const hamTxt = document.querySelectorAll('.ham_txt');
+const gnbMenu = document.querySelector('.gnb');
 const lnbMenu = document.querySelector('.lnb_wrapper');
 hamBtn.addEventListener('click', function(){
-    lnbMenu.classList.toggle('active');
     hams.classList.toggle('X-btn');
-    hamTxt[0].classList.toggle('show');
-    hamTxt[1].classList.toggle('show');
+    for(var i=0; i<hamTxt.length; i++){
+        hamTxt[i].classList.toggle('show');}
+    gnbMenu.classList.toggle('gnbhide');
+    lnbMenu.classList.toggle('active');
 });
 
 
