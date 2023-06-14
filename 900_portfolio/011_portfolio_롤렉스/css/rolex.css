@@ -11,6 +11,7 @@
 }
 header{
     height: 700px;
+    /* background-color: #105033; */
     background-image: url(../images/backgroundimage.jpg);
 }
 #logo1 img{
