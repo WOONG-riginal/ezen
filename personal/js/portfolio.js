@@ -9,7 +9,6 @@ let slide_move = 0;
 
 container.addEventListener('wheel',function(e){
     move_slider(e.deltaY);
-    on_indicator();
 });
 
 function move_slider(amount){
@@ -23,3 +22,15 @@ function move_slider(amount){
     }
     slider.style.transform = `translateX(${slide_move}px)`;
 }
+
+$(".circle").click(function() {
+    var url = $(this).find('a').attr("href");
+    $(this).css({'z-index':99});
+    $(this).animate({
+        width: 9999,
+        height: 9999
+    },500, function() {
+        location.href = url;
+    });
+    return false;
+});

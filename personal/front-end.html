@@ -17,29 +17,28 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <div id="wrap" class="container">
-        <div class="slider">
-            <div class="box"><img src="./images/portfolio1.jpg" alt="포트폴리오"><a href="../900_portfolio/011_portfolio_롤렉스/010_rolex.html"></a></div>
-            <div class="box"><img src="./images/portfolio2.jpg" alt="포트폴리오"><a href="../900_portfolio/021_portfolio_튜더/021_튜더.html"></a></div>
-            <div class="box"><img src="./images/portfolio3.jpg" alt="포트폴리오"><a href="../900_portfolio/000_portfolio_MultiParrellax/01_multiParrellax.html"></a></div>
-            <div class="box"><img src="./images/portfolio4.jpg" alt="포트폴리오"><a href="../900_portfolio/031_RWDT_gshock/gshock.html"></a></div>
-            <div class="box"><img src="./images/portfolio5.jpg" alt="포트폴리오"><a href="../900_portfolio/051_portfolio_gshockEvent/gshockEvent.html"></a></div>
-            <div class="box"><img src="./images/portfolio6.jpg" alt="포트폴리오"><a href="../900_portfolio/040_MobileWeb_Parasite/mobile_iframe.html"></a></div>
-            <div class="box"><img src="./images/portfolio7.jpg" alt="포트폴리오"><a href="../900_portfolio/061_portfolio_wnw2023/01_wnw2023.html"></a></div>
-            <div class="box"><img src="./images/portfolio8.jpg" alt="포트폴리오"><a href="../900_portfolio/901_portfolio_teamHyundai/index.html"></a></div>
+    <div id="wrap">
+        <div class="go_to_main">
+            <a href="../index_v2.html"><ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul></a>
+        </div>
+        <div class="container">
+            <div class="slider">
+                <div class="circle"><a href="../900_portfolio/011_portfolio_롤렉스/010_rolex.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/022_portfolio_튜더/021_튜더.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/000_portfolio_MultiParrellax/01_multiParrellax.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/031_RWDT_gshock/gshock.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/051_portfolio_gshockEvent/gshockEvent.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/040_MobileWeb_Parasite/mobile_img.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/061_portfolio_wnw2023/01_wnw2023.html"></a></div>
+                <div class="circle"><a href="../900_portfolio/901_portfolio_teamHyundai/index.html"></a></div>
+            </div>
         </div>
     </div>
 <script src="./js/portfolio.js"></script>
-<script>
-    $(".box").click(function(){
-        var url = $(this).find('a').attr("href");
-        $(this).animate({
-            height:'9999px',
-            'border-radius':'9999px'
-        },1000,function(){
-            location.href=url;
-        });
-    });
-</script>
 </body>
 </html>

@@ -1,0 +1,324 @@
+@charset "utf-8";
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* Safe Area */
+.w1280{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Header */
+header{
+    height: 700px;
+    position: relative;
+}
+header video{
+    width: 100%;
+    height: 600px;
+    object-fit: fill;
+    position: absolute;
+    top: 100px;
+    z-index: -1;
+}
+/* Logo, GNB */
+header .logo_gnb{
+    padding-top: 24px;
+    height: 100px;
+    background-color: rgb(0,96,57);
+}
+header .menu_btn{
+    float: left;
+    width: 80px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+header .menu_btn:hover p{
+    color: rgb(27, 143, 96);
+}
+header .menu_btn:hover .ham div{
+    background-color: rgb(27, 143, 96);
+}
+header .menu_btn .ham{
+    float: left;
+}
+header .menu_btn .ham div{
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+header .menu_btn .ham div:nth-child(1){
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+header .menu_btn p{
+    margin-left: 10px;
+    float: left;
+    color: #fff;
+    transition: all 0.3s;
+}
+header .logo{
+    margin-left: 480px;
+    float: left;
+}
+header .logo img{
+    width: 48px;
+}
+header nav{
+    float: right;
+}
+header .gnb{
+    color: #fff;
+    font-weight: 400;
+}
+header .gnb li{
+    margin-top: 24px;
+    margin-left: 50px;
+    float: left;
+}
+header .gnb li a{
+    transition: all 0.3s;
+}
+header .gnb li a:hover {
+    color: rgb(27, 143, 96);
+}
+header .detail{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: #eee;
+    opacity: 0.5;
+    border: none;
+    border-radius: 40px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+header .detail:hover{
+    opacity: 0.8;
+}
+/* Section CarBox */
+.card_box{
+    background-color: #dcdcdc;
+}
+/* 3단 CardBox */
+.card_box .card_view{
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    margin-right: 40px;
+    float: left;
+    /* 포지션 3단 CardBox 겹치기 */
+    position: relative;
+    top: -80px;
+    left: 0;
+    z-index: 1;
+}
+/* CardBox Tex */
+.card_box_info{
+    padding-bottom: 60px;    
+}
+.card_box_info h2{
+    font-size: 12px;
+    color: #807f7f;
+    font-weight: 400;
+    float: left;
+}
+.card_box_info h2>span{
+    color: #373636;
+}
+.card_box_info p{
+    font-size: 18px;
+    color: #807f7f;
+    font-weight: 600;
+    float: right;
+}
+.card_box_info p>img{
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+/* Section ABOUTUS */
+.about_us{
+    padding: 100px 0 140px;
+}
+.about_us .about_us_text{
+    color: #807f7f;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.5;
+}
+.about_us .line{
+    width: 110px;
+    height: 2px;
+    border-bottom: 1px solid #fc3;
+    margin-bottom: 60px;
+    margin: 0 auto;
+}
+.about_us .about_us_tab{
+    margin-top: 60px;
+}
+/* Article MOV 추가코딩 */
+.mov{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/mov_back.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+.mov .video #mont_video{
+    width: 1060px;
+    height: 560px;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+/* 추가 플레이어 버튼 작업 */
+#mont_btn{
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    top: 91.5%;
+    z-index: 2;
+    transform: translateX(-50%);
+    border: none;
+    background: none;
+    outline: none;
+}
+#mont_btn i{
+    font-size: 96px;
+    color: rgba(255,255,255,0);
+    cursor: pointer;
+}
+#mont_btn i:hover{
+    color: rgba(255,255,255,0.8);
+}
+/* Section Why */
+.why{
+    padding-top: 100px;
+    /* 포지션 홀 때문에 높이값 추가 */
+    padding-top: 380px;
+    padding-bottom: 160px;
+}
+/* Section FAQ */
+.faq_saying{
+    background-color: #dcdcdc;
+    padding: 70px 0 130px;
+}
+/* Aside Banner */
+.banner{
+    background-color: #fc3;
+}
+/* Footer */
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding-top: 100px;
+}
+/* Footer Logo, SNS */
+.footer .footer_logo{
+    width: 510px;
+    float: left;
+}
+.footer_logo dt{
+    margin-bottom: 24px;
+}
+.footer_logo dd{
+    font-size: 14px;
+    color: #e1e1e1;
+    line-height: 32px;
+    margin-bottom: 32px;
+}
+.footer_logo .sns{
+    display: inline-block;
+    margin-right: 20px;
+}
+/* Footer Services */
+.footer_services{
+    width: 330px;
+    float: left;
+}
+.footer_services dt{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+.footer_services dd{
+    font-size: 14px;
+    color: #e1e1e1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.footer_services dd a:hover{
+    color: #fc3;
+}
+/* Footer Assistance */
+.footer_assistance{
+    width: 330px;
+    float: left;
+}
+.footer_assistance dt{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+.footer_assistance dd{
+    font-size: 14px;
+    color: #e1e1e1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.footer_assistance dd a:hover{
+    color: #fc3;
+}
+/* Footer About */
+.footer_about{
+    float: left;
+}
+.footer_about dt{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+.footer_about dd{
+    font-size: 14px;
+    color: #e1e1e1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.footer_about dd a:hover{
+    color: #fc3;
+}
+/* Copyright */
+.copyright{
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 32px;
+    clear: both;
+}
+.copyright_line{
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 32px;
+}
