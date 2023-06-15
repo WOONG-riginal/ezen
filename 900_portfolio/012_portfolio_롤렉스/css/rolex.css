@@ -9,7 +9,6 @@ body{
     --light-green: rgb(69,165,122);
     --dark-green: rgb(11,62,39);
 }
-
 /* Safe Area */
 .w1280{
     width: 1280px;
@@ -192,8 +191,6 @@ header .lnb_wrapper .sub_lnb{
     color: #aaa;
     opacity: 1;
 }
-
-
 header .lnb_wrapper .sub_lnb .sub_menu{
     overflow: hidden;
     height: 300px;
@@ -202,7 +199,6 @@ header .lnb_wrapper .sub_lnb .sub_menu{
 header .lnb_wrapper .sub_lnb .display{
     display: block;
 }
-
 header .lnb_wrapper .sub_lnb .sub_menu .sub_box{
     width: 32.66%;
     height: 280px;
@@ -237,7 +233,7 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     font-weight: 600;
 }
 
-
+/* ===================== SECTION ===================== */
 /* Section CarBox */
 .card_box{
     background-color: #dcdcdc;
@@ -280,13 +276,17 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     cursor: pointer;
     transition: all 0.3s;
 }
+.card_box .card_view button:hover{
+    background-color: rgb(133,96,14);
+}
 .card_box .card_view h2,
 .card_box .card_view h3,
 .card_box .card_view p{
-    color:#616161;
+    color:#222;
 }
 .card_box .card_view p{
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.4;
 }
 .card_box .card_view h3{
     margin: 10px 0 20px;
