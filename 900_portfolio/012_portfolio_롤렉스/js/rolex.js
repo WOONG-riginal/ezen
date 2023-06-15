@@ -28,6 +28,7 @@ for(var i=0; i<lnbList.length; i++){
     })
 }
 
+
 /* 컬렉션 메뉴 스크립트 */
 let movelength = 0;
 const upBtn = document.querySelector('.up-btn');
@@ -51,6 +52,7 @@ upBtn.addEventListener('click', function(){
     $('.collection .sub_box').css({transform:'translateY(-'+movelength+'px)'});
 });
 
+
 /* ABOUT US 스크립트 */
 const usTitle=document.querySelectorAll('.about_us_title p');
 const usDot=document.querySelectorAll('.line_dots .dot');
@@ -72,6 +74,7 @@ for(var i=0; i<usTitle.length; i++){
     })
 }
 
+
 /* initiative 스크립트 */
 $('.ques').click(function(){
     if($(this).hasClass('mark')){
@@ -85,7 +88,39 @@ $('.ques').click(function(){
     }
 });
 
-/* a링크 */
+
+/* 경고창 생성 스크립트 */
+const addAlert = document.createElement('div');
+const addAlertImg = new Image();
+const addTxt1 =  document.createElement('p');
+const addTxt2 =  document.createElement('p');
+addAlertImg.src = 'images/crown.png';
+const addContent1 = document.createTextNode('죄송합니다.');
+const addContent2 = document.createTextNode('해당 페이지는 준비중입니다.');
+
+addTxt1.appendChild(addContent1);
+addTxt2.appendChild(addContent2);
+
+addAlert.classList.add('alert');
+addAlert.appendChild(addAlertImg);
+addAlert.appendChild(addTxt1);
+addAlert.appendChild(addTxt2);
+
+document.body.appendChild(addAlert);
+
+
+/* 준비창 스크립트 */
+$('.gnb a, .sub_box, .detail_btn, .card_text button, .card_box_info p, .about_us_detail, .planet_r button, footer dd').click(function(){
+    $('.alert').fadeIn();
+    $('.curtain').fadeIn();
+    setTimeout(function(){
+        $('.alert').fadeOut();
+        $('.curtain').fadeOut();
+    },1000)
+});
+
+
+/* a링크 방지 스크립트*/
 $('a').click(function(e){
     e.preventDefault();
 });
