@@ -233,12 +233,10 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     font-weight: 600;
 }
 
-/* ===================== SECTION ===================== */
-/* Section CarBox */
+/* ===================== SECTION 1 ===================== */
 .card_box{
     background-color: #dcdcdc;
 }
-/* 3단 CardBox */
 .card_box .card_view{
     width: 400px;
     height: 500px;
@@ -277,7 +275,7 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     transition: all 0.3s;
 }
 .card_box .card_view button:hover{
-    background-color: rgb(133,96,14);
+    background-color: rgb(143,106,24);
 }
 .card_box .card_view h2,
 .card_box .card_view h3,
@@ -293,30 +291,36 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     font-size: 24px;
     font-weight: bold;
 }
-/* CardBox Tex */
 .card_box_info{
     padding-bottom: 60px;    
 }
 .card_box_info h2{
-    font-size: 12px;
-    color: #807f7f;
+    font-size: 16px;
+    color: #777;
     font-weight: 400;
     float: left;
 }
 .card_box_info h2>span{
-    color: #373636;
+    font-weight: 600;
+    color: #222;
 }
 .card_box_info p{
     font-size: 18px;
-    color: #807f7f;
+    color: #777;
     font-weight: 600;
+    margin-right: 10px;
     float: right;
+    cursor: pointer;
+}
+.card_box_info p:hover{
+    color: #222;
 }
 .card_box_info p>img{
     vertical-align: middle;
     margin-bottom: 4px;
 }
-/* Section ABOUTUS */
+
+/* ===================== SECTION 2 ===================== */
 .about_us{
     padding: 100px 0 140px;
 }
@@ -329,77 +333,281 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
 .about_us .line{
     width: 110px;
     height: 2px;
-    border-bottom: 1px solid #fc3;
+    border-bottom: 2px solid var(--rolex-gold);
     margin-bottom: 60px;
     margin: 0 auto;
 }
 .about_us .about_us_tab{
     margin-top: 60px;
+    height: 500px;
 }
-/* Article MOV 추가코딩 */
+.about_us_l{
+    width: 550px;
+    float: left;
+}
+.about_us_l h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg,#0b3e27,#197149);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.about_us_title p{
+    margin: 30px 40px 20px 20px;
+    font-size: 20px;
+    float: left;
+    cursor: pointer;
+}
+.about_us_title p.active{
+    color: var(--rolex-gold);
+}
+.line_dots{
+    width: 550px;
+    height: 22px;
+    position: relative;
+}
+.line_dots .line{
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #222;
+}
+.line_dots .dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background: var(--rolex-gold);
+    opacity: 0;
+    float: left;
+    position: absolute;
+    top: -8px;
+    z-index: 1;
+}.line_dots .active{
+    opacity: 1;
+}
+.line_dots .dot{left: 70px;}
+.line_dots .dot:nth-child(3){left: 265px;}
+.line_dots .dot:nth-child(4){left: 460px;}
+
+.about_us_content p{
+    margin-top: 30px;
+    color: #777;
+    line-height: 1.8;
+    display: none;
+}
+.about_us_content p.active{
+    display: block;
+}
+.about_us_detail{
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #777;
+    cursor: pointer;
+}
+.about_us_detail:hover{
+    color: #222;
+}
+.about_us_detail span{
+    margin-left: 10px;
+    font-size: 24px;
+    color: var(--rolex-gold);
+}
+.about_us_r{
+    float: right;
+}
+.about_us_r .about_us_pic{
+    display: none;
+}
+.about_us_r .active{
+    display: block;
+}
+.about_us_r .about_us_pic img{
+    margin-left: 40px;
+}
+
+/* ===================== SECTION 3 ===================== */
 .mov{
     width: 100%;
     height: 500px;
-    background-image: url(../images/mov_back.jpg);
+    background-image: url(../images/tennis.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
     /* 포지션 위치기준값 */
     position: relative;
 }
-.mov .video #mont_video{
-    width: 1060px;
+.mov .shadow{
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    opacity: 0.7;
+    position: absolute;
+}
+.mov .federer{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+}
+.mov .federer h2{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+}
+.mov .federer p{
+    height: 44px;
+    color: #fff;
+    line-height: 22px;
+}
+.mov .federer .underLine{
+    width: 110px;
+    height: 0;
+    margin: 25px auto 40px;
+    border: 1px solid var(--rolex-gold);
+}
+.mov .video{
+    width: 990px;
     height: 560px;
-    /* 포지션 */
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 1;
     transform: translateX(-50%);
 }
-/* 추가 플레이어 버튼 작업 */
-#mont_btn{
-    /* 포지션 */
-    position: absolute;
-    left: 50%;
-    top: 91.5%;
-    z-index: 2;
-    transform: translateX(-50%);
+
+/* ===================== SECTION 4 ===================== */
+.planet{
+    margin-top: 380px;
+    height: 600px;
+}
+.planet_content .planet_l {
+    float: left;
+}
+.planet_content .planet_l img {
+    margin-right: 40px;
+    margin-top: 0;
+}
+.planet_content .planet_r{
+    float: right;
+    width: 550px;
+}
+.planet_content .planet_r h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    background: linear-gradient(90deg,#0b3e27,#197149);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.planet_content .planet_r p{
+    line-height: 1.5;
+    color: #777;
+    margin-bottom: 30px;
+}
+.planet_content .planet_r .underLine{
+    width: 110px;
+    height: 0;
+    margin: 32px 0;
+    border: 1px solid var(--rolex-gold);
+}
+.planet_content .planet_r button{
+    width: 150px;
+    height: 40px;
+    background-color: var(--rolex-green);
     border: none;
-    background: none;
-    outline: none;
-}
-#mont_btn i{
-    font-size: 96px;
-    color: rgba(255,255,255,0);
+    border-radius: 40px;
+    margin-top: 56px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
     cursor: pointer;
+    transition: all 0.3s;
 }
-#mont_btn i:hover{
-    color: rgba(255,255,255,0.8);
+.planet_content .planet_r button:hover{
+    background-color: var(--dark-green);
 }
-/* Section Why */
-.why{
-    padding-top: 100px;
-    /* 포지션 홀 때문에 높이값 추가 */
-    padding-top: 380px;
-    padding-bottom: 160px;
-}
-/* Section FAQ */
-.faq_saying{
+
+/* ===================== SECTION 5 ===================== */
+.initiative{
     background-color: #dcdcdc;
     padding: 70px 0 130px;
+    height: 700px;
 }
-/* Aside Banner */
-.banner{
-    background-color: #fc3;
+.initiative h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    background: linear-gradient(90deg,#0b3e27,#197149);
+    color: transparent;
+    -webkit-background-clip: text;
 }
-/* Footer */
+.initiative .QnA{
+    border-bottom: 1px solid #777;
+}
+.initiative .ques{
+    line-height: 1.8;
+    font-size: 18px;
+    margin: 34px 0;
+    padding-left: 40px;
+    color: #222;
+    cursor: pointer;
+}
+.initiative .ques{
+    background: url(../images/mark_plus.png) no-repeat;
+}
+.initiative .mark{
+    background: url(../images/mark_minus.png) no-repeat;
+}
+.initiative .answ{
+    line-height: 1.8;
+    font-size: 14px;
+    margin-left: 16px;
+    margin-bottom: 20px;
+    color: #777;
+    display: none;
+}
+.initiative p{
+    line-height: 1.8;
+    font-size: 14px;
+    margin-left: 16px;
+    margin-bottom: 40px;
+    color: #777;
+}
+.initiative .initiative_l{
+    width: 550px;
+    float: left;
+}
+.initiative .initiative_r{
+    width: 550px;
+    float: right;
+}
+.initiative .interview{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.initiative .interview img{
+    border-radius: 60px;
+}
+.initiative .interview h3{
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 24px;
+}
+.initiative .initiative_r p{
+    margin: 20px 0 60px
+}
+
+/* ===================== Footer ===================== */
 .footer{
-    background-color: #000;
-    color: #fff;
-    padding-top: 100px;
+    background-color: #fff;
+    color: #222;
+    padding: 100px 0 40px;
 }
-/* Footer Logo, SNS */
 .footer .footer_logo{
     width: 510px;
     float: left;
@@ -407,84 +615,49 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
 .footer_logo dt{
     margin-bottom: 24px;
 }
-.footer_logo dd{
-    font-size: 14px;
-    color: #e1e1e1;
-    line-height: 32px;
-    margin-bottom: 32px;
+.footer_logo dt img{
+    width: 100px;
 }
-.footer_logo .sns{
+.footer_logo dd{
     display: inline-block;
     margin-right: 20px;
 }
-/* Footer Services */
-.footer_services{
-    width: 330px;
-    float: left;
+.footer_logo .sns_txt{
+    font-weight: 600;
 }
-.footer_services dt{
+.footer_logo .sns{
+    color: var(--rolex-green);
     font-size: 20px;
-    color: #fff;
+}
+.footer_logo .sns:hover{
+    color: var(--dark-green);
+}
+.fnb{
+    float: left;
+    margin-right: 200px;
+}
+.fnb dt{
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 32px;
 }
-.footer_services dd{
-    font-size: 14px;
-    color: #e1e1e1;
+.fnb dd{
     font-weight: 400;
     margin-bottom: 20px;
 }
-.footer_services dd a:hover{
-    color: #fc3;
+.fnb dd a:hover{
+    color: var(--rolex-gold);
 }
-/* Footer Assistance */
-.footer_assistance{
-    width: 330px;
-    float: left;
-}
-.footer_assistance dt{
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 32px;
-}
-.footer_assistance dd{
-    font-size: 14px;
-    color: #e1e1e1;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-.footer_assistance dd a:hover{
-    color: #fc3;
-}
-/* Footer About */
-.footer_about{
-    float: left;
-}
-.footer_about dt{
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 32px;
-}
-.footer_about dd{
-    font-size: 14px;
-    color: #e1e1e1;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-.footer_about dd a:hover{
-    color: #fc3;
-}
-/* Copyright */
-.copyright{
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 32px;
-    clear: both;
-}
-.copyright_line{
+/* ===================== Parrellax ===================== */
+#wrap:after{
     width: 100%;
-    border-bottom: 1px solid #fff;
-    margin-bottom: 32px;
+    height: 500px;
+    content: "";
+    display: block;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    background-image: url('../images/footer.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
