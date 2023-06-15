@@ -32,9 +32,9 @@
     </div>
 </body>
 <script>
-    $("li").click(function(){
+    $("li").click(function() {
         var url = $(this).find('a').attr("href");
-        $("#wrap").animate({"opacity": "0"},500,function(){
+        $("#wrap").animate({"opacity":0},1000, function() {
             location.href=url;
         });
     });
