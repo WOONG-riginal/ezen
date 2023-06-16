@@ -12,10 +12,10 @@ hamBtn.addEventListener('click', function(){
     lnbMenu.classList.toggle('active');
 
     if($('.lnb_wrapper').hasClass('active')){
-        $('.curtain').show();
+        $('.lnb_curtain').show();
         $('body').css({overflow:'hidden'})
     }else{
-        $('.curtain').hide();
+        $('.lnb_curtain').hide();
         $('body').css({overflow:'visible'})
     }
 });
