@@ -76,7 +76,7 @@ body,html{
 }
 .slider .circle:nth-child(1){
     left: 800px;
-    background: url("../images/portfolio1.jpg") no-repeat center;
+    background: url("../images/portfolio01.png") no-repeat center;
 }
 .slider .circle:nth-child(2){
     left: 1400px;
