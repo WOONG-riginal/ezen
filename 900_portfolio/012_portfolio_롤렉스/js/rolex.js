@@ -10,6 +10,14 @@ hamBtn.addEventListener('click', function(){
         hamTxt[i].classList.toggle('show');}
     gnbMenu.classList.toggle('gnbhide');
     lnbMenu.classList.toggle('active');
+
+    if($('.lnb_wrapper').hasClass('active')){
+        $('.curtain').show();
+        $('body').css({overflow:'hidden'})
+    }else{
+        $('.curtain').hide();
+        $('body').css({overflow:'visible'})
+    }
 });
 
 
@@ -107,6 +115,12 @@ addAlert.appendChild(addTxt1);
 addAlert.appendChild(addTxt2);
 
 document.body.appendChild(addAlert);
+
+
+/* 커튼 생성 스크립트 */
+const addCurtian = document.createElement('div');
+addCurtian.classList.add('curtain');
+document.body.appendChild(addCurtian);
 
 
 /* 준비창 스크립트 */

@@ -696,6 +696,6 @@ header .lnb_wrapper .sub_lnb .sub_menu .sub_box .large_title{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 5;
     display: none;
 }
