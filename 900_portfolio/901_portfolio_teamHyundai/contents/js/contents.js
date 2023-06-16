@@ -220,36 +220,36 @@ $('.contents_gnb .item button, .box .detail a, .box button, .contents_chatBot').
         $('.endBack').stop().fadeOut(500);
     }, 1500);
 });
-// $('.contents_model h2').click(function(){
-//     if($('.contents_model h2 a').hasClass('clicked')){
-//         $('.alert').fadeIn()
-//         $('.endBack').fadeIn()
-//         setTimeout(function(){
-//             $('.alert').stop().fadeOut()
-//             $('.endBack').stop().fadeOut()
-//         },1500)
-//     }
-// });
+$('.contents_model h2').click(function(){
+    if($('.contents_model h2 a').hasClass('clicked')){
+        $('.alert').fadeIn()
+        $('.endBack').fadeIn()
+        setTimeout(function(){
+            $('.alert').stop().fadeOut()
+            $('.endBack').stop().fadeOut()
+        },1500)
+    }
+});
 
 
-$('.contents_slide .box h5').click(function(){
-    if($(this).hasClass('clicked')){
-        var boxTxt1=$(this).parent().find('h2').text();
-        var boxTxt2=$(this).parent().find('h3').text();
-        var boxTxt3=$(this).parent().find('.detail p').eq(0).text();
-        $('.compare_box ul .emptyBox').eq(0).addClass('thisBox');
-        $('.compare_box ul .emptyBox').eq(0).removeClass('emptyBox');
-        $('.compare_box ul .thisBox').eq(-1).empty();
-        $('.compare_box ul .thisBox').eq(-1).append("<h2>"+boxTxt1+"</h2>");
-        $('.compare_box ul .thisBox').eq(-1).append("<h5>"+boxTxt3+"</h5>");
-        $('.compare_box ul .thisBox').eq(-1).append("<h3>"+boxTxt2+"</h3>");
-        $('.compare_box ul .thisBox').eq(-1).css({border:'2px solid #007fa8'});
-    }else{
-        $('.compare_box ul .thisBox').eq(0).empty();
-        $('.compare_box ul .thisBox').eq(0).append("<h4>+</h4>");
-        $('.compare_box ul .thisBox').eq(0).append("<p>비교할 모델을 추가해주세요.</p>");
-        $('.compare_box ul .thisBox').eq(0).css({border:'none'});
-        $('.compare_box ul .thisBox').eq(0).addClass('emptyBox');
-        $('.compare_box ul .thisBox').eq(0).removeClass('thisBox');
-    };
-})
+// $('.contents_slide .box h5').click(function(){
+//     if($(this).hasClass('clicked')){
+//         var boxTxt1=$(this).parent().find('h2').text();
+//         var boxTxt2=$(this).parent().find('h3').text();
+//         var boxTxt3=$(this).parent().find('.detail p').eq(0).text();
+//         $('.compare_box ul .emptyBox').eq(0).addClass('thisBox');
+//         $('.compare_box ul .emptyBox').eq(0).removeClass('emptyBox');
+//         $('.compare_box ul .thisBox').eq(-1).empty();
+//         $('.compare_box ul .thisBox').eq(-1).append("<h2>"+boxTxt1+"</h2>");
+//         $('.compare_box ul .thisBox').eq(-1).append("<h5>"+boxTxt3+"</h5>");
+//         $('.compare_box ul .thisBox').eq(-1).append("<h3>"+boxTxt2+"</h3>");
+//         $('.compare_box ul .thisBox').eq(-1).css({border:'2px solid #007fa8'});
+//     }else{
+//         $('.compare_box ul .thisBox').eq(0).empty();
+//         $('.compare_box ul .thisBox').eq(0).append("<h4>+</h4>");
+//         $('.compare_box ul .thisBox').eq(0).append("<p>비교할 모델을 추가해주세요.</p>");
+//         $('.compare_box ul .thisBox').eq(0).css({border:'none'});
+//         $('.compare_box ul .thisBox').eq(0).addClass('emptyBox');
+//         $('.compare_box ul .thisBox').eq(0).removeClass('thisBox');
+//     };
+// })
