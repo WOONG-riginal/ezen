@@ -4,6 +4,7 @@ body,html{
     font-family: 'Malgun Gothic', sans-serif;
     --omega-red: #c40d2e;
     --omega-gray: #555;
+    --omega-lightgray: #f9f9f9;
     min-height: 100vh;
     max-width: 100%;
     line-height: 1.5;
@@ -130,30 +131,29 @@ header .logo_gnb .rm li{
 /* ======================== 메인영역 2 ======================== */
 .jb_60th{
     width: 100%;
-    height: 210px;
     padding-top: 100px;
     text-align: center;
 }
 .jb_60th .logo img{
     width: 120px;
 }
-.jb_60th_txt{
+.red_title{
     width: 62%;
     margin: 0 auto;
 }
-.jb_60th_txt .title{
+.red_title .title{
     font-size: 3.8rem;
     letter-spacing: 0.16em;
     margin-bottom: 0.7em;
     color: var(--omega-red);
 }
-.jb_60th_txt .txt{
+.red_title .txt{
     font-size: 1.7rem;
     color: var(--omega-gray);
 }
 .jb_60th .model{
     padding-top: 100px;
-    width: 78%;
+    width: 66%;
     margin: 0 auto;
 }
 .jb_60th .model .divide{
@@ -173,4 +173,124 @@ header .logo_gnb .rm li{
 }
 .jb_60th .model .divide img{
     width: 100%;
+}
+.jb_60th .model .divide .half_r .product{
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+}
+.jb_60th .model .divide .half_r .product img{
+    max-width: 200px;
+}
+.jb_60th .model .divide .half_r .product .info{
+    margin: 30px auto 10px 30px;
+    color: var(--omega-gray);
+    text-align: left;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+}
+.jb_60th .model .divide .half_r .product .info .new_prod{
+    width: 52px;
+    height: 25px;
+    margin: 20px 0 10px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: #f9f9f9;
+}
+.jb_60th .model .divide .half_r .product .info .diver300{
+    font-weight: 700;
+}
+.jb_60th .model .divide .half_r .product .info .co-ax{
+    margin: 8px 0 16px;
+}
+.jb_60th .model .divide .half_r .product .info .co-ax span{
+    color: var(--omega-red);
+}
+.jb_60th .model .divide .half_r .product .info .price{
+    font-weight: 700;
+}
+.jb_60th .model .divide .half_r .product .info .detail{
+    max-width: 120px;
+    min-height: 37px;
+    line-height: 39px;
+    margin-top: 12px;
+    padding: 0 20px;
+    font-size: 1.3rem;
+    letter-spacing: 0 !important;
+    border: 1px solid #e2e2e2;
+}
+
+/* ======================== 메인영역 3 ======================== */
+.jb_detail{
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+}
+.jb_detail .detail_image{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.jb_detail .detail_image iframe{
+    width: 60%;
+    aspect-ratio: 100/56;
+}
+.jb_detail .detail_image img{
+    width: 30%;
+    margin-left: 1%;
+}
+.jb_detail .design_list{
+    padding-top: 100px;
+}
+.jb_detail .design_list li{
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+.jb_detail .design_list li img{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.jb_detail .design_list li .design_detail{
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: var(--omega-lightgray);
+    opacity: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    transition: all 0.7s;
+    cursor: default;
+    overflow: hidden;
+}
+.jb_detail .design_list li .design_detail:hover{
+    opacity: 1;
+}
+.jb_detail .design_list li .design_detail span{
+    display: block;
+    font-size: 2.4rem;
+    color: var(--omega-red);
+    letter-spacing: 0.04em;
+    margin: 0 auto 5%;
+}
+.jb_detail .design_list li .design_detail p{
+    font-size: 1.7rem;
+    color: var(--omega-gray);
+    letter-spacing: 0 !important;
+    margin: 0 5%;
+    transform: translateY(-100px);
+    transition: all 0.7s;
+}
+.jb_detail .design_list li .design_detail:hover p{
+    transform: translateY(0);
 }

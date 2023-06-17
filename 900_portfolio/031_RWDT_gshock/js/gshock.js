@@ -6,7 +6,7 @@ $('a, button').click(function(e){
 /* 박스 슬라이드 설정 스크립트 */
 $('.slide_gallery').bxSlider({
     auto: true,
-    speed: 500,
+    speed: 1000,
     mode:'horizontal',
     pager:true,
 });
