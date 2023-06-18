@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Shin" content="Woong">
+    <meta name="description" content="포트폴리오">
     <title>오메가, 제임스 본드 탄생 60주년 기념</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="./images/favicon/rolex32.png">
-    <link rel="apple-touch-icon=precomposed" href="./images/favicon/W180.png">
-    <!-- 기본 코딩 JS 파일 -->
+    <link rel="shortcut icon" href="./images/favicon/omega32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/omega180.png">
+    <!-- JS 플러그인 -->
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/prefixfree.min.js"></script>
-    <!-- 기본 코딩 CSS 파일 -->
+    <!-- 기본 CSS -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
     <link rel="stylesheet" href="./css/omega.css">
 </head>
 <body>
@@ -30,20 +34,41 @@
             <p><em>Beautiful.</em></p>
         </div>
     </div> -->
+
+    <!-- 경고창 -->
+    <div class="alert">
+        <div class="alert-curtain"></div>
+        <div class="alert-message">
+            <img src="./images/favicon/omega180.png" alt="파비콘">
+            <p>죄송합니다.</p>
+            <p>해당 페이지는 준비중입니다.</p>
+        </div>
+    </div>
+
+    <!-- TOP 버튼 -->
+    <div class="top-btn">
+        TOP
+    </div>
+
     <div class="container">
         <!-- 헤더 영역 -->
         <header>
             <div class="logo_gnb">
                 <ul class="lm">
                     <li>
-                        <div class="ham">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <p>메뉴</p>
+                        <a href="#" class="ham-btn">
+                            <div class="ham">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <p><b>메뉴</b></p>
+                            <p class="no-show"><b>닫기</b></p>
+                        </a>
                     </li>
-                    <li>080-050-8383</li>
+                    <li>|</li>
+                    <li><a href="#">080-050-8383</a></li>
+                    <li>|</li>
                     <li><i class="fa fa-globe" aria-hidden="true"></i></li>
                 </ul>
                 <h1 class="logo"><img src="./images/1280px-Omega_Logo.svg.png" alt="로고"></h1>
@@ -56,6 +81,54 @@
                 </ul>
             </div>
         </header>
+
+        <!-- HAM MENU -->
+        <div class="ham_curtain"></div>
+        <div class="ham_menu">
+            <ul class="ham_menu-1f on-off">
+                <li class="active">시계</li>
+                <ul class="ham_menu-2f">
+                    <li>컨스텔레이션</li>
+                    <li>씨마스터</li>
+                    <li>스피드마스터</li>
+                    <li>드 빌</li>
+                    <li>오메가 제품 찾기</li>
+                    <li>여성 셀렉션</li>
+                    <li>남성 셀렉션</li>
+                </ul>
+                <li class="on-off">브레이슬릿 및 스트랩</li>
+                <ul class="ham_menu-2f">
+                    <li>NATO 스트랩</li>
+                    <li>투피스 스트랩</li>
+                </ul>
+                <li class="on-off">파인 주얼리</li>
+                <ul class="ham_menu-2f">
+                    <li>컨스텔레이션</li>
+                    <li>아우아 스윙</li>
+                    <li>오메가 플라워</li>
+                    <li>레이디매틱</li>
+                    <li>오메가 듀드롭</li>
+                </ul>
+                <li class="on-off">액세서리</li>
+                <ul class="ham_menu-2f">
+                    <li>브레이슬릿 및 스트랩</li>
+                    <li>가죽 제품</li>
+                    <li>세일링 브레이슬릿</li>
+                    <li>커프링크스</li>
+                    <li>선글라스</li>
+                    <li>벨트</li>
+                    <li>키홀더 & 기타 제품</li>
+                    <li>향수제품</li>
+                </ul>
+            </ul>
+            <div class="line"></div>
+            <ul class="ham_menu-1f no-action">
+                <li><span>&#937;</span> 플래닛 오메가</li>
+                <li><span><i class="fa fa-newspaper-o" aria-hidden="true"></i></span> 뉴스 & 스토리</li>
+                <li><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> 위치 안내</li>
+                <li><span><i class="fa fa-comments-o" aria-hidden="true"></i></span> 고객 서비스</li>
+            </ul>
+        </div>
 
         <main role="main">
             <!-- 메인 영역 1 -->
@@ -252,6 +325,7 @@
                 </div>
             </section>
             
+            <!-- 메인 영역 5 -->
             <section class="other_editions">
                 <div class="red_title">
                     <div class="title">다양한 선택</div>
@@ -316,11 +390,140 @@
                 </div>
             </section>
         </main>
-        <footer>
+
+        <!-- 추가 영역 -->
+        <aside>
             <div class="fnb">
-                
+                <ul>
+                    <div>
+                        <li>
+                            <span>컬렉션</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">글로브마스터</a></li>
+                                <li><a href="#">컨스텔레이션</a></li>
+                                <li><a href="#">다이버 300M</a></li>
+                                <li><a href="#">아쿠아 테라 150M</a></li>
+                                <li><a href="#">씨마스터 300</a></li>
+                                <li><a href="#">PLANET OCEAN 600M</a></li>
+                                <li><a href="#">문워치</a></li>
+                                <li><a href="#">다크 사이드 오브 더 문</a></li>
+                                <li><a href="#">레이디매틱</a></li>
+                                <li><a href="#">트레저</a></li>
+                                <li><a href="#">프레스티지</a></li>
+                                <li><a href="#">뚜르비용</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <span>오메가 제품 찾기</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">여성용 시계</a></li>
+                                <li><a href="#">남성용 시계</a></li>
+                                <li><a href="#">골드 시계</a></li>
+                                <li><a href="#">크로노그래프 시계</a></li>
+                                <li><a href="#">정장 시계</a></li>
+                                <li><a href="#">다이버 시계</a></li>
+                                <li><a href="#">오토매틱 시계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>플래닛 오메가</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">워치메이킹</a></li>
+                                <li><a href="#">우주</a></li>
+                                <li><a href="#">스포츠</a></li>
+                                <li><a href="#">제임스 본드</a></li>
+                                <li><a href="#">오메가 뮤지엄</a></li>
+                                <li><a href="#">Chronicle</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <span>마스터 크로노미터</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">인증</a></li>
+                                <li><a href="#">나의 테스트 결과 보기</a></li>
+                                <li><a href="#">IPHONE 카드 스캐너 앱</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>위치 안내</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">부티크 찾기</a></li>
+                                <li><a href="#">나의 위치</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <span>고객 서비스</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">INTERVENTIONS AND PRICES</a></li>
+                                <li><a href="#">오메가 제품 관리</a></li>
+                                <li><a href="#">A/S 센터 찾기</a></li>
+                                <li><a href="#">인증서 및 확인서</a></li>
+                                <li><a href="#">카탈로그 주문하기</a></li>
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">용어집</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>더 보기</span>
+                            <ul class="fnb-sub">
+                                <li><a href="#">보도 자료 플랫폼</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
             </div>
-            <div class="info"></div>
+            <div class="sns">
+                <h3>OMEGA 팔로우하기</h3>
+                <ul>
+                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-play-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-commenting" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 푸터 영역 -->
+        <footer>
+            <ul class="info">
+                <li>
+                    Copyright OMEGA SA. All rights reserved.<br><br>
+                </li>
+                <li>
+                    상호: 스와치그룹코리아㈜ | 대표: MIREILLE SIMONE KOENIG | 사업자등록번호: 220-81-01107 | 주소: 서울특별시 서대문구 충정로 36, 1, 2, 10, 11층 (충정로 3가) |
+                </li>
+                <li>
+                    통신판매신고번호: 2018-서울서대문-0765 | 고객센터 전화문의: 080-050-8383 | 이메일 문의: kr.ecommerce@omegawatches.com | 호스팅서비스사업자: Platform.sh
+                </li>
+                <li>
+                    <em><b>007</b></em> and James Bond materials © 1962-2023 Danjaq and MGM.
+                </li>
+                <li>
+                    <em><b>007</b></em> and related James Bond Trademarks, TM Danjaq. All rights reserved.
+                </li>
+                <li>
+                    <b>60</b> © 2023 Danjaq, LLC and Metro-Goldwyn-Mayer Studios Inc. <b>60</b> is a trademark of Danjaq, LLC. AIl Rights Reserved.
+                </li>
+                <li>
+                    <ul class="legal-menu">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">사업자정보확인</a></li>
+                        <li><a href="#">판매약관</a></li>
+                        <li><a href="#">반품 및 교환</a></li>
+                    </ul>
+                </li>
+            </ul>
         </footer>
     </div>
 </body>
