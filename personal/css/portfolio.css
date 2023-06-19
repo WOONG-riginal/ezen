@@ -76,33 +76,33 @@ body,html{
 }
 .slider .circle:nth-child(1){
     left: 800px;
-    background: url("../images/portfolio01.png") no-repeat center;
+    background: url("../images/portfolio01.jpg") no-repeat center;
 }
 .slider .circle:nth-child(2){
     left: 1400px;
-    background: url("../images/portfolio2.jpg") no-repeat center;
+    background: url("../images/portfolio02.jpg") no-repeat center;
 }
 .slider .circle:nth-child(3){
     left: 2000px;
-    background: url("../images/portfolio3.jpg") no-repeat center;
+    background: url("../images/portfolio03.jpg") no-repeat center;
 }
 .slider .circle:nth-child(4){
     left: 2600px;
-    background: url("../images/portfolio4.jpg") no-repeat center;
+    background: url("../images/portfolio04.jpg") no-repeat center;
 }
 .slider .circle:nth-child(5){
     left: 3200px;
-    background: url("../images/portfolio5.jpg") no-repeat center;
+    background: url("../images/portfolio05.jpg") no-repeat center;
 }
 .slider .circle:nth-child(6){
     left: 3800px;
-    background: url("../images/portfolio6.jpg") no-repeat center;
+    background: url("../images/portfolio06.jpg") no-repeat center;
 }
 .slider .circle:nth-child(7){
     left: 4400px;
-    background: url("../images/portfolio7.jpg") no-repeat center;
+    background: url("../images/portfolio07.jpg") no-repeat center;
 }
-.slider .circle:nth-child(8){
+/* .slider .circle:nth-child(8){
     left: 5000px;
     background: url("../images/portfolio8.jpg") no-repeat center;
-}
+} */
