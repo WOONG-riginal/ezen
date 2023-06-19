@@ -948,9 +948,6 @@ footer .info .legal-menu li a:hover{
     .accessory .acc_product .prod_info .txt p{
         font-size: 1.4rem;
     }
-    .accessory .acc_product .prod_info:nth-child(3) .txt .prod_name{
-        min-height: 84px;
-    }
 
     /* ======================== 메인영역 5 ======================== */
     .other_editions{
