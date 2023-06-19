@@ -769,8 +769,7 @@ footer .info .legal-menu li a:hover{
 }
 
 
-
-/* 모바일 & 템플릿 미디어쿼리 768px 이하 */
+/* 태블릿 미디어쿼리 768px 이하 */
 @media screen and (max-width:768px){
     /* ======================== 헤더영역 ======================== */
     header .logo_gnb{
