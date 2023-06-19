@@ -77,10 +77,12 @@ $('.ham-btn').click(function(){
 
     if($('.ham_menu').hasClass('cuntain-on')){
         $('.ham_curtain').show();
-        $('body').css({overflow:'hidden'})
+        $('body').css({overflow:'hidden'});
+        $('.top-btn').css({opacity:0});
     }else{
         $('.ham_curtain').hide();
-        $('body').css({overflow:'visible'})
+        $('body').css({overflow:'scroll'})
+        $('.top-btn').css({opacity:1});
     }
 })
 
