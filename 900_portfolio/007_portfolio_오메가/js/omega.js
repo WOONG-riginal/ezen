@@ -1,18 +1,24 @@
 /* 로딩화면 스크립트 */
 window.onload=function(){
-    $('.container').hide();
-    beBright();
-    setTimeout(beDark, 4500);
-    setTimeout(loaded, 5500);
-    setTimeout(startPage, 5500);
-    setTimeout(beBright, 6000);
-
-    setTimeout(addLine1, 1500);
-    setTimeout(removeLine1, 2500);
-    setTimeout(addLine2, 2600);
-    setTimeout(removeLine2, 3600);
-    setTimeout(addLine3, 3800);
-    setTimeout(removeLine3, 4800);
+    var screenwidth=screen.width;
+    if(screenwidth>412){
+        $('.container').hide();
+        beBright();
+        setTimeout(beDark, 4500);
+        setTimeout(loaded, 5500);
+        setTimeout(startPage, 5500);
+        setTimeout(beBright, 6000);
+    
+        setTimeout(addLine1, 1200);
+        setTimeout(removeLine1, 2200);
+        setTimeout(addLine2, 2400);
+        setTimeout(removeLine2, 3400);
+        setTimeout(addLine3, 3600);
+        setTimeout(removeLine3, 4600);
+    }else{
+        beBright();
+        loaded();
+    }
 }
 
 function beBright() { $('.curtain').fadeOut(1000); }
@@ -34,7 +40,7 @@ $('a').click(function(e){
 
 
 /* 경고창 스크립트 */
-$('.lm li:nth-child(3),.lm li:nth-child(5),.logo,.rm li,.ham_menu-2f li,.no-action li,.detail,.buynow,.fnb-sub li,.sns ul li,.legal-menu li').click(function(){
+$('.lm li:nth-child(3),.lm li:nth-child(5),.logo,.rm li,.ham_menu-2f li,.no-action li,.detail,.buynow,.fnb li span,.fnb-sub li,.sns ul li,.legal-menu li').click(function(){
     $('.alert-message').fadeIn();
     $('.alert-curtain').fadeIn();
     setTimeout(function(){
