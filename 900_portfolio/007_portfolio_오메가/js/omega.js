@@ -1,7 +1,7 @@
 /* 로딩화면 스크립트 */
 window.onload=function(){
     var screenwidth=screen.width;
-    if(screenwidth>412){
+    if(screenwidth>600){
         $('.container').hide();
         beBright();
         setTimeout(beDark, 4500);
@@ -54,7 +54,7 @@ $('.lm li:nth-child(3),.lm li:nth-child(5),.logo,.rm li,.ham_menu-2f li,.no-acti
 $(window).on('scroll',function(){
     var scrT=$(this).scrollTop();
     var screenwidth=screen.width;
-    if(screenwidth>412){
+    if(screenwidth>600){
         if(scrT>=500){
             $('.top-btn').fadeIn();
         }else{
