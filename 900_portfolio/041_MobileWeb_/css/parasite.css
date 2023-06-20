@@ -1,0 +1,234 @@
+@charset "utf-8";
+body{
+    font-family: 'noto Sans KR', sans-serif;
+    --tigers-black: #05141f;
+    --tigers-red: #ea0029;
+}
+
+/* Header */
+.header .menu_logo{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 2px 6px;
+}
+.header .menu_logo .logo{
+    width: 140px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header .menu_logo .logo img{
+    width: 100%;
+}
+.header .menu_logo .member{
+    width: 24px;
+    height: 14px;
+    color: var(--tigers-black);
+    margin-top: -4px;
+    position: fixed;
+    top: 23px;
+    right: 20px;
+    font-size: 24px;
+}
+
+/* 햄버거 */
+.header input[id=menuicon]{
+    display: none;
+}
+.header input[id=menuicon]+label{
+    display: block;
+    width: 24px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+    top: 23px;
+    left: 20px;
+    z-index: 100;
+}
+.header input[id=menuicon]+label span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--tigers-black);
+    position: absolute;
+    z-index: 100;
+    transition: all 0.3s;
+}
+.header input[id=menuicon]+label span:nth-child(1){
+    top: 0;
+}
+.header input[id=menuicon]+label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header input[id=menuicon]+label span:nth-child(3){
+    bottom: 0;
+}
+/* 클릭 시 효과 */
+.header input[id=menuicon]:checked+label span{
+    background: #fff;
+}
+.header input[id=menuicon]:checked+label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+}
+.header input[id=menuicon]:checked+label span:nth-child(2){
+    opacity: 0;
+}
+.header input[id=menuicon]:checked+label span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-45deg);
+}
+.header nav[class='mobile_gnb']{
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 90;
+    transition: all 0.3s;
+}
+.header input[id=menuicon]:checked+label+nav[class='mobile_gnb']{
+    left: 0;
+}
+.header div[class='gnb_curtain']{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;top: 0;
+    z-index: -1;
+    background: #000;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.header input[id=menuicon]:checked+label+nav+div[class='gnb_curtain']{
+    z-index: 10;
+    opacity: 0.7;
+}
+/* GNB 메뉴 */
+.header .mobile_gnb .gnb_logo{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    background: url(../images/mb_menu_bg2.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.header .mobile_gnb .gnb_logo img{
+    width: 120px;
+    margin-top: 30px;
+}
+.header .mobile_gnb .gnb>li{
+    height: 60px;
+    line-height: 60px;
+    padding-left: 60px;
+    position: relative;
+}
+.header .mobile_gnb .gnb>li .icon{
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    left: 0; top: 0;
+}
+.header .mobile_gnb .gnb>li .icon img{
+    width: 24px;
+    vertical-align: middle;
+}
+.header .mobile_gnb .gnb>li>a{
+    display: block;
+    color: var(--tigers-black);
+}
+.header .mobile_gnb .gnb>li>a:hover{
+    color: var(--tigers-red);
+    font-weight: 700;
+}
+/* SNS */
+.header .mobile_gnb .sns{
+    width: 180px;
+    display: flex;
+    padding-left: 20px;
+}
+.header .mobile_gnb .sns li{
+    margin-right: 30px;
+}
+.header .mobile_gnb .sns li a{
+    display: inline-block;
+    width: 20px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.5s;
+}
+.header .mobile_gnb .sns li a:hover{
+    scale: 110%;
+}
+.header .mobile_gnb .sns i{
+    font-size: 20px;
+    font-weight: 600;
+}
+.sns .facebook{background-color: #3c5a98;}
+.sns .twitter{background-color: #56acef;}
+.sns .youtube{background-color: #ff0000;}
+.sns .insta{background: linear-gradient(45deg, #feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);}
+
+/* Contents */
+main{
+    margin-top: 60px;
+}
+.matches{
+    width: 100%;
+    height: 400px;
+    background: url(../images/catchphrase_mobile.png) no-repeat;
+    background-size: cover;
+}
+.slide{
+    width: 340px;
+    height: 177px;
+    background: #af8;
+}
+.match{
+    width: 100%;
+}
+.match .match_date{
+    width: 214px;
+    height: 37px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+
+
+
+
+/* Footer */
+footer{
+    background: #000;
+    padding-top: 30px;
+    text-align: center;
+}
+footer>p{
+    margin-bottom: 56px;
+}
+footer .copyright{
+    padding-bottom: 24px;
+}
+footer .copyright p{
+    color: #4c4c4c;
+    margin-bottom: 24px;
+}
+footer .copyright p:last-child{
+    font-size: 0.75rem;
+}

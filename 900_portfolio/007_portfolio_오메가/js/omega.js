@@ -81,7 +81,7 @@ $('.ham-btn').click(function(){
         $('.top-btn').css({opacity:0});
     }else{
         $('.ham_curtain').hide();
-        $('body').css({overflow:'scroll'})
+        $('body').css({overflow:'visible'})
         $('.top-btn').css({opacity:1});
     }
 })
