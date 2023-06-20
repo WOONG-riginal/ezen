@@ -28,6 +28,11 @@ $('.x_box2').click(function(){
     $('.first_line').slideUp();
 });
 
+/* a링크 방지 스크립트*/
+$('a').click(function(e){
+    e.preventDefault();
+});
+
 /* 슬라이드 이미지 */
 $(function(){
     $('.slide_gallery').bxSlider({

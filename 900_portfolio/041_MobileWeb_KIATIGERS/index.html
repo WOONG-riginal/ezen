@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio, Mobile Web</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- 기본 CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/kiaTigers.css">
+    <!-- JS 플러그인 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 페이지 JS -->
+    <script src="./js/jquery.bxslider.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="menu_logo">
+            <div class="logo"><img src="./images/logo_2021.png" alt="로고"></div>
+            <div class="member"><i class="fa fa-user" aria-hidden="true"></i></div>
+
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="mobile_gnb">
+                <div class="gnb_logo">
+                    <img src="./images/mb_menu_logo.png" alt="메뉴로고">
+                </div>
+                <ul class="gnb">
+                    <li><a href="./index.html"><div class="icon"><img src="./images/mb_menu_ico01.png" alt="아이콘"></div>TIGERS</a></li>
+                    <li><a href="#"><div class="icon"><img src="./images/mb_menu_ico02.png" alt="아이콘"></div>PLAYERS</a></li>
+                    <li><a href="#"><div class="icon"><img src="./images/mb_menu_ico03.png" alt="아이콘"></div>CONTENTS</a></li>
+                    <li><a href="#"><div class="icon"><img src="./images/mb_menu_ico04.png" alt="아이콘"></div>GAME</a></li>
+                    <li><a href="#"><div class="icon"><img src="./images/mb_menu_ico05.png" alt="아이콘"></div>TICKETS</a></li>
+                    <li><a href="#"><div class="icon"><img src="./images/mb_menu_ico06.png" alt="아이콘"></div>TIGERS&nbsp;MEMBERSHIP</a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+            <div class="gnb_curtain"></div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="matches">
+            <div class="slider_wrapper">
+                <ul class="slide">
+                    <li class="match">
+                        <div id="prev_match" class="match_date"></div>
+                        <div class="match_info">대전18:30</div>
+                        <div class="match_vs">
+                            <div>
+                                <img src="./images/emblem_ht.png" alt="엠블럼">
+                                <br>KIA
+                            </div>
+                            <div class="score">
+                                6 <span>VS</span> 4
+                                <div class="match_box">경기 종료</div>
+                            </div>
+                            <div>
+                                <img src="./images/emblem_hh.png" alt="엠블럼">
+                                <br>한화
+                            </div>
+                        </div>
+                    </li>
+                    <li class="match">
+                        <div id="today_match" class="match_date"></div>
+                        <div class="match_info">대전18:30</div>
+                        <div class="match_vs">
+                            <div>
+                                <img src="./images/emblem_ht.png" alt="엠블럼">
+                                <br>KIA
+                            </div>
+                            <div class="score">
+                                  <span>VS</span>  
+                                <div class="match_box">경기 전</div>
+                            </div>
+                            <div>
+                                <img src="./images/emblem_hh.png" alt="엠블럼">
+                                <br>한화
+                            </div>
+                        </div>
+                    </li>
+                    <li class="match">
+                        <div id="next_match" class="match_date"></div>
+                        <div class="match_info">대전18:30</div>
+                        <div class="match_vs">
+                            <div>
+                                <img src="./images/emblem_ht.png" alt="엠블럼">
+                                <br>KIA
+                            </div>
+                            <div class="score">
+                                  <span>VS</span>  
+                                <div class="match_box">경기 전</div>
+                            </div>
+                            <div>
+                                <img src="./images/emblem_hh.png" alt="엠블럼">
+                                <br>한화
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cut"></div>
+        </section>
+
+        <section class="allmenus">
+            <h3>ALL <span>TIGERS</span></h3>
+            <ul class="menuBtns">
+                <li><img src="./images/20230515_kia_main_banner_point.jpg" alt="메뉴버튼"></li>
+                <li><img src="./images/main_store_banner.png" alt="메뉴버튼"></li>
+                <li><img src="./images/20221012111052.dce-10da3fe5b062.png" alt="메뉴버튼"></li>
+                <li><img src="./images/20220223144126.21a-554f123d10a8.png" alt="메뉴버튼"></li>
+                <li><img src="./images/20210513144231.958-50f36cf68c8c.png" alt="메뉴버튼"></li>
+                <li><img src="./images/20220223142039.89f-a278fbc54262.png" alt="메뉴버튼"></li>
+                <li><img src="./images/banner_twitter_m.png" alt="메뉴버튼"><img src="./images/main_at_twt.png" alt="트위터" class="twt"></li>
+                <li><img src="./images/banner_instagram_m.png" alt="메뉴버튼"></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="policy">
+            <li><span>개인정보처리방침</span></li>
+            <li>서비스이용약관</li>
+            <li>운영정책</li>
+        </ul>
+        <div class="info">
+            사업등록번호 : 409-81-02 844 |<br>
+            대표자 : 최준영 | 전화 : 070-7686-8000<br>
+            팩스 : 062-525-5350 | 이메일 : kiatigers@kiatigers.co.kr<br>
+            주소 : 광주광역시 북구 서림로 10 광주-기아 챔피언스 필드 내 2층<br>
+            KIA타이거즈 사무실
+        </div>
+        <div class="copyright">
+            Copyright © 2020 KIA TIGERS. All rights reserved.
+        </div>
+    </footer>
+</body>
+<script src="./js/kiaTigers.js"></script>
+</html>
