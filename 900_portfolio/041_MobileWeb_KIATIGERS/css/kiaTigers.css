@@ -353,7 +353,8 @@ footer .policy{
     line-height: 48px;
     padding: 0 10%;
     background: #f2f4f6;
-    border: 1px solid #c4c6c8;
+    border-top: 1px solid #c4c6c8;
+    border-bottom: 1px solid #c4c6c8;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -397,12 +398,13 @@ footer .copyright{
     color: #222;
 }
 .sub_header .sub_header-1f p{
-    margin-top: 10px;
+    margin-top: 18px;
     font-size: 12px;
     color: #666;
 }
 .sub_header .sub_header-1f p img{
     width: 14px;
+    margin-top: -2px;
 }
 .sub_header .sub_header-2f{
     width: 100%;
@@ -415,7 +417,7 @@ footer .copyright{
 /* membership */
 .membership_contents{
     width: 90%;
-    margin: 30px auto;
+    margin: 60px auto;
 }
 .membership_contents img{
     width: 100%;
@@ -425,7 +427,7 @@ footer .copyright{
 .ticket .reserve{
     width: 90%;
     height: 240px;
-    margin: 30px auto 0;
+    margin: 60px auto;
     line-height: 1.2;
     background: url(../images/vs_skybox.jpg) no-repeat;
     background-position: center;
@@ -455,7 +457,7 @@ footer .copyright{
 }
 .ticket .champions-field{
     width: 90%;
-    margin: 30px auto;
+    margin: 60px auto;
 }
 .ticket .champions-field h3{
     margin-bottom: 10px;
@@ -476,7 +478,7 @@ footer .copyright{
 /* contents */
 .tigersTv{
     width: 90%;
-    margin: 30px auto 0;
+    margin: 60px auto 0;
 }
 .tigersTv iframe{
     width: 100%;
@@ -488,7 +490,7 @@ footer .copyright{
     height: 40px;
     line-height: 36px;
     text-align: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 60px;
     border: 2px solid var(--tigers-darkblue);
     border-radius: 10px;
     font-size: 14px;
@@ -502,14 +504,14 @@ footer .copyright{
 
 /* player */
 .players{
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 60px 0;
 }
 .players table{
     width: 100%;
     border-collapse: collapse;
     border-top: 2px solid #8f9191;
-    border-bottom: 2px solid #8f9191;
+    border-bottom: 1px solid #e4e5e6;
 }
 .players th,.players td{
     text-align: center;
@@ -543,12 +545,12 @@ footer .copyright{
 /* game */
 .schedule{
     width: 90%;
-    margin: 30px auto 70px;
+    margin: 60px auto;
 }
 .schedule h2{
     width: 100px;
     height: 40px;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
     line-height: 36px;
     border: 2px solid var(--tigers-red);
     text-align: center;
@@ -556,6 +558,7 @@ footer .copyright{
     color: var(--tigers-red);
 }
 .schedule h3{
+    margin-left: 50%;
     font-size: 15px;
     color: #666;
     margin-bottom: 10px;
@@ -589,8 +592,8 @@ footer .copyright{
     height: 50px;
     line-height: 47px;
     font-size: 14px;
+    border: 1px solid #e4e5e6;
     border-top: 2px solid var(--tigers-red);
-    border-bottom: 1px solid #e4e5e6;
     background-color: #f8f8fa;
 }
 .schedule table td{
@@ -605,9 +608,11 @@ footer .copyright{
     height: 13px;
     line-height: 13px;
     font-size: 10px;
+    margin-right: 2px;
     font-style: italic;
     color: #fff;
     border-radius: 50%;
+    letter-spacing: 2px;
 }
 .schedule table td p:first-child{
     padding-left: 4px;
@@ -616,7 +621,6 @@ footer .copyright{
 .schedule table td p:nth-last-child(2),
 .schedule table td p:last-child{
     text-align: center;
-    font-weight: 600;
 }
 .schedule table td p.win{
     color: var(--tigers-red);

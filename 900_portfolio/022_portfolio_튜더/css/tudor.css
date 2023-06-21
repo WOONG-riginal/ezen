@@ -1,4 +1,8 @@
 @charset "utf-8";
+body,html{
+    font-family: "Helvetica Neue","Arial Nova",sans-serif;
+    --tudor-red: #be0100;
+}
 .w1300{
     max-width: 1300px;
     width: 100%;
@@ -10,40 +14,57 @@
     margin: 0 auto;
 }
 /* Header */
-header .first_line{
-    background-color: #000;
+.border_line{
+    border-bottom: 1px solid #e0e0e0;
 }
-#fir_box{
+.first_line{
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
 }
-header .first_line .fir_box{
-    margin-right: 40px;
-    padding: 20px 0;
-    display: flex;
+.first_line h2{
+    font-size: 10px;
+    color: var(--tudor-red);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.closeFirst{
-    margin-left: 320px;
+.first_line .underline{
+    width: 125px;
+    height: 2px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-header .first_line .fir_box p{
-    font-size: 12px;
-    color: #fff;
+.first_line .underline div{
+    width: 0;
+    height: 2px;
+    background: var(--tudor-red);
+    transition: all 0.7s;
 }
-header .first_line .fir_box .x_box{
-    width: 14px;
-    height: 14px;
-    margin-left: 16px;
-    background-color: #ff0000;
-    text-align: center;
-    cursor: pointer;
+.first_line h2:hover+.underline>div{
+    width: 100%;
 }
-header .first_line .fir_box .x_box2{
-    width: 14px;
-    height: 14px;
-    margin-left: 15px;
-    background-color: #ff0000;
-    text-align: center;
-    cursor: pointer;
+.first_line .x-btn{
+    position: relative;
+}
+.first_line .x-btn div{
+    width: 12px;
+    height: 2px;
+    background: var(--tudor-red);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.first_line .x-btn div:first-child{
+    transform: rotate(45deg)
+}
+.first_line .x-btn div:last-child{
+    transform: rotate(-45deg)
 }
 .second_line{
     padding-top: 10px;
