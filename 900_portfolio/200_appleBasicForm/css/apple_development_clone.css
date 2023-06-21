@@ -5,6 +5,7 @@ body{
 }
 .w1440{
     width: 1440px;
+    width: 101.0526315789474vw;
     margin: 0 auto;
 }
 .nowrap {
@@ -41,16 +42,22 @@ body{
 }
 
 /* 헤더 */
+/* 뷰포트 기준크기 1425 x 768 */
 #header{
     background-color: rgba(240, 240, 240, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 /* 상단 GNB 메뉴 */
 #header nav{
     width: 980px;
+    width: 68.7719298245614vw;
     margin: 0 auto;
 }
 #header .gnb{
     height: 44px;
+    height: 5.729166666666667vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,38 +69,45 @@ body{
 #header .logo a{
     display: inline-block;
     font-size: 20px;
+    font-size: 2.604166666666667vh;
     letter-spacing: -0.14px;
     font-weight: 400;
 }
 #header .gnb li a{
     font-size: 14px;
+    font-size: 1.822916666666667vh;
     letter-spacing: 0.14px;
     font-weight: 300;
 }
 /* https://codepen.io/sosuke/pen/Pjoqqp : filter값 얻기(svg파일) */
 .svg,.search{
     width: 17px;
+    width: 1.192982456140351vw;
     filter: invert(0%) sepia(95%) saturate(21%) hue-rotate(16deg) brightness(95%) contrast(105%);
 }
 
 /* 탑배너 */
 .top_banner{
     height: 76px;
+    height: 9.895833333333333vh;
     background: linear-gradient(180deg, #399fd5 0%, #0983ff 100%);
     text-align: center;
     line-height: 76px;
+    line-height: 9.895833333333333vh;
 }
 .top_banner h4:after{
     content: "\f054";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 13px;
+    font-size: 1.692708333333333vh;
     color: #fff;
     margin-left: 5px;
     display: inline-block;
 }
 .top_banner h4 a{
     font-size: 17px;
+    font-size: 2.213541666666667vh;
     font-weight: 500;
     color: #fff;
 }
@@ -103,21 +117,27 @@ body{
 .homepage{
     color: #fff;
     padding-bottom: 70px;
+    padding-bottom: 9.114583333333333vh;
 }
 .homepage .main_img li:first-child{
     background-image: url(../images/wwdc21-hero3-large_2x.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 624px;
+    background-size: 100% 81.25vh;
     height: 624px;
+    height: 81.25vh;
     position: relative;
 }
 .homepage .main_img li:first-child .main_img_text{
     position: absolute;
     left: 500px;
+    left: 35.08771929824561vw;
     top: 150px;
+    top: 19.53125vh;
     z-index: 100;
     padding-top: 88px;
+    padding-top: 11.45833333333333vh;
 }
 .homepage .main_img h3>img{
     width: 50%;
@@ -127,29 +147,37 @@ body{
 }
 .homepage .main_img li:first-child h5{
     font-size: 27px;
+    font-size: 3.515625vh;
     font-weight: 400;
     color: #f5f5f7;
     line-height: 32px;
+    line-height: 4.166666666666667vh;
 }
 .homepage .main_img li:last-child{
     text-align: center;
     margin-top: 80px;
+    margin-top: 10.41666666666667vh;
 }
 .homepage .main_img li:last-child h3{
     color: #000;
     font-size: 44px;
+    font-size: 5.729166666666667vh;
     font-weight: 600;
     line-height: 48px;
+    line-height: 6.25vh;
     margin-bottom: 48px;
+    margin-bottom: 6.25vh;
 }
 .homepage .main_img li:last-child h4>img{
     width: 635px;
+    width: 44.56140350877193vw;
 }
 
 /* 섹션 1 */
 .promos{
     background-color: #fff;
     padding: 12px;
+    padding: 0.8421052631578947vw 1.5625vh;
 }
 .promos ul{
     display: flex;
@@ -158,32 +186,46 @@ body{
 /* 프로모션 L */
 .promos li:first-child{
     width: 694.5px;
+    width: 48.73684210526316vw;
     height: 574px;
+    height: 74.73958333333333vh;
     background-image: linear-gradient(320deg, rgb(10,96,216) 0%, rgb(81,214,254) 100%);
     background-origin: padding-box;
     padding: 52px 0 0;
+    padding: 6.770833333333333vh 0 0;
     text-align: center;
 }
 .promos li:first-child h4{
     font-size: 32px;
+    font-size: 4.166666666666667vh;
     color: #fafafa;
     font-weight: 600;
     line-height: 44px;
+    line-height: 5.729166666666667vh;
+}
+/* 추가 CSS */
+.promos li:first-child div img{
+    width: 14.03508771929825vw !important;
 }
 .promos li:first-child h5{
     font-size: 21px;
+    font-size: 2.734375vh;
     color: #fafafa;
     font-weight: 300;
     margin-top: 4px;
     line-height: 26px;
+    line-height: 3.385416666666667vh;
 }
 .promos h5+div{
     margin-top: 120px;
+    margin-top: 15.625vh;
 }
 /* 프로모션 R */
 .promos li:last-child{
     width: 708px;
+    width: 49.68421052631579vw;
     height: 574px;
+    height: 74.73958333333333vh;
     background-image: url(../images/large_2x.jpeg);
     background-position: 50% 50%;
     background-size: auto 100%;
@@ -192,27 +234,35 @@ body{
 }
 .promos li:last-child h4{
     font-size: 34px;
+    font-size: 4.427083333333333vh;
     color: #fafafa;
     font-weight: 600;
     line-height: 44px;
+    line-height: 5.729166666666667vh;
     padding-top: 380px;
+    padding-top: 49.47916666666667vh;
 }
 .promos li:last-child h5{
     font-size: 18px;
+    font-size: 2.34375vh;
     color: #06c;
     font-weight: 400;
     line-height: 24px;
+    line-height: 3.125vh;
     padding-top: 16px;
+    padding-top: 2.083333333333333vh;
 }
 /* 폰트어썸 가상클래스 */
 .promos li:last-child h5 a:after{
     font-family: "Font Awesome 5 Free";
     margin-left: 8px;
+    margin-left: 0.5614035087719298vw;
     display: inline-block;
 }
 .promos li:last-child h5 a:first-child:after{
     content: "\f054";
     font-size: 13px;
+    font-size: 1.692708333333333vh;
     font-weight: 900;
 }
 .promos li:last-child h5 a:last-child:after{
@@ -224,21 +274,31 @@ body{
 .xcode {
     width: 100%;
     height: 692px;
+    height: 90.10416666666667vh;
     background: linear-gradient(#f2f2f2, #d5e4f3);
     padding-top: 88px;
+    padding-top: 11.45833333333333vh;
     text-align: center;
 }
 .xcode h4{
     font-size: 56px;
+    font-size: 7.291666666666667vh;
     color: #1d1d1d;
     font-weight: 600;
     margin-bottom: 72px;
+    margin-bottom: 9.375vh;
+}
+/* 추가 CSS */
+.xcode img{
+    width: 48.21052631578947vw;
+    height: 52.21354166666667vh;
 }
 
 /* 섹션 3 */
 .apps{
     background-color: #fff;
     padding: 12px 12px 0;
+    padding: 0.8421052631578947vw 1.5625vh 0;
 }
 .apps ul{
     display: flex;
@@ -247,30 +307,57 @@ body{
 }
 .apps li{
     width: 702px;
+    width: 49.26315789473684vw;
     height: 574px;
+    height: 74.73958333333333vh;
     background: linear-gradient(320deg, rgb(184,201,228) 0%, rgb(231,244,248) 100%);
     background-origin: padding-box;
     padding: 52px 0;
+    padding: 6.770833333333333vh 0;
     margin-bottom: 12px;
+    margin-bottom: 1.5625vh;
     text-align: center;
+}
+/* 추가 CSS */
+.apps li img{
+    width: 14.03508771929825vw;
+    height: 26.04166666666667vh;
+}
+.apps li:nth-child(4) img{
+    width: 13.40350877192982vw;
+    height: 42.96875vh;
+}
+.apps li:nth-child(5) img{
+    width: 10.59649122807018vw;
+    height: 39.0625vh;
+}
+.apps li:nth-child(6) img{
+    width: 30.80701754385965vw;
+    height: 41.40625vh;
 }
 .apps li h4{
     font-size: 40px;
+    font-size: 5.208333333333333vh;
     color: #1d1d1f;
     font-weight: 600;
     line-height: 44px;
+    line-height: 5.729166666666667vh;
 }
 .apps li h5{
     width: 430px;
+    width: 30.17543859649123vw;
     font-size: 21px;
+    font-size: 2.734375vh;
     color: #1d1d1f;
     font-weight: 400;
     line-height: 26px;
+    line-height: 3.385416666666667vh;
     margin: 0 auto;
     margin-top: 4px;
 }
 .apps li h5+div{
     margin-top: 64px;
+    margin-top: 8.333333333333333vh;
 }
 .apps li:nth-child(2){
     background: linear-gradient(320deg, rgb(227,181,179) 0%, rgb(244,237,226) 100%);
@@ -286,20 +373,26 @@ body{
 .platforms{
     max-width: 100%;
     height: 320px;
+    height: 41.66666666666667vh;
     background: #fafafa;
     padding: 12px 0;
+    padding: 1.5625vh 0;
     margin-bottom: 12px;
+    margin-bottom: 1.5625vh;
     text-align: center;
 }
 .platforms h3{
     color: #1d1d1f;
     font-size: 32px;
+    font-size: 4.166666666666667vh;
     line-height: 1.125;
     font-weight: 600;
     padding: 25px 0;
+    padding: 3.255208333333333vh 0;
 }
 .platforms .links{
     width: 980px;
+    width: 68.7719298245614vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -307,61 +400,96 @@ body{
 }
 .platforms .links a{
     margin: 0 28px;
+    margin: 0 1.964912280701754vw;
     display: flex;
     flex-direction: column;
 }
+.platforms .links a:nth-child(1) img{
+    width: 1.894736842105263vw;
+    height: 9.505208333333333vh;
+}
+.platforms .links a:nth-child(2) img{
+    width: 3.929824561403509vw;
+    height: 10.15625vh;
+}
+.platforms .links a:nth-child(3) img{
+    width: 3.929824561403509vw;
+    height: 8.203125vh;
+}
+.platforms .links a:nth-child(4) img{
+    width: 3.43859649122807vw;
+    height: 7.03125vh;
+}
+.platforms .links a:nth-child(5) img{
+    width: 4.842105263157895vw;
+    height: 21.22395833333333vh;
+}
 .platforms .links a p:last-child{
     margin-top: 8px;
+    margin-top: 1.041666666666667vh;
 }
 
 /* 섹션 5 */
 .banner{
     height: 560px;
+    height: 72.91666666666667vh;
     background: linear-gradient(rgb(0,0,0) 0%, rgb(15,144,197) 100%);
     margin-bottom: 12px;
+    margin-bottom: 1.5625vh;
 }
 .banner .section_content{
     width: 980px;
+    width: 68.7719298245614vw;
     margin: 0 auto;
     text-align: center;
     color: #fff;
 }
 .banner .section_content div{
     width: 520px;
+    width: 36.49122807017544vw;
     margin: 0 auto;
     padding: 36px;
+    padding: 4.6875vh 2.526315789473684vw;
     letter-spacing: -1px;
 }
 .banner .section_content div h3,
 .banner .section_content div h5{
     font-size: 32px;
+    font-size: 4.166666666666667vh;
     color: #f5f5f7;
     line-height: 1.125;
     font-weight: 600;
 }
 .banner .section_content div h5{
     font-size: 18px;
+    font-size: 2.34375vh;
     font-weight: 400;
     line-height: 1.25;
     margin-top: 8px;
+    margin-top: 1.041666666666667vh;
 }
 .banner figure{
     height: 376px;
+    height: 48.95833333333333vh;
     background: url(../images/build-apps_2x.png) no-repeat center;
     background-size: cover;
     margin-top: -50px;
+    margin-top: -6.510416666666667vh;
 }
 
 /* 어사이드 */
 .aside{
     background-color: #f5f5f7;
     padding: 25px 0;
+    padding: 3.255208333333333vh 0;
 }
 .aside .section_content{
     width: 980px;
+    width: 68.7719298245614vw;
     margin: 0 auto;
     color: #1d1d1f;
     font-size: 17px;
+    font-size: 2.213541666666667vh;
     display: flex;
     justify-content: space-between;
     flex-basis: 25%;
@@ -371,55 +499,72 @@ body{
 }
 .aside .section_content div figure{
     width: 50px;
+    width: 3.508771929824561vw;
     height: 50px;
+    height: 6.510416666666667vh;
     background: url(../svg/news.svg) no-repeat center;
-    background-size: 100%;
+    background-size: 100% 100%;
     margin: 4px auto 10px;
+    margin: 0.5208333333333333vh auto 1.302083333333333vh;
 }
-.aside .section_content div:nth-child(2) figure{background: url(../svg/documentation.svg);}
-.aside .section_content div:nth-child(3) figure{background: url(../svg/download.svg);}
-.aside .section_content div:nth-child(4) figure{background: url(../svg/program.svg);}
+.aside .section_content div:nth-child(2) figure{background: url(../svg/documentation.svg) no-repeat center;}
+.aside .section_content div:nth-child(3) figure{background: url(../svg/download.svg) no-repeat center;}
+.aside .section_content div:nth-child(4) figure{background: url(../svg/program.svg) no-repeat center;}
 .aside .section_content div p{
     width: 216px;
+    width: 15.15789473684211vw;
     color: #1d1d1f;
     font-size: 17px;
+    font-size: 2.213541666666667vh;
     font-weight: 600;
     line-height: 25px;
+    line-height: 3.255208333333333vh;
 }
 .aside .section_content div p:nth-last-child(2),
 .aside .section_content div p:last-child{
     font-size: 14px;
+    font-size: 1.822916666666667vh;
     font-weight: 400;
     margin-top: 12px;
+    margin-top: 1.5625vh;
     line-height: 20px;
+    line-height: 2.604166666666667vh;
 }
 .aside .section_content div p:last-child{
     color: #06c;
     margin-top: 12px;
+    margin-top: 1.5625vh;
 }
 .aside .section_content div span:after{
     content: "\f054";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 13px;
+    font-size: 1.692708333333333vh;
     color: #06c;
     margin-left: 5px;
+    margin-left: 0.3508771929824561vw;
     display: inline-block;
 }
 
 /* 푸터 */
 #footer{
     font-size: 12px;
+    font-size: 1.5625vh;
     line-height: 1.3334;
     font-weight: 400;
     background-color: #f5f5f7;
     color: #515154;
     min-width: 1024px;
+    min-width: 71.85964912280702vw;
     padding-top: 25px;
+    padding-top: 3.255208333333333vh;
 }
 #footer .footer_content{
     width: 1024px;
+    width: 71.85964912280702vw;
     padding: 0 22px;
+    padding: 0 1.543859649122807vw;
     margin: 0 auto;
 }
 /* [참고] sprite 기법 (여기서는 사용 안함) */
@@ -433,6 +578,7 @@ body{
 #footer .footer_content nav{
     border-top: 1px solid #d2d2d7;
     padding-top: 20px;
+    padding-top: 2.604166666666667vh;
     display: flex;
     flex-flow: row wrap;
 }
@@ -442,29 +588,38 @@ body{
 #footer .footer_content nav h3{
     font-weight: 600;
     line-height: 16px;
+    line-height: 2.083333333333333vh;
     letter-spacing: -0.12px;
     margin-bottom: 9.6px;
+    margin-bottom: 1.25vh;
 }
 #footer .footer_content nav ul{
     font-weight: 400;
     line-height: 16px;
+    line-height: 2.083333333333333vh;
 }
 #footer .footer_content nav ul li{
     margin-bottom: 9.6px;
+    margin-bottom: 1.25vh;
 }
 #footer .footer_content nav>div:last-child>div:last-child{
     margin-top: 24px;
+    margin-top: 3.125vh;
 }
 /* 법적고지 */
 #legal{
     width: 980px;
+    width: 68.7719298245614vw;
     margin: 0 auto;
     padding: 34px 0 21px;
+    padding: 4.427083333333333vh 0 2.734375vh;
     color: #86868b;
 }
 #legal h3{
     margin-bottom: 7px;
+    margin-bottom: 0.9114583333333333vh;
     padding-bottom: 8px;
+    padding-bottom: 1.041666666666667vh;
     border-bottom: 1px solid #d2d2d7;
 }
 #legal h3>a{
@@ -474,9 +629,11 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+    margin-top: 0.6510416666666667vh;
 }
 #legal>div div:first-child{
     margin: 5px 30px 0 0;
+    margin: 0.6510416666666667vh 2.105263157894737vw 0 0;
 }
 #legal>div div:first-child a{
     color: #515154;
@@ -484,27 +641,34 @@ body{
 #legal>div div:nth-child(2){
     color: #515154;
     margin-left: -288px;
+    margin-left: -20.21052631578947vw;
 }
 #legal>div div:nth-child(2) a{
     border-right: 1px solid #d2d2d7;
     margin-right: 7px;
+    margin-right: 0.4912280701754386vw;
     padding-right: 10px;
+    padding-right: 0.7017543859649123vw;
     display: inline-block;
     margin-top: 5px;
+    margin-top: 0.6510416666666667vh;
 }
 #legal>div div:nth-child(2) a:last-child{
     border-right: none;
 }
 #legal>div div:last-child{
     margin-top: 5px;
+    margin-top: 0.6510416666666667vh;
 }
 #legal span:after{
     content: "\f054";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 13px;
+    font-size: 1.692708333333333vh;
     color: #06c;
     margin-left: 5px;
+    margin-left: 0.3508771929824561vw;
     display: inline-block;
 }
 /* select 스타일 */
