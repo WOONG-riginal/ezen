@@ -1,23 +1,53 @@
-/* 서브메뉴 */
-$('.submenu').hide()
-$('.gnb li').mouseenter(function(){
-    $('.submenu').hide()
-    const idx = $(this).index();
-    $('.submenu').eq(idx).show();
-});
-$('header').mouseleave(function(){
-    $('.submenu').hide()
+/* X버튼 스크립트 */
+$('.x-btn').click(function(){
+    $('.border_line').slideUp();
 })
 
-/* 스크롤, TOP버튼 */
+
+/* LNB 메뉴 스크립트 */
+$('.menu').click(function(){    
+    if($('#menuicon').is(':checked')){
+        $('.menu_dept').slideDown();
+    }else{
+        $('.menu_dept').slideUp();
+    }
+})
+$('.menu_content').hide();
+$('.menu_content').eq(0).show();
+$('.category li').click(function(){
+    $('.category li').removeClass('on');
+    $(this).addClass('on');
+    var idx=$(this).index();
+    $('.menu_content').hide();
+    $('.menu_content').eq(idx).show();
+})
+
+
+$('.new-product').click(function(){
+    $('html,body').stop().animate({scrollTop:2135},500);
+});
+$('.first_line h2').click(function(){
+    $('html,body').stop().animate({scrollTop:2135},500);
+});
+
+
+
+/* 스크롤, TOP버튼 스크립트 */
 $(window).on('scroll',function(){
     var scrT=$(this).scrollTop();
-    if(scrT>=100){
+    if(scrT>=300){
         $('aside div').fadeIn();
+        $('.second_line').css({height:50});
+        $('.byscroll').hide();
+        $(".logo a img").attr("src", "./images/scroll-logo.png");
     }else{
         $('aside div').fadeOut();
+        $('.second_line').css({height:100});
+        $('.byscroll').show();
+        $(".logo a img").attr("src", "./images/Tudor-Logo.png");
     }
 });
+
 $('.topBtn').click(function(e){
     e.preventDefault();
     $('html,body').stop().animate({scrollTop:0},500);
@@ -33,14 +63,59 @@ $('a').click(function(e){
     e.preventDefault();
 });
 
-/* 슬라이드 이미지 */
-$(function(){
-    $('.slide_gallery').bxSlider({
-        auto: true,
-		speed: 1000,
-		pause: 4000,
-		mode:'horizontal',
-		autoControls: false,
-		pager:true,
-    });
-});
+/* 슬라이드 만들기 */
+window.onload = function () {
+    const slider = document.querySelector('.slider');
+    const slideLis = slider.querySelectorAll('.slider li')
+
+    /* 클론 */
+	var i=0;
+	function cloning() {
+	    const clone1 = slideLis[i].cloneNode(true);
+	    slider.append(clone1);
+    }
+	function counting() {
+        i++;
+    }
+	function cloneSliding() {
+        setInterval(cloning, 3000);
+        setInterval(counting, 3000);
+    }
+    cloneSliding();
+
+    /* 주요 변수 초기화 */
+    let currentIdx = 0;
+    let translate = 0;
+    const speedTime = 500;
+
+    /* CSSOM 셋업 */
+    const sliderCloneLis = slider.querySelectorAll('li');
+    const liWidth = slideLis[0].clientWidth;
+    const sliderWidth = liWidth * sliderCloneLis.length;
+    slider.style.width = `${sliderWidth}px`;
+
+    /* 슬라이드 실행 */
+    function move(D) {
+        currentIdx += (-1 * D);
+        translate += liWidth * D;
+        translate -= 10;
+        slider.style.transform = `translateX(${translate}px)`;
+        slider.style.transition = `all ${speedTime}ms ease`
+    }
+    function sliding() {
+        move(-1);
+		if (currentIdx === sliderCloneLis.length)
+	        setTimeout(() => {
+	            slider.style.transition = 'none';
+	            currentIdx = 0;
+	            translate = -liWidth;
+	            // slider.style.transform = `translateY(${translate}px)`;
+	            slider.style.transform = `translateX(${translate}px)`;
+	        }, speedTime);
+    }
+
+    function showSliding() {
+        setInterval(sliding, 3000);
+    }
+    showSliding();
+}
