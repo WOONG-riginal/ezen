@@ -23,13 +23,13 @@ $('.category li').click(function(){
 })
 
 
+/* 신제품 스크립트 */
 $('.new-product').click(function(){
     $('html,body').stop().animate({scrollTop:2135},500);
 });
 $('.first_line h2').click(function(){
     $('html,body').stop().animate({scrollTop:2135},500);
 });
-
 
 
 /* 스크롤, TOP버튼 스크립트 */
@@ -47,28 +47,29 @@ $(window).on('scroll',function(){
         $(".logo a img").attr("src", "./images/Tudor-Logo.png");
     }
 });
-
 $('.topBtn').click(function(e){
     e.preventDefault();
     $('html,body').stop().animate({scrollTop:0},500);
 });
 
-/* 맨 첫 줄 */
+
+/* 맨 첫 줄 스크립트 */
 $('.x_box2').click(function(){
     $('.first_line').slideUp();
 });
+
 
 /* a링크 방지 스크립트*/
 $('a').click(function(e){
     e.preventDefault();
 });
 
-/* 슬라이드 만들기 */
+
+/* 슬라이드 스크립트 */
 window.onload = function () {
     const slider = document.querySelector('.slider');
     const slideLis = slider.querySelectorAll('.slider li')
 
-    /* 클론 */
 	var i=0;
 	function cloning() {
 	    const clone1 = slideLis[i].cloneNode(true);
@@ -83,18 +84,15 @@ window.onload = function () {
     }
     cloneSliding();
 
-    /* 주요 변수 초기화 */
     let currentIdx = 0;
     let translate = 0;
-    const speedTime = 500;
+    const speedTime = 1000;
 
-    /* CSSOM 셋업 */
     const sliderCloneLis = slider.querySelectorAll('li');
     const liWidth = slideLis[0].clientWidth;
     const sliderWidth = liWidth * sliderCloneLis.length;
     slider.style.width = `${sliderWidth}px`;
 
-    /* 슬라이드 실행 */
     function move(D) {
         currentIdx += (-1 * D);
         translate += liWidth * D;
@@ -109,7 +107,6 @@ window.onload = function () {
 	            slider.style.transition = 'none';
 	            currentIdx = 0;
 	            translate = -liWidth;
-	            // slider.style.transform = `translateY(${translate}px)`;
 	            slider.style.transform = `translateX(${translate}px)`;
 	        }, speedTime);
     }
@@ -119,3 +116,14 @@ window.onload = function () {
     }
     showSliding();
 }
+
+
+/* 아이프레임 동영상 소스 변환 스크립트 */
+$('.left_section li').click(function(){
+    $('.left_section li').removeClass('active');
+    $(this).addClass('active');
+
+    let url = $(this).find('a').attr('href');
+    console.log(url);
+    $('iframe').attr('src', url);
+})

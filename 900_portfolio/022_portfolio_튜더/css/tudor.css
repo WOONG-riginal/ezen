@@ -90,7 +90,6 @@ header{
     width: 24px;
     height: 14px;
     cursor: pointer;
-    /* 포지션 위치기준값 */
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -101,7 +100,6 @@ header{
     width: 100%;
     height: 2px;
     background: #000;
-    /* 포지션 */
     position: absolute;
     z-index: 100;
     transition: all 0.5s;
@@ -265,25 +263,50 @@ figure h4:hover i{
 .first_section{
     margin-top: 142px;
     margin-bottom: 150px;
-    display: flex;
+    position: relative;
 }
-.first_section .video_box{
-    width: 620px;
-    height: 482px;
-    background-color: #000;
+.first_section h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #000;
+}
+.first_section p{
+    width: 84px;
+    font-size: 12px;
+    color: var(--tudor-red);
+    margin-top: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.first_section .underline{
+    width: 84px;
+    height: 2px;
+    margin-top: 2px;
+    margin-left: 30px;
+}
+.first_section .underline div{
+    width: 0;
+    height: 2px;
+    background: var(--tudor-red);
+    transition: all 0.4s;
+}
+.first_section p:hover+.underline>div{
+    width: 100%;
 }
 .cards_box{
-    width: 740px;
+    width: 1240px;
     height: 330px;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     display: flex;
     flex-flow: row wrap;
-    position: relative;
-    left: -60px;
-    z-index: 1;
-    background: red;
     overflow: hidden;
+}
+.cards_box .slider{
+    transition: 0.5s;
+    width: 7000px !important;
+    display: flex;
 }
 .cards_box .card{
     width: 240px;
@@ -291,22 +314,22 @@ figure h4:hover i{
     margin-right: 10px;
     cursor: pointer;
 }
-.cards_box .slider {
-    transition: 0.5s;
-    z-index: -9999;
-    width: 9000px !important;
-    display: flex;
+.cards_box .card img{
+    width: 100%;
 }
-.slider li {
-    /* width: 470px;
-    height: 25px; */
-    background: yellow;
+.cards_box .card h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: -50px;
+    margin-left: 10px;
 }
-
-
-
-
-
+.cards_box .card h4{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
 .second_section{
     height: 625px;
     background-color: #f5f5f5;
@@ -320,35 +343,30 @@ figure h4:hover i{
 
 }
 .second_section .left_section .box1{
-    width: 235px;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 2px #ccc;
-    font-family: 'Anton', sans-serif;
-    font-size: 28px;
-    background-color: #000;
+    width: 100%;
+    margin: 30px auto;
+}
+.second_section .left_section .box1 img{
+    width: 100%;
 }
 .second_section .left_section ul{
-    width: 235px;
-    height: 234px;
+    width: 100%;
     text-align: center;
 }
 .second_section .left_section ul li{
-    font-size: 18px;
-    margin: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 26px;
+    padding: 4px;
+    transition: all 0.5s;
 }
-.second_section .left_section .box2{
-    width: 130px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    background-color: #848484;
-    margin: 36px auto;
+.second_section .left_section ul li.active{
+    background: var(--tudor-red);
+    color: #fff;
 }
-.second_section .left_section .box2 img{
-    width: 100%;
+.second_section .left_section ul li:hover{
+    background: var(--tudor-red);
+    color: #fff;
 }
 .right_section{
     /* width: 1065px; */
@@ -361,84 +379,83 @@ figure h4:hover i{
     height: 452px;
 }
 .third_section{
-    height: 735px;
+    margin-top: 124px;
+    padding-left: 84px;
 }
-.third_section .first_box{
-    width: 260px;
-    height: 25px;
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
+.third_section h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+}
+.third_section p{
+    width: 75px;
+    font-size: 12px;
+    color: var(--tudor-red);
+    margin-top: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.third_section .underline{
+    width: 75px;
+    height: 2px;
+    margin-top: 2px;
+    margin-left: 30px;
+    margin-bottom: 44px;
+}
+.third_section .underline div{
+    width: 0;
+    height: 2px;
+    background: var(--tudor-red);
+    transition: all 0.4s;
+}
+.third_section p:hover+.underline>div{
+    width: 100%;
+}
+.products{
+    display: flex;
+}
+.products ul li{
     text-align: center;
-    text-shadow: 1px 2px 5px #999;
-    margin: 126px auto 46px;
+    overflow: hidden;
 }
-.img{
+.products ul li img{
+    height: 100%;
+}
+.products ul:first-child{
+    display: flex;
+    flex-flow: column wrap;
+}
+.products ul:first-child li{
     width: 185px;
     height: 185px;
-    margin-right: 5px;
     margin-bottom: 5px;
-    position: relative;
+    margin-right: 5px;
 }
-.bigImg{
+.products ul:nth-child(2) li{
     width: 375px;
     height: 375px;
     margin-right: 5px;
-    position: relative;
 }
-.caption{
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    background-color: #fff;
-    color: #222;
-    font-size: 30px;
-    font-weight: bold;
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    transition: all 0.5s;
-}
-.img .caption{
-    width: 185px;
-    height: 185px;
-    line-height: 185px;
-}
-.bigImg .caption{
-    width: 375px;
-    height: 375px;
-    line-height: 375px;
-}
-.img:hover .caption,
-.bigImg:hover .caption{
-    opacity: 0.5;
-}
-.images .sec1{
-    width: 190px;
-}
-.images .sec3{
-    width: 565px;
+.products ul:last-child{
     display: flex;
     flex-flow: row wrap;
 }
-.images{
-    margin: 0 82px;
-    display: flex;
+.products ul:last-child li{
+    width: 185px;
+    height: 185px;
+    margin-bottom: 5px;
+    margin-right: 5px;
 }
-.last_box{
-    width: 130px;
-    height: 32px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ff0000;
-    text-align: center;
-    line-height: 32px;
-    margin: 30px 83px 107px auto;
-    cursor: pointer;
+.products ul:last-child li:nth-child(3),
+.products ul:last-child li:nth-child(6){
+    margin-right: 0;
 }
-.last_box:hover{
-    text-decoration: underline;
+.products ul:last-child li:nth-child(4),
+.products ul:last-child li:nth-child(5),
+.products ul:last-child li:nth-child(6){
+    margin-bottom: 0;
 }
+
 aside div{
     width: 60px;
     height: 60px;
@@ -457,6 +474,7 @@ aside div a{
     color: #fff;
 }
 footer{
+    margin-top: 160px;
     height: 330px;
     background-color: #000;
     color: #929294;
