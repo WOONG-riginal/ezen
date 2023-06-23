@@ -1,6 +1,6 @@
 @charset "utf-8";
 body,html{
-    max-width: 412px;
+    width: 100%;
     height: 2000px;
     margin: 0 auto;
     font-family: 'Noto Sans', sans-serif;
@@ -22,7 +22,7 @@ body,html{
 }
 /* GNB */
 header{
-    max-width: 412px;
+    width: 100%;
 }
 header .gnb{
     width: 100%;
@@ -320,7 +320,7 @@ header .gnb_contents .shop img{
 }
 /* 이벤트 메뉴 */
 header .event_menu{
-    width: 412px;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -340,11 +340,11 @@ header .event_menu .event_slide{
 }
 header .event_menu .event_slide:nth-child(2){
     z-index: 0;
-    transform:translateX(412px);
+    transform:translateX(100vw);
 }
 header .event_menu .event_slide:nth-child(3){
     z-index: 0;
-    transform:translateX(-412px);
+    transform:translateX(-100vw);
 }
 header .event_menu .event_slide img,
 header .event_menu .event_slide div{

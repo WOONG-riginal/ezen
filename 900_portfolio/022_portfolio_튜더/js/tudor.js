@@ -25,16 +25,17 @@ $('.category li').click(function(){
 
 /* 신제품 스크립트 */
 $('.new-product').click(function(){
-    $('html,body').stop().animate({scrollTop:2135},500);
+    $('html,body').stop().animate({scrollTop:2318},500);
 });
 $('.first_line h2').click(function(){
-    $('html,body').stop().animate({scrollTop:2135},500);
+    $('html,body').stop().animate({scrollTop:2318},500);
 });
 
 
 /* 스크롤, TOP버튼 스크립트 */
 $(window).on('scroll',function(){
     var scrT=$(this).scrollTop();
+    console.log(scrT);
     if(scrT>=300){
         $('aside div').fadeIn();
         $('.second_line').css({height:50});
@@ -56,12 +57,6 @@ $('.topBtn').click(function(e){
 /* 맨 첫 줄 스크립트 */
 $('.x_box2').click(function(){
     $('.first_line').slideUp();
-});
-
-
-/* a링크 방지 스크립트*/
-$('a').click(function(e){
-    e.preventDefault();
 });
 
 
@@ -119,7 +114,8 @@ window.onload = function () {
 
 
 /* 아이프레임 동영상 소스 변환 스크립트 */
-$('.left_section li').click(function(){
+$('.left_section li').click(function(e){
+    e.preventDefault();
     $('.left_section li').removeClass('active');
     $(this).addClass('active');
 
@@ -127,3 +123,16 @@ $('.left_section li').click(function(){
     console.log(url);
     $('iframe').attr('src', url);
 })
+
+
+/* 경고창 스크립트 */
+$('.gnb li,.snb>li:nth-child(3),.snb>li:nth-child(4),.snb>li:nth-child(5),.content_box,.first_section p,.slider li,.third_section p,.products li,.follow li,.fnb a').click(function(e){
+    e.preventDefault();
+    $('.alert-message').fadeIn();
+    $('.alert-curtain').fadeIn();
+    setTimeout(function(){
+        $('.alert-message').fadeOut();
+        $('.alert-curtain').fadeOut();
+    },1000)
+});
+

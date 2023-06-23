@@ -236,26 +236,26 @@ header{
 }
   
 .slide_item:nth-child(2) {
-    background-image: url(../images/portfolio1.jpg);
+    background-image: url(../images/portfolio01.jpg);
 }
 .slide_item:nth-child(3) {
-    background-image: url(../images/portfolio2.jpg);
+    background-image: url(../images/portfolio02.jpg);
 }
 .slide_item:nth-child(4) {
-    background-image: url(../images/portfolio3.jpg);
+    background-image: url(../images/portfolio03.jpg);
 }
 .slide_item:nth-child(5) {
-    background-image: url(../images/portfolio4.jpg);
+    background-image: url(../images/portfolio04.jpg);
 }
 .slide_item:nth-child(6) {
-    background-image: url(../images/portfolio5.jpg);
+    background-image: url(../images/portfolio05.jpg);
 }
 .slide_item:nth-child(7) {
-    background-image: url(../images/portfolio6.jpg);
+    background-image: url(../images/portfolio06.jpg);
 }
 .slide_item:nth-child(8) {
-    background-image: url(../images/portfolio7.jpg);
+    background-image: url(../images/portfolio07.jpg);
 }
 .slide_item:nth-child(9) {
-    background-image: url(../images/portfolio8.jpg);
+    background-image: url(../images/portfolio08.jpg);
 }
