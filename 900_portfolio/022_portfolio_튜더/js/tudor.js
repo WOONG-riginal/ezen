@@ -110,6 +110,7 @@ window.onload = function () {
         setInterval(sliding, 3000);
     }
     showSliding();
+
 }
 
 

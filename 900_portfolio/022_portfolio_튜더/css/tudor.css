@@ -360,9 +360,15 @@ figure h4:hover i{
     height: 330px;
     margin-right: 10px;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
 .cards_box .card img{
     width: 100%;
+    transition: all 0.5s;
+}
+.cards_box .card:hover img{
+    scale: 110%;
 }
 .cards_box .card h3{
     color: #fff;
@@ -370,12 +376,16 @@ figure h4:hover i{
     font-weight: 900;
     margin-top: -50px;
     margin-left: 10px;
+    position: absolute;
+    z-index: 10;
 }
 .cards_box .card h4{
     color: #fff;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: -25px;
     margin-left: 10px;
+    position: absolute;
+    z-index: 10;
 }
 .second_section{
     height: 625px;
