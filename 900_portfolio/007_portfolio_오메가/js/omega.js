@@ -33,14 +33,9 @@ function loaded() { $('.loading').hide(); }
 function startPage() { $('.container').show(); }
 
 
-/* a링크 방지 스크립트*/
-$('a').click(function(e){
-    e.preventDefault();
-});
-
-
 /* 경고창 스크립트 */
-$('.lm li:nth-child(3),.lm li:nth-child(5),.logo,.rm li,.ham_menu-2f li,.no-action li,.detail,.buynow,.fnb li span,.fnb-sub li,.sns ul li,.legal-menu li').click(function(){
+$('.lm li:nth-child(3),.lm li:nth-child(5),.logo,.rm li,.ham_menu-2f li,.no-action li,.detail,.buynow,.fnb li span,.fnb-sub li,.sns ul li,.legal-menu li').click(function(e){
+    e.preventDefault();
     $('.alert-message').fadeIn();
     $('.alert-curtain').fadeIn();
     setTimeout(function(){

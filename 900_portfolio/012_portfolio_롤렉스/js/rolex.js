@@ -124,17 +124,12 @@ document.body.appendChild(addCurtian);
 
 
 /* 준비창 스크립트 */
-$('.gnb a, .sub_box, .detail_btn, .card_text button, .card_box_info p, .about_us_detail, .planet_r button, footer dd').click(function(){
+$('.gnb a, .sub_box, .card_text button, .card_box_info p, .about_us_detail, .planet_r button, footer dd').click(function(e){
+    e.preventDefault();
     $('.alert').fadeIn();
     $('.curtain').fadeIn();
     setTimeout(function(){
         $('.alert').fadeOut();
         $('.curtain').fadeOut();
     },1000)
-});
-
-
-/* a링크 방지 스크립트*/
-$('a').click(function(e){
-    e.preventDefault();
 });

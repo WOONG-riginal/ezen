@@ -11,16 +11,17 @@ let show = document.querySelector(".show");
 
 function showPreview() {
   show.innerHTML="";
+  console.log(currSlide);
   let linkText;
   if(currSlide===7){
-    linkText=`<a href="./portfolio/mobile/pf${currSlide-1}.html">`;
+    linkText=`<a href="http://ahdzlaksen.cafe24.com/teamplay/index.html">`;
   }else if(currSlide===9){
-    linkText=`<a href="./teamplay/pf${currSlide-1}.html">`;
+    linkText=`<a href="http://ahdzlaksen.cafe24.com/portfolio/0${currSlide-1}/index.html">`;
   }else{
-    linkText=`<a href="./portfolio/pf${currSlide-1}.html">`;
+    linkText=`<a href="http://ahdzlaksen.cafe24.com/portfolio/0${currSlide-1}/index.html">`;
   }
   show.innerHTML=`${linkText}<h3>GO TO THIS PORTFOLIO</h3>
-    <img src="./personal/images/portfolio${currSlide-1}.jpg" alt="미리보기">
+    <img src="./personal/images/portfolio0${currSlide-1}.jpg" alt="미리보기">
     </a>`;
 };
 function defaultPreview() {

@@ -110,27 +110,7 @@ header .gnb li a{
 header .gnb li a:hover {
     color: var(--light-green);
 }
-header .detail_btn{
-    width: 150px;
-    height: 40px;
-    background-color: #eee;
-    opacity: 0.5;
-    border: none;
-    border-radius: 40px;
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-header .detail_btn:hover{
-    opacity: 0.8;
-}
+
 
 /* ===================== LNB ===================== */
 header .lnb_wrapper{
