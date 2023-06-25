@@ -1,0 +1,525 @@
+@charset "utf-8";
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
+}
+/* 경고창 */
+.alert .alert-curtain{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    left: 0;top: 0;
+    z-index: 7777;
+    display: none;
+}
+.alert .alert-message{
+    width: 240px;
+    height: 120px;
+    padding-top: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #222;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 8888;
+    transform: translate(-50%, -100%);
+    display: none;
+}
+.alert .alert-message img{
+    width: 20%;
+    margin: 0 auto;
+}
+.alert .alert-message p{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+/* 0. HOME */
+header{
+    padding-top: 36px;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo img{
+    width: 160px;
+}
+.gnb{
+    float: right;
+}
+.gnb li{
+    float: left;
+    margin-left: 40px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.gnb li:nth-child(1){
+    margin-left: 0;
+}
+.lnb{
+    width: 33.33%;
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lnb li{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.gnb li:hover,.lnb li:hover{
+    color: #dc1f18;
+}
+.section0 .vid video{
+    position: fixed;
+    left: 0;top: -50px;
+    width: 100%;
+    z-index: -1;
+}
+.section0 article{
+    position: absolute;
+    left: 50px;
+    bottom: 80px;
+}
+.section0 article h4{
+    text-shadow: 1px 1px 3px #252525;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.section0 article button{
+    background-color: #dc1f18;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.section0 article button:hover{
+    background-color: #252525;
+}
+.section0 article button h5{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+.videoBtn{
+    position: absolute;
+    right: 50px;
+    bottom: 80px;
+}
+.videoBtn button{
+    width: 50px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+.videoBtn .on{
+    display: block;
+}
+.videoBtn button:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100px;
+    background-color: #000;
+    transition: all 0.5s;
+    position: absolute;
+    left: 50%;top: 50%;
+    z-index: -1;
+    transform: translate(-50%,-50%);
+}
+.videoBtn button:hover::after{
+    width: 60px;
+    height: 60px;
+}
+
+/* 섹션 1 */
+.section1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+}
+.section1 .mens{
+    width: 40%;
+    height: 90%;
+    background: url(https://www.tissotwatches.com/media/content_push/watches-for-him-seastar-2023.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 7%;
+    top: 5%;
+}
+.section1 .mens h2{
+    color: #fff;
+    text-shadow: 1px 1px 3px #252525;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 80px;
+}
+.section1 .mens button{
+    display: block;
+    background-color: #dc1f18;
+    width: 300px;
+    height: 50px;
+    margin: 50px auto 0;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.section1 .mens button:hover{
+    background-color: #252525;
+}
+.section1 .mens button h5{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+.section1 .watch_list{
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    right: 7%;
+    top: 5%;
+}
+.watch_list ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.watch_list ul li{
+    width: 40%;
+    text-align: center;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.watch_list ul li:hover{
+    color: #dc1f18;
+}
+.watch_list ul li div{
+    width: 100%;
+    overflow: hidden;
+}
+.watch_list ul li img{
+    width: 90%;
+    transition: all 0.3s;
+}
+.watch_list ul li:hover img{
+    scale: 105%;
+}
+.watch_list ul li h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.watch_list ul li h4{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.watch_list ul li h5{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+/* 섹션 2 */
+.section2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+}
+.section2 .womens{
+    width: 40%;
+    height: 90%;
+    background: url(https://www.tissotwatches.com/media/content_push/watches-for-her-seastar-2023.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 7%;
+    top: 5%;
+}
+.section2 .womens h2{
+    color: #fff;
+    text-shadow: 1px 1px 3px #252525;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 80px;
+}
+.section2 .womens button{
+    display: block;
+    background-color: #dc1f18;
+    width: 300px;
+    height: 50px;
+    margin: 50px auto 0;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.section2 .womens button:hover{
+    background-color: #252525;
+}
+.section2 .womens button h5{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+.section2 .watch_list{
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    left: 7%;
+    top: 5%;
+}
+
+/* 섹션 3 */
+.section3{
+    text-align: center;
+}
+.section3 h2{
+    color: #111;
+    text-shadow: 1px 1px 3px #ddd;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.section3 nav{
+    width: 90%;
+    margin: 0 auto;
+}
+.section3 ul{
+    display: flex;
+    justify-content: space-between;
+}
+.section3 ul li{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.section3 ul li:hover{
+    color: #dc1f18;
+}
+.section3 ul li h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.section3 ul li div{
+    padding-top: 30px;
+    overflow: hidden;
+}
+.section3 ul li img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.section3 ul li:hover img{
+    scale: 105%;
+}
+
+/* 섹션 4 */
+.section4 h2{
+    color: #111;
+    text-shadow: 1px 1px 3px #ddd;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.section4 h3{
+    color: #111;
+    font-size: 20px;
+    text-align: center;
+}
+.section4 .news{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.section4 .news li{
+    width: 24%;
+    line-height: 1.8;
+    cursor: pointer;
+}
+.section4 .news li div{
+    position: relative;
+    overflow: hidden;
+}
+.section4 .news li img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.section4 .news li:hover img{
+    scale: 105%;
+}
+.section4 .news li div span{
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 28px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #dc1f18;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.section4 .news li h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+.section4 .news li:hover h4{
+    color: #dc1f18;
+}
+.section4 .news li h5{
+    font-weight: 300;
+}
+.section4 .news li:nth-child(2) h5{
+    margin-bottom: 30px;
+}
+.section4 .news li p{
+    font-size: 16px;
+    color: #222;
+}
+.section4 button{
+    display: block;
+    background-color: #dc1f18;
+    width: 300px;
+    height: 50px;
+    margin: 50px auto 0;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.section4 button:hover{
+    background-color: #252525;
+}
+.section4 button h5{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+
+/* 5. Section */
+.section5 aside{
+    display: flex;
+}
+.section5 aside h2{
+    color: #111;
+    text-shadow: 1px 1px 3px #eee;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.section5 aside button{
+    display: block;
+    background-color: #dc1f18;
+    width: 300px;
+    height: 50px;
+    margin: 50px auto 0;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.section5 aside button:hover{
+    background-color: #252525;
+}
+.section5 aside button h5{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+.section5 .find_store{
+    width: 50%;
+    height: 350px;
+    background: url(https://www.tissotwatches.com/static/version1686048788/frontend/Tissot/hyva/ko_KR/images/bg-store-locator.jpg) no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #eee;
+}
+.section5 .service{
+    width: 50%;
+    height: 350px;
+    background: url(https://www.tissotwatches.com/static/version1686048788/frontend/Tissot/hyva/ko_KR/images/bg-customer-service.jpg) no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #eee;
+}
+.section5 footer{
+    width: 100%;
+    height: calc(100vh - 350px);
+    padding: 40px 0;
+    text-align: center;
+    background: #000;
+}
+.section5 .footer_title{
+    padding-top: 120px;
+    width: 80%;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.section5 .footer_title li{
+    width: 25%;
+}
+.section5 .footer_title h3{
+    color: #fff;
+    font-size: 18px;
+    line-height: 2.5;
+    cursor: pointer;
+}
+.section5 .footer_title h3 i{
+    font-size: 24px;
+}
+.section5 .fnb{
+    width: 80%;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.section5 .fnb ul{
+    width: 25%;
+}
+.section5 .fnb li{
+    color: #fff;
+    font-size: 12px;
+    padding: 15px 0;
+}
+.section5 .fnb li a{
+    cursor: pointer;
+}
+.section5 .fnb li a:hover{
+    text-decoration: underline;
+}
+.section5 .footer_txt p{
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+}

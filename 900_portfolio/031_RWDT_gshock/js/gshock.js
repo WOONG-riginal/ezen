@@ -1,4 +1,4 @@
-/* a링크 방지 스크립트*/
+/* 경고창 스크립트*/
 $('.gnb li:nth-child(1) a,.gnb li:nth-child(2) a,.gnb li:nth-child(3) a,.gnb li:nth-child(4) a,.search_icon,.promotion_list a,.work_list a,.blog_list a,.send_btn').click(function(e){
     e.preventDefault();
     $('.alert-message').fadeIn();
