@@ -32,6 +32,44 @@ body{
     background-color: #000;
     margin-top: 80px;
 }
+
+/* 경고창 */
+.alert .alert-curtain{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    position: fixed;
+    left: 0;top: 0;
+    z-index: 7777;
+    display: none;
+}
+.alert .alert-message{
+    width: 240px;
+    height: 120px;
+    padding-top: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 8888;
+    transform: translate(-50%, -100%);
+    display: none;
+}
+.alert .alert-message img{
+    width: 40%;
+    margin: 0 auto 14px;
+}
+.alert .alert-message p{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
 /* 모바일 퍼스트 = 모바일은 공통 스타일 */
 /* 1. Header */
 header{
@@ -96,10 +134,7 @@ header{
     margin: 5px 0;
 }
 /* 2. Slider */
-/* 텍스트는 PC에서만 보이도록 */
-    .slider .slide_text{
-        display: none;
-    }
+
 /* 3. Contents */
 /* 3-1. Display */
 .display_section{
@@ -367,7 +402,7 @@ input, textarea{
         display: none;
     }
     /* 2. Slider */
-    /* 텍스트는 PC에서만 보이도록 */
+    
     /* 3-1. 태블릿 Display */
     .display_section{
         /* 속성값 수정 */
@@ -582,77 +617,10 @@ input, textarea{
         right: 5.5%;
         top: 16px;
         top: 26.66666666666667%;
-    }
-    /* 2. Slider */
-    .slider .slide_text{
-        display: block;
-        position: absolute;
-        left: 5%;
-        bottom: 10%;
-        z-index: 9;
-        text-align: center;
-        color: #fff;
-    }
-    .slide4 .slide_text,
-    .slide9 .slide_text{
-        bottom: 40%;
-    }
-
-    .slide3 .slide_text,
-    .slide5 .slide_text,
-    .slide7 .slide_text{
-        bottom: 30%;
-    }
-    .slide3 .slide_text,
-    .slide5 .slide_text,
-    .slide7 .slide_text,
-    .slide8 .slide_text{
-        left: 12%;
-    }
-    .slide7 .slide_text{
-        color: #111;
-    }
-    .slide8 .slide_text{
-        color: red;
-    }
-    .slider .slide_text p{
-        font: bold 32px Play, sans-serif;
-        margin-bottom: 20px;
-    }
-    .slider .slide_text h2{
-        font: 32px 'Anton', sans-serif;
-        margin-bottom: 20px;
-    }
-    .slider .slide_text h3{
-        font: 18px 'Anton', sans-serif;
-        margin-bottom: 24px;
-    }
-    .slider .slide_text .learnmore{
-        display: inline-block;
-        font-size: 16px;
-        border: 1px solid #fff;
-        padding: 8px 28px;
-        z-index: 10;
         cursor: pointer;
     }
-    .slide7 .slide_text .learnmore{
-        border: 1px solid #111;
-    }
-    .slide8 .slide_text .learnmore{
-        border: 1px solid red;
-    }
-    .slider .slide_text .learnmore:hover{
-        color: #000;
-        background: #fff;
-    }
-    .slide7 .slide_text .learnmore:hover{
-        color: #fff;
-        background: #111;
-    }
-    .slide8 .slide_text .learnmore:hover{
-        color: #fff;
-        background: red;
-    }
+    /* 2. Slider */
+
     /* 3-1. PC Display */
     .display_section{
         margin-top: 100px;
