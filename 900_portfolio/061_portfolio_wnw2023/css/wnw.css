@@ -25,6 +25,12 @@ header h1{
 }
 header h1 img{
     width: 400px;
+    animation: bingbing 10s linear infinite;
+}
+@keyframes bingbing{
+	100% {
+    	transform: rotate(360deg);
+    }
 }
 /* Img Text */
 header .txt{

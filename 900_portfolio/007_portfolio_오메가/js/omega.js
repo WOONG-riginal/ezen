@@ -34,7 +34,7 @@ function startPage() { $('.container').show(); }
 
 
 /* 경고창 스크립트 */
-$('.lm li:nth-child(3),.lm li:nth-child(5),.logo,.rm li,.ham_menu-2f li,.no-action li,.detail,.buynow,.fnb li span,.fnb-sub li,.sns ul li,.legal-menu li').click(function(e){
+$('.lm li:nth-child(3),.lm li:nth-child(5),.rm li,.ham_menu-2f li,.no-action li,.detail,.buynow,.fnb li span,.fnb-sub li,.sns ul li,.legal-menu li').click(function(e){
     e.preventDefault();
     $('.alert-message').fadeIn();
     $('.alert-curtain').fadeIn();
@@ -63,9 +63,9 @@ $('.top-btn').click(function(){
 
 
 /* HAM 메뉴 스크립트 */
-$('.ham_menu').hide();
-$('.ham-btn').click(function(){
-    $('.ham_menu').toggle(300);
+$('.ham-btn').click(function(e){
+    e.preventDefault();
+    $('.ham_menu').toggleClass('comeon');
     $('.ham-btn p').toggleClass('no-show');
     $('.ham_menu').toggleClass('cuntain-on');
     $('.ham').toggleClass('X-btn');
