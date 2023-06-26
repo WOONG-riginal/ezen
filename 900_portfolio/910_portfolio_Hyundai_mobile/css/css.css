@@ -1,0 +1,41 @@
+@charset "utf-8";
+.ranking{
+    padding-top: 70px;
+    text-align: center;
+}
+.ranking h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+.ranking h3{
+    color: #666;
+    font-size: 13px;
+    margin: 12px auto 35px;
+    letter-spacing: -0.4px;
+}
+.ranking .generation{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto 30px;
+}
+.ranking .generation li{
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+}
+.ranking .generation .active{
+    color: #007fa8;
+}
+.ranking .generation li:after{
+    content: "|";
+    display: inline-block;
+    color: #666;
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.ranking .generation li:last-child:after{
+    content: "";
+    margin-left: 0;
+}

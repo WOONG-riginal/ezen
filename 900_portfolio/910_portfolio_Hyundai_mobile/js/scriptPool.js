@@ -74,7 +74,7 @@ function langMenu(){
 }
 // GNB 오픈메뉴 스크립트
 function openMenu(){
-    $('.model_show').hide();
+    $('.model div').hide();
     $('.gnb_contents h2').click(function(){
         if($(this).siblings('ol,ul,h3').hasClass('open')){
             $(this).siblings('ol,ul,h3').removeClass('open');
@@ -92,7 +92,7 @@ function openMenu(){
             $(this).find('.btn_close').hide();
             $('.gnb_contents h2').css({color:'#000'});
             $(this).css({color:'#00aad2'});
-            $('.model_show').show();
+            $(this).parent().find('.model_show').show();
             $('.event_menu').css({height:164});
         }
     });
@@ -104,27 +104,31 @@ function openMenu(){
             $('.gnb_contents nav ol').removeClass('model_open');
             $('.model div').removeClass('model_show');
             $(this).addClass('model_open');
-            $(this).find('div').addClass('model_show');
+            $(this).next().addClass('model_show');
         }
         $('.model div').hide();
         $('.model_show').show();
     });
-    $('.gnb_contents nav ul').click(function(){
-        if($(this).find('span').hasClass('show')){
+    $('.gnb_contents nav ul div').click(function(){
+        if($(this).parent().find('span').hasClass('show')){
             $('.gnb_contents ul span').removeClass('show');
             $('.gnb_contents ul li').removeClass('show_menu');
             $(this).find('.detail').hide();
         }else{
             $('.gnb_contents ul span').removeClass('show');
             $('.gnb_contents ul li').removeClass('show_menu');
-            $(this).find('span').addClass('show');
-            $(this).find('li').addClass('show_menu');
-            $(this).find('.detail').show();
-            $(this).find('.detail').css({transform:'translateY(-60px)'});
+            $(this).parent().find('span').addClass('show');
+            $(this).parent().find('li').addClass('show_menu');
+            $(this).parent().find('.detail').show();
+            $(this).parent().find('.detail').css({transform:'translateY(-60px)'});
         }
         $('.gnb_contents nav ul li').hide();
         $('.gnb_contents nav ul .show_menu').show();
     });
+    $('.gnb_contents nav ul li').click(function(e){
+        e.preventDefault();
+    })
+    
 }
 // 이벤트 슬라이드 스크립트
 function eventSlide(){
