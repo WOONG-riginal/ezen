@@ -15,3 +15,21 @@ $('.main_slider').load('./include/main_slider.html',function(){
     slideBtn();
     pagerClick();
 });
+
+$('.ranking').load('./include/ranking.html',function(){
+    showRanking();
+});
+
+$('.electric_car').load('./include/electric_car.html');
+
+$('.application').load('./include/application.html',function(){
+    $('a').click(function(e){
+        e.preventDefault();
+    })
+});
+
+$('.hyundai_shop').load('./include/hyundai_shop.html');
+
+$('.campaign').load('./include/campaign.html',function(){
+    brandSlide();
+});

@@ -186,7 +186,7 @@ function autoSlide(){
     if(slideIndex==atSlide.length){
         $('.slide_container .item_button_box').css({background:'rgba(246,243,242,0.5)'})
     }else{
-        $('.slide_container .item_button_box').css({background:'none'})
+        $('.slide_container .item_button_box').css({background:'#f7f3f2'})
     }
 
     setTimeout(autoSlide,3000);
@@ -241,5 +241,44 @@ function pagerClick(){
         $('.control_button').css({fontSize:'10px'});
         $('.control_button').css({paddingTop:3});
         $('.control_button').css({paddingLeft:2});
+    });
+}
+// 모델 랭킹 스크립트
+function showRanking(){
+    $('.rankbox').hide();
+    $('.rankbox').eq(0).show();
+    $('.generation li').click(function(){
+        $('.generation li').removeClass('active');
+        $(this).addClass('active');
+    })
+    $('.dots div').click(function(){
+        $('.dots div').removeClass('clicked');
+        $(this).addClass('clicked');
+        let idx=$(this).index();
+        $('.rankbox').hide();
+        $('.rankbox').eq(idx).show();
+    })
+}
+// 브랜드 슬라이드 스크립트
+function brandSlide(){
+    $('.brand_dot').click(function(){
+        let brandIdx=$(this).index();
+        let brandSlide = $('.brand_slide ul li');
+        let brandSlideDot = $('.brand_dot');
+        
+        console.log(brandIdx);
+    
+        brandSlide.eq(brandIdx).stop().css({transform:'translateX(0px)'});
+        brandSlide.eq(brandIdx-1).stop().css({transform:'translateX(-100vw)'});
+        brandSlide.eq(brandIdx-2).stop().css({transform:'translateX(100vw)'});
+        brandSlide.eq(brandIdx).css({zIndex:2});
+        brandSlide.eq(brandIdx-1).css({zIndex:0});
+        brandSlide.eq(brandIdx-2).css({zIndex:0});
+    
+        for(i=0;i<brandSlide.length;i++){
+            brandSlideDot.eq(i).css({backgroundColor:'rgba(0,0,0,0.1)'});
+        }
+    
+        brandSlideDot.eq(brandIdx).css({backgroundColor:'#007fa8'});
     });
 }

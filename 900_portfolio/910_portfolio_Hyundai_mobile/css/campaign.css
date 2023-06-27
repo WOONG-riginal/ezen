@@ -1,0 +1,76 @@
+@charset "utf-8";
+.campaign{
+    padding-top: 70px;
+    text-align: center;
+}
+.campaign h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+.campaign h3{
+    color: #666;
+    font-size: 13px;
+    margin: 12px auto 35px;
+    letter-spacing: -0.4px;
+    line-height: 1.4;
+}
+.campaign .brand_slide{
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+}
+.campaign .brand_slide ul li{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    text-align: left;
+    background: #fff;
+    transition: all 0.5s;
+}
+.campaign .brand_slide ul li img{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15px;
+}
+.campaign .brand_slide ul li h2{
+    margin-left: 5%;
+    font-size: 15px;
+}
+.campaign .brand_slide ul li h3{
+    margin-left: 5%;
+    color: #000;
+}
+.campaign .brand_slide li:nth-child(2){
+    z-index: 0;
+    transform:translateX(100vw);
+}
+.campaign .brand_slide li:nth-child(3){
+    z-index: 0;
+    transform:translateX(-100vw);
+}
+.campaign .brand_slide .brand_slide_control{
+    width: 50px;
+    height: 32px;
+    display: flex;
+    position: absolute;
+    left: 50%;bottom: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.campaign .brand_slide .brand_slide_control .brand_dot_list{
+    display: flex;
+    justify-content: center;
+}
+.campaign .brand_slide .brand_slide_control .brand_dot_list .brand_dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+}
+.campaign .brand_slide .brand_slide_control .brand_dot_list .brand_dot:first-child{
+    background: #007fa8;
+}
