@@ -1,0 +1,234 @@
+@charset "utf-8";
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
+}
+/* 경고창 */
+.alert .alert-curtain{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    left: 0;top: 0;
+    z-index: 7777;
+    display: none;
+}
+.alert .alert-message{
+    width: 240px;
+    height: 120px;
+    padding-top: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #222;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 8888;
+    transform: translate(-50%, -100%);
+    display: none;
+}
+.alert .alert-message img{
+    width: 20%;
+    margin: 0 auto;
+}
+.alert .alert-message p{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+header{
+    width: 100%;
+    height: 140px;
+    padding-top: 36px;
+    position: fixed;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.logo{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo img{
+    width: 160px;
+}
+.gnb{
+    float: right;
+}
+.gnb li{
+    float: left;
+    margin-left: 40px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    color: #000;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.gnb li:nth-child(1){
+    margin-left: 0;
+}
+.lnb{
+    width: 33.33%;
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lnb li{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.gnb li:hover,.lnb li:hover{
+    color: #dc1f18;
+}
+
+/* 콘텐츠 */
+section{
+    padding-top: 140px;
+}
+.collection{
+    width: 100%;
+    text-align: center;
+}
+.collection h2{
+    color: #252525;
+    text-shadow: 1px 1px 3px #eee;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.watch_list{
+    width: 90%;
+    margin: 40px auto 0;
+}
+.watch_list .category{
+    width: 70%;
+    margin: 0 auto;
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.watch_list .category p{
+    font-size: 18px;
+    cursor: pointer;
+}
+.watch_list .category .active{
+    font-weight: 600;
+    color: #dc1f18;
+}
+.watch_list .category .active:after{
+    content: '\f00c';
+    font-family: "FontAwesome";
+    display: inline-block;
+    color: #dc1f18;
+    font-size: 18px;
+}
+.watch_list .category p:hover{
+    color: #dc1f18;
+}
+.watch_list ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+}
+.watch_list ul li{
+    width: 25%;
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.watch_list ul li:hover{
+    color: #dc1f18;
+}
+.watch_list ul li div{
+    width: 100%;
+    overflow: hidden;
+}
+.watch_list ul li img{
+    width: 90%;
+    transition: all 0.3s;
+}
+.watch_list ul li:hover img{
+    scale: 105%;
+}
+.watch_list ul li h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.watch_list ul li h4{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.watch_list ul li h5{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer{
+    width: 100%;
+    margin-top: 60px;
+    padding: 40px 0 0;
+    text-align: center;
+    background: #000;
+}
+.footer_title{
+    padding-top: 120px;
+    width: 80%;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer_title li{
+    width: 25%;
+}
+.footer_title h3{
+    color: #fff;
+    font-size: 18px;
+    line-height: 2.5;
+    cursor: pointer;
+}
+.footer_title h3 i{
+    font-size: 24px;
+}
+.fnb{
+    width: 80%;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.fnb ul{
+    width: 25%;
+}
+.fnb li{
+    color: #fff;
+    font-size: 12px;
+    padding: 15px 0;
+}
+.fnb li a{
+    cursor: pointer;
+}
+.fnb li a:hover{
+    text-decoration: underline;
+}
+.footer_txt p{
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+}

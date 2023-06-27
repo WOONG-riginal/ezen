@@ -1,0 +1,89 @@
+@charset "utf-8";
+.ranking{
+    padding-top: 70px;
+    text-align: center;
+}
+.ranking h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+.ranking h3{
+    color: #666;
+    font-size: 13px;
+    margin: 12px auto 35px;
+    letter-spacing: -0.4px;
+}
+.ranking .generation{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto 30px;
+}
+.ranking .generation li{
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+}
+.ranking .generation .active{
+    color: #007fa8;
+}
+.ranking .generation li:after{
+    content: "|";
+    display: inline-block;
+    color: #666;
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.ranking .generation li:last-child:after{
+    content: "";
+    margin-left: 0;
+}
+.ranking .rankbox{
+    width: 90%;
+    margin: 0 auto;
+}
+.ranking .rankbox>div{
+    width: 100%;
+    position: relative;
+}
+.ranking .rankbox>div img{
+    width: 100%;
+}
+.ranking .rankbox>div span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    background: #007fa8;
+    position: absolute;
+    left: 0;top: 0;
+}
+.ranking .rankbox p{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 20px;
+}
+.ranking .dots{
+    margin: 20px auto 0;
+    width: 70px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ranking .dots div{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+}
+.ranking .dots .clicked{
+    background: #007fa8;
+}

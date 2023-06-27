@@ -18,3 +18,16 @@ $('.soundBtn').click(function(){
         $('.soundBtn').html('<i class="fa fa-volume-off" aria-hidden="true"></i>');
     }
 });
+
+
+
+/* 경고창 스크립트*/
+$('#gnb li, #sns li, .inner p').click(function(e){
+    e.preventDefault();
+    $('.alert-message').fadeIn();
+    $('.alert-curtain').fadeIn();
+    setTimeout(function(){
+        $('.alert-message').fadeOut();
+        $('.alert-curtain').fadeOut();
+    },1000)
+});

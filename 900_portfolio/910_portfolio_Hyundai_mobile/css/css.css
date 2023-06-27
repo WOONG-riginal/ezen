@@ -1,0 +1,39 @@
+@charset "utf-8";
+.toggle_menu{
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 15px;
+    background: #f6f3f2;
+}
+.toggle_menu div{
+    width: 90%;
+    margin: 0 auto;
+    padding: 18px 15px 0;
+    border: 1px solid #ddd;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none;
+    background: #fff;
+}
+.toggle_menu div h2{
+    font-size: 15px;
+    font-weight: 700;
+}
+.toggle_menu div h3{
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #002c5f;
+}
+.toggle_menu div ul{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 25px;
+}
+.toggle_menu div li{
+    width: 50%;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

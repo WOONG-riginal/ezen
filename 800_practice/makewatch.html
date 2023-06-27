@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계만들기</title>
+    <style>
+        div{
+            width: 5px;
+            background: #000;
+            position: absolute;
+            left: 50%;top: 50%;
+            /* transform: translate(-50%,-100%); */
+        }
+        .hour-hand{
+            height: 60px;
+        }
+        .minute-hand{
+            height: 100px;
+        }
+        .second-hand{
+            height: 100px;
+            width: 3px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="hour-hand"></div>
+    <div class="minute-hand"></div>
+    <div class="second-hand"></div>
+</body>
+<script>
+    nowday = new Date();
+    hour = nowday.getHours();
+    minute = nowday.getMinutes();
+    second = nowday.getSeconds();
+    millisecond = Math.round(nowday.getMilliseconds() / 100);
+
+    setInterval(console.log(hour, minute, second, millisecond), 100);
+
+    hourHand = document.querySelector('.hour-hand');
+    minuteHand = document.querySelector('.minute-hand');
+    secondHand = document.querySelector('.second-hand');
+
+    function goHour() {
+        hourHand.style.transform = 'rotate(' + ((hour*30) + (minute*0.5) + (second*0.0083333333333333)) + 'deg)';
+    }
+    function goMinute() {
+        minuteHand.style.transform = 'rotate(' + ((minute*6) + (second*0.1) + (millisecond*0.0016666666666667)) + 'deg)';
+    }
+    function goSecond() {
+        secondHand.style.transform = 'rotate(' + ((second*6) + (millisecond*0.1)) + 'deg)';
+    }
+    
+    function clock() {
+        setInterval(goHour, 100);
+        setInterval(goMinute, 100);
+        setInterval(goSecond, 100);
+    }
+    clock();
+</script>
+</html>

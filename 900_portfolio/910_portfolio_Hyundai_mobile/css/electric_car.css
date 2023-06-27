@@ -1,0 +1,86 @@
+@charset "utf-8";
+.electric_car{
+    padding-top: 70px;
+    text-align: center;
+}
+.electric_car h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+.electric_car h3{
+    color: #666;
+    font-size: 13px;
+    margin: 12px auto 35px;
+    letter-spacing: -0.4px;
+    line-height: 1.4;
+}
+.electric_car img{
+    width: 100%;
+}
+.electric_car .ioniq6{
+    padding: 30px 15px;
+    width: 100%;
+    text-align: left;
+    background: #f7f3f2;
+    position: relative;
+}
+.electric_car .ioniq6 .new{
+    width: 36px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background: #007fa8;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    font-stretch: narrower;
+    letter-spacing: 0.5px;
+}
+.electric_car .ioniq6 h2{
+    margin: 12px 0 10px;
+}
+.electric_car .ioniq6 .subtitle{
+    margin: 0;
+    color: #000;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.electric_car .ioniq6 button{
+    width: 100%;
+    height: 48px;
+    margin-top: 28px;
+    background: #002c5f;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.electric_car .ioniq6 h4{
+    margin-top: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: narrower;
+    letter-spacing: -0.5px;
+}
+.electric_car .ioniq6 ul{
+    margin-top: -12px;
+    display: flex;
+}
+.electric_car .ioniq6 ul li{
+    font-size: 13px;
+    font-weight: 600;
+    color: #002c5f;
+    margin-right: 10px;
+}
+.electric_car .ioniq6 ul li:nth-child(1):after,
+.electric_car .ioniq6 ul li:nth-child(3):after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 8px;
+}
+.electric_car .ioniq6 .icon{
+    width: 120px;
+    position: absolute;
+    right: 15px;bottom: 24px;
+}

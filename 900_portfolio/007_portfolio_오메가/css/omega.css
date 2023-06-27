@@ -185,11 +185,15 @@ header .logo_gnb .rm li{
     height: calc( 100vh - 60px );
     position: fixed;
     top: 60px;
-    left: 0;
+    left: -350px;
     z-index: 7;
     background: #fff;
     border-top: 1.5px solid #e5e5e5;
     padding: 50px 30px 50px 75px;
+    transition: all 0.5s;
+}
+.comeon{
+    left: 0;
 }
 .ham_menu .line{
     width: 80%;
@@ -808,7 +812,6 @@ footer .info .legal-menu li a:hover{
 
     /* ======================== HAM MENU ======================== */
     .ham_menu{
-        width: 100%;
         padding: 0;
     }
     .ham_menu .line{
