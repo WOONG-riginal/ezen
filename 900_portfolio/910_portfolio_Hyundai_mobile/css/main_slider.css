@@ -5,7 +5,8 @@
     height: 670px;
     background-image: url(../images/main/slider/main_kv_bg.jpg);
     background-repeat: no-repeat;
-    background-size: 104%;
+    background-size: 100%;
+    background-position: center center;
     position: relative;
     overflow: hidden;
 }
@@ -19,7 +20,7 @@
 .slide_box .slide_section:nth-child(5){
     background-image: url(../images/main/slider/re_style_2023.jpg);
     background-repeat: no-repeat;
-    background-size: 104%;
+    background-size: 100%;
 }
 .slide_box .slide_section .slide_txt{
     padding-top: 110px;

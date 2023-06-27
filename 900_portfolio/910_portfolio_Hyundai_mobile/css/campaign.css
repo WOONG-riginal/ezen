@@ -1,4 +1,3 @@
-@charset "utf-8";
 .campaign{
     padding-top: 70px;
     text-align: center;
@@ -51,26 +50,26 @@
     z-index: 0;
     transform:translateX(-100vw);
 }
-.campaign .brand_slide .brand_slide_control{
+.campaign .brand_slide_control{
     width: 50px;
     height: 32px;
     display: flex;
-    position: absolute;
+    position: relative;
     left: 50%;bottom: 0;
     transform: translateX(-50%);
     z-index: 10;
 }
-.campaign .brand_slide .brand_slide_control .brand_dot_list{
+.campaign .brand_slide_control .brand_dot_list{
     display: flex;
     justify-content: center;
 }
-.campaign .brand_slide .brand_slide_control .brand_dot_list .brand_dot{
+.campaign .brand_slide_control .brand_dot_list .brand_dot{
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.1);
     margin-right: 15px;
 }
-.campaign .brand_slide .brand_slide_control .brand_dot_list .brand_dot:first-child{
+.campaign .brand_slide_control .brand_dot_list .brand_dot:first-child{
     background: #007fa8;
 }

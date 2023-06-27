@@ -1,3 +1,15 @@
+// 경고창 스크립트
+function popAlert(){
+    $('.myhyundai, .search, .util div, .lang li, .gnb_contents li, .shop, .event_slide, .btn_img, .quick_menu li, .ioniq6 button, .ioniq6 li, .app_slide a, .app_download span, .bestseller span, .toggle_menu article li, .chatbot, .fnb li').click(function(e){
+        e.preventDefault();
+        $('.alert-message').fadeIn();
+        $('.alert-curtain').fadeIn();
+        setTimeout(function(){
+            $('.alert-message').fadeOut();
+            $('.alert-curtain').fadeOut();
+        },1000)
+    });
+}
 // 스크롤 게이지바 스크립트
 function progressBar(){
     var winScroll=document.body.scrollTop||document.documentElement.scrollTop;
@@ -138,8 +150,8 @@ function eventSlide(){
         var eventSlideDot = $('.event_dot_list div');
         
         eventSlide.eq(eventIdx).stop().css({transform:'translateX(0px)'});
-        eventSlide.eq(eventIdx-1).stop().css({transform:'translateX(-412px)'});
-        eventSlide.eq(eventIdx-2).stop().css({transform:'translateX(412px)'});
+        eventSlide.eq(eventIdx-1).stop().css({transform:'translateX(-100vw)'});
+        eventSlide.eq(eventIdx-2).stop().css({transform:'translateX(100vw)'});
         eventSlide.eq(eventIdx).css({zIndex:2});
         eventSlide.eq(eventIdx-1).css({zIndex:0});
         eventSlide.eq(eventIdx-2).css({zIndex:0});
@@ -159,19 +171,19 @@ function autoSlide(){
     var atSlideDot = $('.dot_list li');
     
     for(i=0;i<atSlide.length;i++){
-        atSlide.eq(i).css({left:412});
+        atSlide.eq(i).css({left:'100vw'});
     }
 
     if($('.control_button').hasClass('slide_active')){
         slideIndex++;
         atSlide.eq(slideIndex-6).stop().css({display:'block'});
         atSlide.eq(slideIndex-6).stop().animate({left: 0});
-        atSlide.eq(slideIndex-6).find('.slide_image').stop().css({left:412});
-        atSlide.eq(slideIndex-6).find('.slide_image').stop().animate({left:0},1000);
+        atSlide.eq(slideIndex-6).find('.slide_image').stop().css({left:'100vw'});
+        atSlide.eq(slideIndex-6).find('.slide_image').stop().animate({left:'5vw'},1000);
     }else{
         slideIndex=slideIndex;
         for(i=0;i<atSlide.length;i++){
-            atSlide.eq(i).css({left:412});
+            atSlide.eq(i).css({left:'100vw'});
         }
         atSlide.eq(slideIndex-1).stop().css({left: 0});
     }
@@ -219,13 +231,13 @@ function pagerClick(){
     
         for(i=0;i<pagerSlide.length;i++){
             pagerSlide.eq(i).css({display:'none'});
-            pagerSlide.eq(i).css({left:412});
+            pagerSlide.eq(i).css({left:'100vw'});
             pagerSlideDot.eq(i).find('.dot').css({backgroundColor:'rgba(0,0,0,0.1)'});
         }
     
         pagerSlide.eq(slideIndex-1).stop().css({display:'block'});
         pagerSlide.eq(slideIndex-1).stop().animate({left:0});
-        pagerSlide.eq(slideIndex-1).find('.slide_image').stop().css({left:412});
+        pagerSlide.eq(slideIndex-1).find('.slide_image').stop().css({left:'100vw'});
         pagerSlide.eq(slideIndex-1).find('.slide_image').stop().delay(200).animate({left:0},1000);
     
         pagerSlideDot.eq(slideIndex-1).find('.dot').css({backgroundColor:'#007fa8'});
@@ -281,4 +293,11 @@ function brandSlide(){
     
         brandSlideDot.eq(brandIdx).css({backgroundColor:'#007fa8'});
     });
+}
+// 토글 메뉴 스크립트
+function toggleMenu(){
+    $('.toggle_menu h2').click(function(){
+        $(this).toggleClass('open');
+        $(this).next().slideToggle();
+    })
 }
