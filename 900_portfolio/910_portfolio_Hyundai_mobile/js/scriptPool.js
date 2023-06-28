@@ -1,6 +1,6 @@
 // 경고창 스크립트
 function popAlert(){
-    $('.myhyundai, .search, .util div, .lang li, .gnb_contents li, .shop, .event_slide, .btn_img, .quick_menu li, .ioniq6 button, .ioniq6 li, .app_slide a, .app_download span, .bestseller span, .toggle_menu article li, .chatbot, .fnb li').click(function(e){
+    $('.myhyundai, .util div, .lang li, .gnb_contents li, .shop, .event_slide, .btn_img, .quick_menu li, .ioniq6 button, .ioniq6 li, .app_slide a, .app_download span, .bestseller span, .toggle_menu article li, .chatbot, .fnb li').click(function(e){
         e.preventDefault();
         $('.alert-message').fadeIn();
         $('.alert-curtain').fadeIn();

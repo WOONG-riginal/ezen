@@ -1,0 +1,182 @@
+@charset "utf-8";
+body,html{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+/* Header */
+header h1{
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    z-index: 99;
+}
+header h1 img{
+    width: 75px;
+    animation: bingbing 3s linear infinite;
+}
+@keyframes bingbing{
+	100% {
+    	transform: rotateY(360deg);
+    }
+}
+/* GNB */
+header #gnb{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: 99;
+    margin-top: -120px;
+}
+header #gnb a{
+    display: block;
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+    color: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: right;
+    opacity: 0.8;
+    border-top: 1px solid #111;
+    padding-top: 5px;
+    transition: all 0.5s;
+}
+/* 호버 효과 */
+header #gnb li:hover a{
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+}
+header #gnb li:nth-child(1):hover a{
+    color: #d4164c;
+    border-color: #d4164c;
+}
+header #gnb li:nth-child(2):hover a{
+    color: #005a89;
+    border-color: #005a89;
+}
+header #gnb li:nth-child(3):hover a{
+    color: #7f5539;
+    border-color: #7f5539;
+}
+header #gnb li:nth-child(4):hover a{
+    color: #00873e;
+    border-color: #00873e;
+}
+/* SNS */
+header #sns{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    z-index: 99;
+}
+header #sns li{
+    display: inline-block;
+    margin-left: 20px;
+}
+header #sns li i{
+    font-size: 24px;
+    color: #111;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+header #sns li i:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+header #sns li:nth-child(1) i:hover{color: #2b4b8e;}
+header #sns li:nth-child(2) i:hover{color: #56acef;}
+header #sns li:nth-child(3) i:hover{
+    background: linear-gradient(45deg, #feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+header #sns li:nth-child(4) i:hover{color: #ff0000;}
+/* Contents */
+section{
+    width: 100vw;
+    height: 100vh;
+}
+section article{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+section article>h2{
+    position: absolute;
+    left: 250px;
+    top: 41%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+section #con1{background-image: url(../images/spring.jpg);}
+section #con2{background-image: url(../images/summer.jpg);}
+section #con3{background-image: url(../images/fall.jpg);}
+section #con4{background-image: url(../images/winter.jpg);}
+
+/* Contents Text */
+section article>span{
+    width: 50%;
+    font-size: 16px;
+    font-family: 'Righteous', cursive;
+    position: absolute;
+    left: 250px;
+    top: 48%;
+}
+/* Image Decoration Position */
+.p11{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.p12{
+    position: absolute;
+    right: 13px;
+    bottom: -40px;
+}
+.p13{
+    position: absolute;
+    right: 60px;
+    bottom: 180px;
+}
+.p21 {
+    position: absolute;
+    right: 60px;
+    bottom: 180px;
+}
+.p22{
+    position: absolute;
+    right: 130px;
+    bottom: -40px;
+}
+.p31{
+    position: absolute;
+    right: 180px;
+    bottom: 30px;
+}
+.p32{
+    position: absolute;
+    right: 110px;
+    bottom: -270px;
+}
+.p33{
+    position: absolute;
+    right: -70px;
+    bottom: -130px;
+}
+.p41{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+.p42{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
