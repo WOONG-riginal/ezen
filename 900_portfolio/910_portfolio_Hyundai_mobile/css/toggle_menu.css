@@ -23,13 +23,13 @@
     content: "\f078";
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
-    margin-left: 25%;
+    margin-left: 20%;
 }
 .toggle_menu div .open:after{
     content: "\f077";
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
-    margin-left: 25%;
+    margin-left: 20%;
 }
 .toggle_menu div h3{
     margin-top: 30px;

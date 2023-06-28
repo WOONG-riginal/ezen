@@ -76,7 +76,6 @@ header{
     background: #000;
 }
 .header{
-    padding: 0 5%;
     /* 포지션 위치기준값 */
     position: relative;
 }
@@ -175,11 +174,10 @@ header{
 }
 .promotion_section .promotion_list li h3{
     font-family: 'Play';
-    font-weight: bold;
     margin: 30px 0 20px;
     padding: 5px 0;
-    color: #000;
-    background: red;
+    color: #fff;
+    background: #000;
 }
 .promotion_section .promotion_list li p{
     font-size: 14px;
@@ -238,9 +236,9 @@ header{
     opacity: 1;
 }
 .work_section .work_list li div h3{
-    font-family: 'Anton';
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-family: 'Play';
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 40px;
     color: #fff;
 }
@@ -439,11 +437,10 @@ input, textarea{
     }
     .promotion_section .promotion_list li h3{
         font-family: 'Play';
-        font-weight: bold;
         margin: 30px 0 20px;
         padding: 5px 0;
-        color: #000;
-        background: red;
+        color: #fff;
+        background: #000;
     }
     .promotion_section .promotion_list li p{
         font-family: 'PT-Serif', sans-serif;
@@ -680,11 +677,10 @@ input, textarea{
     }
     .promotion_section .promotion_list li h3{
         font-family: 'Play';
-        font-weight: bold;
         margin: 30px 0 20px;
         padding: 5px 0;
-        color: #000;
-        background: red;
+        color: #fff;
+        background: #000;
     }
     .promotion_section .promotion_list li p{
         font-size: 14px;

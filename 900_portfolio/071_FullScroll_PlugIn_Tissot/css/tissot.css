@@ -392,6 +392,7 @@ header{
 .section4 .news li h4{
     font-size: 18px;
     font-weight: 600;
+    letter-spacing: -1px;
 }
 .section4 .news li:hover h4{
     color: #dc1f18;
@@ -399,12 +400,14 @@ header{
 .section4 .news li h5{
     font-weight: 300;
 }
-.section4 .news li:nth-child(2) h5{
+.section4 .news li:nth-child(2) h5,
+.section4 .news li:nth-child(3) h5{
     margin-bottom: 30px;
 }
 .section4 .news li p{
-    font-size: 16px;
+    font-size: 14px;
     color: #222;
+    margin-top: 10px;
 }
 .section4 button{
     display: block;
