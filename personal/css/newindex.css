@@ -113,5 +113,5 @@ header .gnb{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotate(-135deg) translate(75%,0);
+    transform: rotate(-135deg) translate(50%,-50%);
 }
