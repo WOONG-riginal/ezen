@@ -101,17 +101,17 @@ header .gnb{
     left: 50%;
     transform: rotate(135deg) translate(25%,100%);
 }
-.gnb .contact-btn{
+.gnb .spa-btn{
     background-color: #90dbf4;
     border-bottom-left-radius: 100px;
     position: relative;
 }
-.gnb .contact-btn:hover{
+.gnb .spa-btn:hover{
     transform: translate(-10px,10px);
 }
-.gnb .contact-btn a{
+.gnb .spa-btn a{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotate(-135deg) translate(50%,-50%);
+    transform: rotate(-135deg) translate(75%,0);
 }

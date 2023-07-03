@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>새로운 인덱스</title>
+    <title>EGGMONEYNA</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="./personal/images/favicon/W32.png">
+    <link rel="shortcut icon" href="./personal/images/favicon/egg32.png">
     <link rel="stylesheet" href="./personal/css/reset.css">
     <link rel="stylesheet" href="./personal/css/font.css">
     <!-- 페이지 CSS -->
@@ -22,10 +22,10 @@
             <h1 class="logo">EGGMONEYNA</h1>
             <nav>
                 <ul class="gnb">
-                    <li class="about-btn"><a href="#">about</a></li>
-                    <li class="front-end-btn"><a href="./front-end.html">front-end</a></li>
-                    <li class="contact-btn"><a href="#">contact</a></li>
-                    <li class="back-end-btn"><a href="#">back-end</a></li>
+                    <li class="about-btn"><a href="./me/aboutme.html">about</a></li>
+                    <li class="front-end-btn"><a href="https://eggmoneyna.modoo.at/?link=dplbn2hn">front-end</a></li>
+                    <li class="spa-btn"><a href="https://eggmoneyna.modoo.at/?link=d6m3et3y">SPA</a></li>
+                    <li class="back-end-btn"><a href="https://eggmoneyna.modoo.at/?link=c1vl1jgv">back-end</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,10 +33,8 @@
 </body>
 <script>
     $("li").click(function() {
-        var url = $(this).find('a').attr("href");
-        $("#wrap").animate({"opacity":0},1000, function() {
-            location.href=url;
-        });
+        let url = $(this).find('a').attr("href");
+        location.href=url;
     });
 </script>
 </html>
