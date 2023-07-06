@@ -96,10 +96,11 @@ body,html {
     margin-top: 80px;
     line-height: 2;
 }
+#right_side li{
+    list-style: disc;
+}
 .learn{
-    margin-top: 50px;
-    overflow: hidden;
-    position: relative;
+    margin: 50px 0;
 }
 .learn h2:after{
     content: "\f078";
@@ -124,4 +125,26 @@ body,html {
 }
 .learn td{
     min-width: 300px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:412px){
+    #wrap {
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    #left_side {
+        width: 100%;
+    }
+    #left_side>div{
+        width: 95%;
+        margin-right: 0;
+    }
+    .slider li {
+        width: 400px;
+    }
+    #right_side{
+        width: 95%;
+    }
 }
