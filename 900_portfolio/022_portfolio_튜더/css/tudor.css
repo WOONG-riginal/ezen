@@ -166,7 +166,7 @@ header{
 }
 .menu_dept{
     width: 100%;
-    height: 500px;
+    height: 480px;
     background: #fff;
     position: absolute;
     z-index: 4444;
@@ -179,7 +179,7 @@ header{
     width: 200px;
 }
 .menu_dept .sub-menu .snb li{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
     letter-spacing: -1px;
     margin-bottom: 40px;
@@ -233,11 +233,15 @@ header{
 }
 .menu_dept .sub-menu .menu_content .content_box .product_pic{
     text-align: center;
-    margin-top: -90px;
+    width: 300px;
     position: absolute;
-    left: 50%;
+    left: 50%;top: 130px;
     transform: translateX(-50%);
     z-index: 6666;
+}
+.menu_dept .sub-menu .menu_content .content_box .product_pic img{
+    width: 75%;
+    margin: 0 auto;
 }
 
 /* 비디오 */
