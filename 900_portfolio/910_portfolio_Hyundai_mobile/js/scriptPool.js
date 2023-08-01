@@ -65,10 +65,14 @@ function toggleMenu(){
 // 챗봇 스크립트
 function chatbotPosition(){
     $(window).on('scroll',function(){
+        var bodyH = $('body').height();
+        var windowH = $(window).height();
+        var toggleH = $('.toggle_menu>div').height();
+        var chatbotPs = (bodyH-windowH-toggleH-450);
         var scrT=$(this).scrollTop();
-        if(scrT>3500){
+        if(scrT>chatbotPs){
             $('.chatbot').css({position:'absolute'});
-            $('.chatbot').css({bottom:'-3500px'});
+            $('.chatbot').css({bottom:-(chatbotPs)});
         }else{
             $('.chatbot').css({position:'fixed'});
             $('.chatbot').css({bottom:'30px'});
