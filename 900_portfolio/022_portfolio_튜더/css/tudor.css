@@ -153,6 +153,17 @@ header{
 .second_line .gnb li:hover{
     color: var(--tudor-red);
 }
+.dept_menu_curtain{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+}
 .menu_dept{
     width: 100%;
     height: 480px;
@@ -560,7 +571,7 @@ aside div{
     position: fixed;
     right: 40px;
     bottom: 60px;
-    z-index: 999;
+    z-index: 4;
     display: none;
 }
 aside div a{

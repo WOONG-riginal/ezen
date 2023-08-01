@@ -85,6 +85,7 @@ function openMenu(){
             $(this).find('.btn_close').hide();
             $('.gnb_contents h2').css({color:'#000'});
             $(this).css({color:'#00aad2'});
+            $('.model_show').hide();
             $(this).parent().find('.model_show').show();
             $('.event_menu').css({height:164});
         }

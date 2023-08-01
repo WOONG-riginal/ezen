@@ -8,8 +8,12 @@ $('.x-btn').click(function(){
 $('.menu').click(function(){    
     if($('#menuicon').is(':checked')){
         $('.menu_dept').slideDown();
+        $('.dept_menu_curtain').show();
+        $('body').css({overflow:'hidden'})
     }else{
         $('.menu_dept').slideUp();
+        $('.dept_menu_curtain').hide();
+        $('body').css({overflow:'visible'})
     }
 })
 $('.menu_content').hide();

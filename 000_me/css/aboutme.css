@@ -1,0 +1,150 @@
+@charset "utf-8";
+body,html {
+    font-family: "Noto Sans KR", sans-serif;
+}
+#wrap {
+    width: 960px;
+    padding-top: 70px;
+    margin: 0 auto;
+}
+#wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#left_side>div {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    width: 90%;
+    margin-right: 78px;
+    margin-bottom: 28px;
+}
+#left_side>div:last-child {
+    border-bottom: none;
+}
+#left_side {
+    width: 508px;
+    float: left;
+}
+.kind-wrap{
+    height: 50px;
+    margin-bottom: 20px;
+}
+.kind-wrap > .kind-slider {
+    width: 400px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.kind-wrap > .kind-slider .slider {
+    transition: 0.5s;
+    z-index: -9999;
+    width: 150px !important;
+}
+
+.kind-slider {
+    height: 100%;
+}
+
+.slider li {
+    width: 470px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 600;
+}
+.intro img,
+.link img{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    transform: translateY(4px);
+}
+.intro>p {
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+}
+.link p {
+    margin-bottom: 10px;
+}
+.link i {
+    margin: 0 6px;
+}
+.link a:hover{
+    background: #000;
+    color: #fff;
+}
+#left_side .skill_main:after {
+    content: "7개";
+    font-size: 9px;
+    color: #aaa;
+    padding: 0px 8px;
+}
+#left_side .skill_tag:after {
+    content: "3개";
+    font-size: 10px;
+    color: #aaa;
+    padding: 0px 8px;
+}
+.skill h2 {
+    margin-bottom: 12px;
+}
+.skill p {
+    margin-bottom: 20px;
+}
+
+#right_side{
+    margin-top: 80px;
+    line-height: 2;
+}
+#right_side li{
+    list-style: disc;
+}
+.learn{
+    margin: 50px 0;
+}
+.learn h2:after{
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    margin-left: 20px;
+}
+.learn h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.learn table{
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.learn th{
+    width: 80px;
+    text-align: left;
+}
+.learn td{
+    min-width: 300px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:412px){
+    #wrap {
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    #left_side {
+        width: 100%;
+    }
+    #left_side>div{
+        width: 95%;
+        margin-right: 0;
+    }
+    .slider li {
+        width: 400px;
+    }
+    #right_side{
+        width: 95%;
+    }
+}

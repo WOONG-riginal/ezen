@@ -132,7 +132,7 @@
 
 .card__back {
     transform: rotateY(0deg);
-    background-image: url('../images/pawprint.png');
+    background-image: url('../images/egg.png');
     background-size: 50% auto;
 }
 
@@ -148,7 +148,6 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
-    animation: movingEffect 130ms 10 alternate;
 }
 
 .modal {
