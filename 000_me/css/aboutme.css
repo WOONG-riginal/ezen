@@ -147,4 +147,7 @@ body,html {
     #right_side{
         width: 95%;
     }
+    #right_side li{
+        list-style: none;
+    }
 }
