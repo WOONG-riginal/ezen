@@ -95,7 +95,7 @@ header .gnb_open{
     background: #fff;
     left: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 777;
 }
 /* 유틸 메뉴 */
 header .util{
