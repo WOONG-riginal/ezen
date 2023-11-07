@@ -2,7 +2,7 @@ const textInput = document.querySelector("#todoInput");
 const inputForm = document.querySelector(".inputForm");
 const todoList = document.querySelector(".todoList__main");
 const todoTask = document.querySelector(".todoList__foot__task");
-todoTask.innerHTML = `You have ${todoList.childElementCount} pending tasks`;
+todoTask.innerHTML = `${todoList.childElementCount}개의 할 일이 남아있습니다.`;
 
 const addBtn = document.querySelector(".input__btn");
 const clearAllBtn = document.querySelector(".todoList__foot__clearBtn");
@@ -41,7 +41,7 @@ function addToDo(newTodoItem) {
 }
 
 function ChangeTaskNum() {
-  todoTask.innerHTML = `You have ${todoList.childElementCount} pending tasks`;
+  todoTask.innerHTML = `${todoList.childElementCount}개의 할 일이 남아있습니다.`;
 }
 
 function handleSubmit(e) {
