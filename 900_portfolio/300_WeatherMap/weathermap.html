@@ -6,6 +6,7 @@
     <title>WEATHER MAP</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/weathermap.css">
 </head>
 <body>
     <body>
@@ -14,22 +15,171 @@
         
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6852d5832b95791484c3a15c165edf6c"></script>
         <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-            mapOption = { 
-                center: new kakao.maps.LatLng(36.5, 127.5), // 지도의 중심좌표
-                level: 12 // 지도의 확대 레벨
-            };
-        
-        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-        var map = new kakao.maps.Map(mapContainer, mapOption); 
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = { 
+                    center: new kakao.maps.LatLng(36.5, 127.5), // 지도의 중심좌표
+                    level: 12 // 지도의 확대 레벨
+                };
+            
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-        function setZoomable(zoomable) {
-            // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다 -> 지도의 크기를 확대하거나 축소를 불가능하게 설정
-            map.setZoomable(zoomable);
-        }
-        setZoomable();
+            // 지도의 확대, 축소 레벨 제한 (10~12)
+            map.setMinLevel(10); map.setMaxLevel(12);
+
+            var imageSrc = './images/qm.png', // 마커이미지의 주소입니다    
+                imageSize = new kakao.maps.Size(20, 20), // 마커이미지의 크기입니다
+                imageOption = {offset: new kakao.maps.Point(10, 10)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+            // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+            var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
+                
+            // 마커를 표시할 위치입니다
+            var positions = [
+                {
+                    content: '<div style="width: 160px; padding:5px; font-size:13px;">서울 날씨 확인하기 <span style="font-size:10px; color:red;">CLICK!</span></div>', 
+                    latlng: new kakao.maps.LatLng(37.5665, 126.9780)
+                },
+                {
+                    content: '<div style="width: 160px; padding:5px; font-size:13px;">부산 날씨 확인하기 <span style="font-size:10px; color:red;">CLICK!</span></div>', 
+                    latlng: new kakao.maps.LatLng(35.1796, 129.0757)
+                },
+            ];
+
+            for (var i = 0; i < positions.length; i ++) {
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    map: map, // 마커를 표시할 지도
+                    position: positions[i].latlng, // 마커의 위치
+                    image: markerImage // 마커이미지 설정 
+                });
+
+                // 마커에 표시할 인포윈도우를 생성합니다 
+                var infowindow = new kakao.maps.InfoWindow({
+                    content: positions[i].content // 인포윈도우에 표시할 내용
+                });
+
+                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+            }
+
+            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+            function makeOverListener(map, marker, infowindow) {
+                return function() {
+                    infowindow.open(map, marker);
+                };
+            }
+
+            // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+            function makeOutListener(infowindow) {
+                return function() {
+                    infowindow.close();
+                };
+            }
+
+            // 커스텀 오버레이에 표시할 내용입니다     
+            // HTML 문자열 또는 Dom Element 입니다 
+            var weatherInfo = [
+                {
+                    content:'<div class="overlaybox">' +
+                            '    <div class="boxtitle">금주 영화순위</div>' +
+                            '    <span class="close">&times;</span>' +
+                            '    <div class="first">' +
+                            '        <div class="triangle text">1</div>' +
+                            '        <div class="movietitle text">드래곤 길들이기2</div>' +
+                            '    </div>' +
+                            '    <ul>' +
+                            '        <li class="up">' +
+                            '            <span class="number">2</span>' +
+                            '            <span class="title">명량</span>' +
+                            '            <span class="arrow up"></span>' +
+                            '            <span class="count">2</span>' +
+                            '        </li>' +
+                            '        <li>' +
+                            '            <span class="number">3</span>' +
+                            '            <span class="title">해적(바다로 간 산적)</span>' +
+                            '            <span class="arrow up"></span>' +
+                            '            <span class="count">6</span>' +
+                            '        </li>' +
+                            '        <li>' +
+                            '            <span class="number">4</span>' +
+                            '            <span class="title">해무</span>' +
+                            '            <span class="arrow up"></span>' +
+                            '            <span class="count">3</span>' +
+                            '        </li>' +
+                            '        <li>' +
+                            '            <span class="number">5</span>' +
+                            '            <span class="title">안녕, 헤이즐</span>' +
+                            '            <span class="arrow down"></span>' +
+                            '            <span class="count">1</span>' +
+                            '        </li>' +
+                            '    </ul>' +
+                            '</div>'
+                },
+                {
+                    content:'<div class="overlaybox">' +
+                            '    <div class="boxtitle">금주 영화순위</div>' +
+                            '    <span class="close">&times;</span>' +
+                            '    <div class="first">' +
+                            '        <div class="triangle text">1</div>' +
+                            '        <div class="movietitle text">드래곤 길들이기2</div>' +
+                            '    </div>' +
+                            '    <ul>' +
+                            '        <li class="up">' +
+                            '            <span class="number">2</span>' +
+                            '            <span class="title">명량</span>' +
+                            '            <span class="arrow up"></span>' +
+                            '            <span class="count">2</span>' +
+                            '        </li>' +
+                            '        <li>' +
+                            '            <span class="number">3</span>' +
+                            '            <span class="title">해적(바다로 간 산적)</span>' +
+                            '            <span class="arrow up"></span>' +
+                            '            <span class="count">6</span>' +
+                            '        </li>' +
+                            '        <li>' +
+                            '            <span class="number">4</span>' +
+                            '            <span class="title">해무</span>' +
+                            '            <span class="arrow up"></span>' +
+                            '            <span class="count">3</span>' +
+                            '        </li>' +
+                            '        <li>' +
+                            '            <span class="number">5</span>' +
+                            '            <span class="title">안녕, 헤이즐</span>' +
+                            '            <span class="arrow down"></span>' +
+                            '            <span class="count">1</span>' +
+                            '        </li>' +
+                            '    </ul>' +
+                            '</div>'
+                },
+            ];
+            
+
+            for (var i = 0; i < weatherInfo.length; i ++) {
+                // 커스텀 오버레이를 생성합니다
+                var customOverlay = new kakao.maps.CustomOverlay({
+                    position: positions[i].latlng,
+                    content: weatherInfo[i].content,
+                    xAnchor: 0.32,
+                    yAnchor: 1
+                });
+            }
+
+            // 마커를 클릭 했을 때 커스텀 오버레이 열기 (모달창처럼 활용)
+            kakao.maps.event.addListener(marker, 'click', function() {
+                customOverlay.setMap(map);
+            });
+
+            // map을 클릭하면 커스텀 오버레이 닫기
+            kakao.maps.event.addListener(map, 'click', function() {
+                customOverlay.setMap(null);
+            });
+
+
         </script>
     </body>
 </body>
 </html>
-
