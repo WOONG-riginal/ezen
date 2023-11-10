@@ -44,25 +44,28 @@
             // 지도에 마커를 표시합니다
             marker.setMap(map);
 
-            var weatherInfo = '<div class="wrap">' + 
-                        '    <div class="info">' + 
-                        '        <div class="title">' + 
-                        '            카카오 스페이스닷원' + 
-                        '        </div>' + 
-                        '        <div class="body">' + 
-                        '            <div class="img">' +
-                        '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-                        '           </div>' + 
-                        '            <div class="desc">' + 
-                        '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' + 
-                        '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' + 
-                        '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' + 
-                        '            </div>' + 
-                        '        </div>' + 
-                        '    </div>' +    
-                        '</div>';
+            // 날씨정보를 보여주는 오버레이 정보
+            var weatherInfo = 
+            `
+              <div class="wrap">
+                <div class="info">
+                    <div class="title">서울특별시</div>
+                    <div class="weather">
+                        <div class="weatherImg">
+                            <img src="./images/qm.png" alt="날씨이미지">
+                        </div>
+                        <ul class="weatherInfo">
+                            <li>현재기온 : 10&deg;</li>
+                            <li>최고기온 : 12&deg;</li>
+                            <li>최저기온 : 2&deg;</li>
+                            <li>체감온도 : 8&deg;</li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+            `
 
-
+            // 오버레이 생성
             var overlay = new kakao.maps.CustomOverlay({
                 content: weatherInfo,
                 position: marker.getPosition()
@@ -82,7 +85,7 @@
                 // 클릭한 위치의 위도는 latlng.getLat(), 경도는 latlng.getLng()로 추출    
             });
 
-            // 마커에 마우스를 올렸을 때 커스텀 오버레이를 표시합니다
+            // 마커에 마우스를 올렸을 때 오버레이를 표시합니다
             kakao.maps.event.addListener(marker, 'mouseover', function() {
                 overlay.setMap(map);
             });
