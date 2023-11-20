@@ -18,7 +18,10 @@
     </style>
 </head>
 <body>
-    <div class="new"></div>
+    <div class="new1"></div>
+    <br>
+    <div class="new2"></div>
+
     <script>
         var num = [1,2,3,4,5,6,7,8,9,10];
         var t = `<table class="number-table">`;
@@ -31,7 +34,42 @@
         t += `</table>`;
 
         // document.write(t);
-        document.querySelector('.new').innerHTML = t;
+        document.querySelector('.new1').innerHTML = t;
+    </script>
+    <script>
+        var hero = [
+            {
+                name: '아이언맨',
+                actor: '로다주',
+            },
+            {
+                name: '배트맨',
+                actor: '크리스찬 베일',
+            },
+            {
+                name: '슈퍼맨',
+                actor: '헨리 카빌',
+            },
+            {
+                name: '스파이더맨',
+                actor: '톰 홀랜드',
+            },
+        ]
+
+        var tt = `<table class="number-table">
+                    <tr>
+                        <td>히어로</td>
+                        <td>배우</td>
+                    </tr>`;
+            for(var i=0; i<hero.length; i++) {
+            tt += `<tr>
+                        <td>${hero[i].name}</td>
+                        <td>${hero[i].actor}</td>
+                    </tr>`
+        }
+        tt += `</table>`
+
+        document.querySelector('.new2').innerHTML = tt;
     </script>
 </body>
 </html>
