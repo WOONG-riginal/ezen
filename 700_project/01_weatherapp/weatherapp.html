@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEATHER APP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/weatherapp.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 <body>
     <header>
@@ -17,5 +19,95 @@
             </ul>
         </nav>
     </header>
+    <div class="container">
+        <div class='search-container'>
+            <input type="text" placeholder='지역명을 영문으로 입력하세요. (ex. Seoul)'>
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        <div class="weather-contents">
+            <h3 class="weather-now"><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/></h3>
+            <p class="temp-now"><span class="main-temp">3.5&#8451;</span> 체감(3.0&#8451;)</p>
+            <p class="temp-low-high">최저 <span class="temp-low">2.0&#8451;</span> | 최고 <span class="temp-high">4.5&#8451;</span></p>
+            <p class="weather-info">습도 50% | 바람 남동 0.5m/s | 1시간강수량 -mm</p>
+            <p class="sunrise-sunset">일출 07:00 | 일몰 17:00</p>
+        </div>
+        <table class='forecast-contents'>
+            <thead>
+              <tr class='date'>
+                <th class='area-name' rowSpan='2'>지역</th>
+                <th>오늘</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>내일</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>모레</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr className='time'>
+                <th>00:00</th>
+                <th>03:00</th>
+                <th>06:00</th>
+                <th>09:00</th>
+                <th>12:00</th>
+                <th>15:00</th>
+                <th>18:00</th>
+                <th>21:00</th>
+                <th>00:00</th>
+                <th>03:00</th>
+                <th>06:00</th>
+                <th>09:00</th>
+                <th>12:00</th>
+                <th>15:00</th>
+                <th>18:00</th>
+                <th>21:00</th>
+                <th>00:00</th>
+                <th>03:00</th>
+                <th>06:00</th>
+                <th>09:00</th>
+                <th>12:00</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>도시이름</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+                <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

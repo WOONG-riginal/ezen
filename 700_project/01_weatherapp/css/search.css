@@ -1,0 +1,116 @@
+@charset "utf-8";
+.container {
+    width: 90%; height: 90vh; margin: 30px auto 0;
+}
+.search-container {
+    width: 420px;
+    margin: 0 auto 30px;
+    display: flex;
+}
+.search-container input {
+    width: 360px;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.search-container button {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 24px;
+    background-color: #0ae;
+    color: #fff;
+    cursor: pointer;
+}
+
+.weather-contents {
+    width: 400px;
+    margin: 90px auto;
+    text-align: center;
+}
+.weather-now {
+    width: 160px;
+    margin: 0 auto 30px;
+}
+.weather-now img {
+    width: 100%;
+}
+.weather-contents p {
+    margin-bottom: 30px;
+}
+.temp-now {
+    font-size: 20px;
+}
+.main-temp {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.temp-low, .temp-high {
+    font-weight: bold;
+    color: blue;
+}
+.temp-high {
+    color: red;
+}
+
+
+table, td, th {
+    border-collapse: collapse;
+}
+thead {
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+}
+.forecast-contents {
+    border-left: none;
+    border-right: none;
+}
+.forecast-contents th {
+    border-right: 1px solid #ddd;
+    width: 80px;
+    padding: 10px 0;
+}
+.forecast-contents th:last-child {
+    border-right: none;
+}
+.forecast-contents th {
+    font-size: 14px;
+}
+.forecast-contents .date th {
+    font-weight: bold;
+    color: orangered;
+}
+.forecast-contents th.area-name {
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: bold;
+    border-left: none;
+    color: #000;
+}
+.forecast-contents tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+.forecast-contents tbody tr:nth-child(2n) {
+    background-color: #eee;
+}
+.forecast-contents td {
+    border-right: 1px solid #ddd;
+    width: 80px;
+    height: 70px;
+    font-size: 14px;
+    line-height: 1.2;
+    vertical-align: middle;
+    text-align: center;
+}
+.forecast-contents td:last-child {
+    border: none;
+}
+.forecast-contents td img {
+    width: 32px;
+    margin-bottom: 4px;
+}
