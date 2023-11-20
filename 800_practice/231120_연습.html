@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트 연습하기</title>
+    <style>
+        .number-table, tr, td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td {
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="new"></div>
+    <script>
+        var num = [1,2,3,4,5,6,7,8,9,10];
+        var t = `<table class="number-table">`;
+        
+        t += `<tr>`;
+        for (var j=0; j<num.length; j++) {
+            t += `<td> ${num[j]} </td>`;
+        }   
+        t += `</tr>`;
+        t += `</table>`;
+
+        // document.write(t);
+        document.querySelector('.new').innerHTML = t;
+    </script>
+</body>
+</html>
