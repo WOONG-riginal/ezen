@@ -1,0 +1,87 @@
+@charset "utf-8";
+body {
+    width: 100%; height: 100vh;
+    background-color: #eee;
+}
+.container {
+    max-width: 400px;
+    height: 80vh;
+    background-color: #70c1b3;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 40px 0;
+}
+.add-todo {
+    margin: 20px 0;
+}
+.add-todo .input-todo {
+    width: 312px; height: 40px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.add-todo .add-btn {
+    width: 40px; height: 40px;
+    border: 1px solid #000;
+    background-color: #247ba0;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.todo {
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.todo-content {
+    width: 312px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.todo-content input {
+    display: none;
+}
+.todo-content input[type="checkbox"] + label {
+    width: 24px; height: 24px;
+    margin: 0 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.todo-content input[type="checkbox"]:checked + label {
+    background-color: #aaa;
+    border: 1px solid #aaa;
+    position: relative;
+}
+.todo-content input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    color: #fff;
+    font-size: 18px;
+    margin-left: 3px;
+}
+.todo-content input[type="checkbox"] + label + label {
+    font-size: 16px;
+    cursor: pointer;
+}
+.todo-content input[type="checkbox"]:checked + label + label {
+    text-decoration: line-through;
+    color: #aaa;
+}
+.todo .delete-btn {
+    margin-right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
