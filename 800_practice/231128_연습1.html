@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select, button {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #news-list {
+            padding: 20px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .article {
+            margin-bottom: 20px;
+        }
+
+        .article h2 {
+            margin-bottom: 10px;
+        }
+
+        .article a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .article a img {
+            width: 160px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>분야별 뉴스</h1>
+    <label for="category">카테고리 선택:</label>
+    <select id="category">
+        <option value="general">일반</option>
+        <option value="business">비즈니스</option>
+        <option value="technology">기술</option>
+        <option value="entertainment">엔터테인먼트</option>
+        <option value="sports">스포츠</option>
+        <option value="science">과학</option>
+    </select>
+    <button onclick="fetchNews()">뉴스 불러오기</button>
+    <div id="news-list"></div>
+</div>
+
+<script>
+    function fetchNews() {
+        const apiKey = '791ca4f4c6ea4f7c86e63bbaf040a6d6'; // 실제 API 키로 대체해야 합니다.
+        const category = document.getElementById('category').value;
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=kr&category=${category}&apiKey=${apiKey}`, true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                displayNews(response.articles);
+            } else {
+                console.error('Error fetching news:', xhr.statusText);
+            }
+        };
+
+        xhr.onerror = function () {
+            console.error('Network error while fetching news.');
+        };
+
+        xhr.send();
+    }
+
+    function displayNews(news) {
+        const newsList = document.getElementById('news-list');
+        newsList.innerHTML = '';
+
+        if (news.length === 0) {
+            newsList.innerHTML = '<p>No news available</p>';
+            return;
+        }
+
+        news.forEach(article => {
+            const articleDiv = document.createElement('div');
+            articleDiv.classList.add('article');
+            const articleTitle = article.title.split(' - ')[0]
+            articleDiv.innerHTML = `<a href="${article.url}" target="_blank"><image src="${article.urlToImage}"><h2>${articleTitle}</h2></a>`;
+            newsList.appendChild(articleDiv);
+        });
+    }
+
+</script>
+</body>
+</html>
