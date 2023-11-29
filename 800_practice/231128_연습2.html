@@ -3,63 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이탈리아 세리에 A 리그 순위</title>
+    <title>놀면 뭐보니?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        #videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .video-card {
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+        h2 {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
 
-<h1>이탈리아 세리에 A 리그 순위</h1>
+<header>
+    <h1>분야별 인기 동영상</h1>
+    <label for="category-select">동영상 분야 선택:</label>
+    <select id="category-select" onchange="loadVideos()">
+        <option value="25">뉴스</option>
+        <option value="24">엔터테인먼트</option>
+        <option value="17">스포츠</option>
+        <option value="20">게임</option>
+        <option value="10">음악</option>
+        <option value="15">동물</option>
+        <option value="28">과학 및 기술</option>
+    </select>
+</header>
 
-<div id="leagueTable"></div>
+<div id="videos-container"></div>
 
 <script>
-    // Football Data API 키
-    const apiKey = '05f03d4178234ee99222d6625e0536b1';
+    function loadVideos() {
+        const apiKey = 'AIzaSyBrt1qkOdSoU-PwJak8P_EyYEa27yrXlF8';
+        const apiUrl = 'https://www.googleapis.com/youtube/v3/videos';
+        const categorySelect = document.getElementById('category-select');
+        const selectedCategory = categorySelect.value;
 
-    // 리그 순위를 가져오는 함수
-    function getLeagueTable() {
-        const leagueId = 524; // 세리에 A 리그 ID
-        const apiUrl = `https://api.football-data.org/v2/competitions/${leagueId}/standings`;
+        const params = {
+            part: 'snippet, statistics',
+            chart: 'mostPopular',
+            regionCode: 'KR',
+            videoCategoryId: selectedCategory,
+            maxResults: 10,
+            key: apiKey,
+        };
 
-        // API 요청
-        fetch(apiUrl, {
-            headers: {
-                'X-Auth-Token': apiKey,
-                'Accept-Encoding': '',
-            },
-        })
-        .then(response => response.json())
-        .then(data => {
-            const leagueTableElement = document.getElementById('leagueTable');
-            const standings = data.standings[0].table;
+        const apiUrlWithParams = `${apiUrl}?${Object.entries(params).map(([key, val]) => `${key}=${val}`).join('&')}`;
 
-            let tableHtml = '<table border="1">';
-            tableHtml += '<tr><th>순위</th><th>팀</th><th>경기수</th><th>승</th><th>무</th><th>패</th><th>골득점</th><th>골실점</th><th>골차이</th><th>포인트</th></tr>';
+        fetch(apiUrlWithParams)
+            .then(response => response.json())
+            .then(data => {
+                const videosContainer = document.getElementById('videos-container');
+                // 기존 동영상 목록 초기화
+                videosContainer.innerHTML = '';
 
-            standings.forEach(team => {
-                tableHtml += `<tr>
-                                <td>${team.position}</td>
-                                <td>${team.team.name}</td>
-                                <td>${team.playedGames}</td>
-                                <td>${team.won}</td>
-                                <td>${team.draw}</td>
-                                <td>${team.lost}</td>
-                                <td>${team.goalsFor}</td>
-                                <td>${team.goalsAgainst}</td>
-                                <td>${team.goalDifference}</td>
-                                <td>${team.points}</td>
-                             </tr>`;
-            });
+                data.items.forEach(video => {
+                    const videoElement = document.createElement('div');
+                    videoElement.classList.add('video-card');
+                    videoElement.innerHTML = 
+                    `
+                        <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank">
+                            <img src="${video.snippet.thumbnails.medium.url}" alt="${video.snippet.title}">
+                            <h2>${video.snippet.title}</h2>
+                            <p>${video.snippet.channelTitle}</p>
+                            <p>조회수: ${video.statistics.viewCount}</p>
+                        </a>
+                    `;
+                    
 
-            tableHtml += '</table>';
-            leagueTableElement.innerHTML = tableHtml;
-        })
-        .catch(error => {
-            console.error('API 요청 중 오류 발생:', error);
-        });
+                    videosContainer.appendChild(videoElement);
+                });
+            })
+            .catch(error => console.error('Error fetching videos:', error));
     }
 
-    // 페이지 로드 시 리그 순위 가져오기
-    window.onload = getLeagueTable;
+    loadVideos();
 </script>
 
 </body>

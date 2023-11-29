@@ -59,14 +59,21 @@
 
         .article h2 {
             margin-bottom: 10px;
+            width: 600px;
+            font-size: 16px;
         }
 
         .article a {
             text-decoration: none;
-            color: #007BFF;
+            display: flex;
         }
-        .article a img {
+        .article a div {
             width: 160px;
+            height: 100px;
+            overflow: hidden;
+        }
+        .article a div img {
+            width: 100%;
         }
 
     </style>
@@ -90,7 +97,7 @@
 
 <script>
     function fetchNews() {
-        const apiKey = '791ca4f4c6ea4f7c86e63bbaf040a6d6'; // 실제 API 키로 대체해야 합니다.
+        const apiKey = '791ca4f4c6ea4f7c86e63bbaf040a6d6';
         const category = document.getElementById('category').value;
 
         const xhr = new XMLHttpRequest();
@@ -124,8 +131,12 @@
         news.forEach(article => {
             const articleDiv = document.createElement('div');
             articleDiv.classList.add('article');
-            const articleTitle = article.title.split(' - ')[0]
-            articleDiv.innerHTML = `<a href="${article.url}" target="_blank"><image src="${article.urlToImage}"><h2>${articleTitle}</h2></a>`;
+            const articleTitle = article.title.split(' - ')[0];
+            let articleImg = '';
+            if(article.urlToImage!==null){
+                articleImg = article.urlToImage;
+            }
+            articleDiv.innerHTML = `<a href="${article.url}" target="_blank"><div><image src="${articleImg}"></div><h2>${articleTitle}</h2></a>`;
             newsList.appendChild(articleDiv);
         });
     }
