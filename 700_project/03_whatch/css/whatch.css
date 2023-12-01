@@ -1,0 +1,44 @@
+@charset "utf-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+#videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.video-card {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h2 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #444;
+}

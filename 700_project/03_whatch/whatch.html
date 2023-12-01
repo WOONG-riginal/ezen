@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHATCH?</title>
+    <link rel="stylesheet" href="./css/whatch.css">
+</head>
+<body>
+    <header>
+        <h1>분야별 인기 동영상</h1>
+        <label for="category-select">동영상 분야 선택:</label>
+        <select id="category-select" onchange="loadVideos()">
+            <option value="25">뉴스</option>
+            <option value="24">엔터테인먼트</option>
+            <option value="17">스포츠</option>
+            <option value="20">게임</option>
+            <option value="10">음악</option>
+            <option value="15">동물</option>
+            <option value="28">과학 및 기술</option>
+        </select>
+    </header>
+    <div id="videos-container"></div>
+    
+    <script src="./js/whatch.js"></script>
+</body>
+</html>
