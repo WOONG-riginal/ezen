@@ -1,8 +1,7 @@
 function loadVideos() {
     const apiKey = 'AIzaSyBrt1qkOdSoU-PwJak8P_EyYEa27yrXlF8';
     const apiUrl = 'https://www.googleapis.com/youtube/v3/videos';
-    const categorySelect = document.getElementById('category-select');
-    const selectedCategory = categorySelect.value;
+    const selectedCategory = document.getElementById('category-select').value;
 
     const params = {
         part: 'snippet, statistics',
@@ -13,33 +12,32 @@ function loadVideos() {
         key: apiKey,
     };
 
-    const apiUrlWithParams = `${apiUrl}?${Object.entries(params).map(([key, val]) => `${key}=${val}`).join('&')}`;
+    const apiUrlAddParams = `${apiUrl}?${Object.entries(params).map(([key, val]) => `${key}=${val}`).join('&')}`;
 
-    fetch(apiUrlWithParams)
-        .then(response => response.json())
-        .then(data => {
-            const videosContainer = document.getElementById('videos-container');
-            // 기존 동영상 목록 초기화
-            videosContainer.innerHTML = '';
+    fetch(apiUrlAddParams)
+    .then(response => response.json())
+    .then(data => {
+        const videosContainer = document.getElementById('videos-container');
+        // 기존 동영상 목록 초기화
+        videosContainer.innerHTML = '';
 
-            data.items.forEach(video => {
-                const videoElement = document.createElement('div');
-                videoElement.classList.add('video-card');
-                videoElement.innerHTML = 
-                `
-                    <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank">
-                        <img src="${video.snippet.thumbnails.medium.url}" alt="${video.snippet.title}">
-                        <h2>${video.snippet.title}</h2>
-                        <p>${video.snippet.channelTitle}</p>
-                        <p>조회수: ${video.statistics.viewCount}</p>
-                    </a>
-                `;
-                
-
-                videosContainer.appendChild(videoElement);
-            });
-        })
-        .catch(error => console.error('Error fetching videos:', error));
+        data.items.forEach(video => {
+            const videoElement = document.createElement('div');
+            videoElement.classList.add('video-card');
+            videoElement.innerHTML = 
+            `
+                <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank">
+                    <img src="${video.snippet.thumbnails.medium.url}" alt="${video.snippet.title}">
+                    <h2>${video.snippet.title}</h2>
+                    <p>${video.snippet.channelTitle}</p>
+                    <p>조회수: ${video.statistics.viewCount}</p>
+                </a>
+            `;
+            
+            videosContainer.appendChild(videoElement);
+        });
+    })
+    .catch(error => console.error('Error fetching videos:', error));
 }
 
 loadVideos();
