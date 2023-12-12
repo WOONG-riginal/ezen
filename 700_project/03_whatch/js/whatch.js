@@ -1,5 +1,5 @@
 function loadVideos() {
-    const apiKey = 'AIzaSyBrt1qkOdSoU-PwJak8P_EyYEa27yrXlF8';
+    const apiKey = '발급받은 구글API키';
     const apiUrl = 'https://www.googleapis.com/youtube/v3/videos';
     const selectedCategory = document.getElementById('category-select').value;
 
